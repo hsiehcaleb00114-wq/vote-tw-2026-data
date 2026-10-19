@@ -48,6 +48,23 @@
 
 App 用「`updated`＋`results.updatedAt`」判斷資料新舊，開票夜每次更新都要把 `results.updatedAt` 改成當下時間（含 `+08:00`），否則 App 不會採用。中選會公告當選人名單（12/4）後把 `final` 改成 `true`。
 
+## 歷屆選舉（history/）
+
+App「歷屆選舉」「我的地區」使用的資料，由中選會選舉資料庫（[db.cec.gov.tw](https://db.cec.gov.tw/)）的批次下載檔轉換：
+
+1. 下載 `https://data.cec.gov.tw/選舉資料庫/votedata.zip`（約 110 MB，政府資料開放授權條款第 1 版）
+2. `python tools/import_history.py votedata.zip`
+
+| 檔案 | 內容 |
+|---|---|
+| `history/index.json` | 歷屆選舉清單 |
+| `history/<年>.json` | 總統（全國與各縣市）、縣市長、立委與議員政黨席次 |
+| `history/trends.json` | 歷屆政黨席次、得票率、投票率走勢 |
+| `history/villages/<縣市>.json` | 各村里在 6 次選舉的得票率（跨村里投開票所各村里都計入） |
+| `history/referendums.json` | 2018、2021 全國性公投 14 案，主文見 `tools/referendum_titles.json` |
+
+目前涵蓋 2018、2022 地方選舉與 2020、2024 總統立委；要加年份時，在 `tools/import_history.py` 的 `ELECTIONS` 加上該屆資料夾即可。2026 選後中選會更新批次檔，再重跑一次就會多一屆。
+
 ## 格式
 
 ```jsonc
