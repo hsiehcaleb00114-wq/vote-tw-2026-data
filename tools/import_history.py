@@ -57,6 +57,74 @@ ELECTIONS = [
             for x in ('直轄市區域議員', '直轄市平原議員', '直轄市山原議員', '縣市區域議員', '縣市平原議員', '縣市山原議員')
         ],
     },
+    {
+        'id': '2016', 'title': '2016 總統副總統及立法委員選舉', 'date': '2016-01-16', 'kind': 'national',
+        'president': ['2016總統立委/總統'],
+        'legislator': ['2016總統立委/區域立委', '2016總統立委/平地立委', '2016總統立委/山地立委'],
+        'partylist': '2016總統立委/不分區政黨',
+    },
+    {
+        'id': '2014', 'title': '2014 地方公職人員選舉', 'date': '2014-11-29', 'kind': 'local',
+        'mayor': ['2014-103年地方公職人員選舉/直轄市市長', '2014-103年地方公職人員選舉/縣市市長'],
+        'council': [
+            f'2014-103年地方公職人員選舉/{x}'
+            for x in ('直轄市區域議員', '直轄市平原議員', '直轄市山原議員', '縣市區域議員', '縣市平原議員', '縣市山原議員')
+        ],
+    },
+    {
+        'id': '2012', 'title': '2012 總統副總統及立法委員選舉', 'date': '2012-01-14', 'kind': 'national',
+        'president': ['20120114-總統及立委/總統'],
+        'legislator': [f'20120114-總統及立委/{x}' for x in ('區域立委', '平地立委', '山地立委')],
+        'partylist': '20120114-總統及立委/不分區政黨',
+    },
+    {
+        'id': '2009-10', 'label': '2009–10', 'title': '2009 縣市長及 2010 五都選舉', 'date': '2009-12-05', 'kind': 'local',
+        'note': '2009/12/5 縣市長與縣市議員、2010/11/27 五都市長與議員',
+        'mayor': ['20091205-縣市長縣市議員及鄉鎮長/縣市長', '20101127-五都市長議員及里長/市長'],
+        'council': [
+            f'{d}/{x}'
+            for d in ('20091205-縣市長縣市議員及鄉鎮長', '20101127-五都市長議員及里長')
+            for x in ('區域議員', '平地議員', '山地議員')
+        ],
+    },
+    {
+        'id': '2008', 'title': '2008 立法委員及總統選舉', 'date': '2008-01-12', 'kind': 'national',
+        'note': '2008/1/12 立法委員（首次單一選區兩票制）、2008/3/22 總統',
+        'president': ['20080322-總統'],
+        'legislator': ['2008立委/區域', '2008立委/平原', '2008立委/山原'],
+        'partylist': '2008立委/不分區政黨',
+    },
+    {
+        'id': '2005-06', 'label': '2005–06', 'title': '2005 縣市長及 2006 北高市長選舉', 'date': '2005-12-03', 'kind': 'local',
+        'note': '2005/12/3 縣市長與縣市議員、2006/12/9 臺北市與高雄市市長與議員',
+        'mayor': ['2005縣市長', '2006直轄市長'],
+        'council': ['2005縣市議員/區域', '2005縣市議員/平原', '2005縣市議員/山原', '2006直轄市議員(區域)', '2006直轄市議員(原住民)'],
+    },
+    {
+        'id': '2004', 'title': '2004 總統副總統選舉', 'date': '2004-03-20', 'kind': 'national',
+        'president': ['2004   11任總統'],
+    },
+    {
+        'id': '2001-02', 'label': '2001–02', 'title': '2001 縣市長及 2002 北高市長選舉', 'date': '2001-12-01', 'kind': 'local',
+        'note': '2001/12/1 縣市長、2002/12/7 縣市議員與臺北市、高雄市市長與議員',
+        'mayor': ['2001縣市長', '2002直轄市長'],
+        'council': ['2002縣市議員/區域', '2002縣市議員/平原', '2002縣市議員/山原', '2002直轄市議員(區域)', '2002直轄市議員(原住民)'],
+    },
+    {
+        'id': '2000', 'title': '2000 總統副總統選舉', 'date': '2000-03-18', 'kind': 'national',
+        'president': ['2000年10任總統'],
+    },
+    {
+        'id': '1997-98', 'label': '1997–98', 'title': '1997 縣市長及 1998 北高市長選舉', 'date': '1997-11-29', 'kind': 'local',
+        'note': '1997/11/29 縣市長、1998 縣市議員與臺北市、高雄市市長與議員',
+        'mayor': ['1997縣市長', '1998直轄市長'],
+        'council': ['1998縣市議員/區域', '1998縣市議員/平原', '1998縣市議員/山原', '1998直轄市議員/區域', '1998直轄市議員/原住民'],
+    },
+    {
+        'id': '1996', 'title': '1996 總統副總統選舉', 'date': '1996-03-23', 'kind': 'national',
+        'note': '第一次總統直選',
+        'president': ['9任總統'],
+    },
 ]
 
 COUNTY_ORDER = [
@@ -65,15 +133,27 @@ COUNTY_ORDER = [
     '雲林縣', '嘉義市', '嘉義縣', '屏東縣', '宜蘭縣', '花蓮縣',
     '臺東縣', '澎湖縣', '金門縣', '連江縣',
 ]
+# 2010 年前已改制或合併的縣市，排在現行縣市之後
+LEGACY_COUNTIES = ['臺北縣', '桃園縣', '臺中縣', '臺南縣', '高雄縣']
 INDEPENDENT = '無黨籍'
+
+
+def is_county(name):
+    name = name.replace('台', '臺')
+    return name in COUNTY_ORDER or name in LEGACY_COUNTIES or (name.endswith(('縣', '市')) and '省' not in name)
 
 
 class Archive:
     def __init__(self, path):
         self.z = zipfile.ZipFile(path)
         # 檔名是 Big5 但沒有 UTF-8 旗標，zipfile 會當成 cp437 解讀
+        # 部分檔案（如 2016）有 UTF-8 旗標，名稱已正確解讀，不能再轉換
         self.names = {}
-        for n in self.z.namelist():
+        for info in self.z.infolist():
+            n = info.filename
+            if info.flag_bits & 0x800:
+                self.names[n] = n
+                continue
             try:
                 self.names[n.encode('cp437').decode('cp950')] = n
             except (UnicodeEncodeError, UnicodeDecodeError):
@@ -89,19 +169,29 @@ class Archive:
     def has(self, path):
         return path in self.names
 
+    def find(self, folder, stem):
+        """資料夾內的 stem.csv；2016 年的檔名帶後綴（如 elbase_T1.csv）"""
+        if folder + stem + '.csv' in self.names:
+            return folder + stem + '.csv'
+        for n in self.names:
+            if n.startswith(folder + stem + '_') and n.endswith('.csv') and '/' not in n[len(folder):]:
+                return n
+        return None
+
 
 class Dataset:
     """一個資料夾（elbase / elcand / elctks / elpaty / elprof）"""
 
     def __init__(self, ar, folder):
         p = VD + folder + '/'
-        self.party = {r[0]: r[1] for r in ar.rows(p + 'elpaty.csv') if r}
-        self.base = {tuple(r[:5]): r[5] for r in ar.rows(p + 'elbase.csv') if len(r) >= 6}
-        self.cands = [r for r in ar.rows(p + 'elcand.csv') if len(r) >= 15]
+        f = lambda stem: ar.find(p, stem)
+        self.party = {r[0]: r[1] for r in ar.rows(f('elpaty')) if r}
+        self.base = {tuple(r[:5]): r[5] for r in ar.rows(f('elbase')) if len(r) >= 6}
+        self.cands = [r for r in ar.rows(f('elcand')) if len(r) >= 15]
         # 只取彙總層級（投開票所 = 0）的得票
-        self.tks = [r for r in ar.rows(p + 'elctks.csv') if len(r) >= 9 and int(r[5] or 0) == 0]
-        self.prof = [r for r in ar.rows(p + 'elprof.csv') if len(r) >= 10 and int(r[5] or 0) == 0]
-        self.retks = [r for r in ar.rows(p + 'elretks.csv') if len(r) >= 5] if ar.has(p + 'elretks.csv') else []
+        self.tks = [r for r in ar.rows(f('elctks')) if len(r) >= 9 and int(r[5] or 0) == 0]
+        self.prof = [r for r in ar.rows(f('elprof')) if len(r) >= 10 and int(r[5] or 0) == 0]
+        self.retks = [r for r in ar.rows(f('elretks')) if len(r) >= 5] if f('elretks') else []
 
         # 總統、立委資料的得票檔在村里列帶有選區代碼，但行政區檔沒有，查名稱時忽略選區
         self.village = {(k[0], k[1], k[3], k[4]): name for k, name in self.base.items() if k[4] != '0000'}
@@ -111,14 +201,17 @@ class Dataset:
             prv, city, area, dept, li = k
             if prv == '00' or li != '0000':
                 continue
-            if dept == '000' and area == '00' and name in COUNTY_ORDER:
-                self.county[(prv, city)] = name
+            if dept == '000' and area == '00' and is_county(name):
+                self.county[(prv, city)] = name.replace('台', '臺')
             elif dept != '000':
                 self.town[(prv, city, dept)] = name
 
     def party_name(self, code):
         name = self.party.get(code, '')
-        return INDEPENDENT if code == '999' or not name or '無黨' in name else name
+        # 早年資料的無黨籍寫作「無」、總統選舉的連署參選人寫作「連署」
+        if code == '999' or not name or '無黨' in name or '未經政黨推薦' in name or name in ('無', '連署'):
+            return INDEPENDENT
+        return name
 
     def county_of(self, key):
         return self.county.get((key[0], key[1]), '')
@@ -152,10 +245,12 @@ def votes_at(ds, key):
 
 
 def turnout_at(ds, key):
-    for r in ds.prof:
-        if tuple(r[:5]) == key:
-            valid, invalid, votes, electors = (int(x or 0) for x in r[6:10])
-            return {'electors': electors, 'votes': votes, 'turnout': pct(votes, electors)}
+    # 部分年份候選人與得票檔帶選區代碼（如 01），投票概況檔的縣市總計則為 00
+    for k in (key, (key[0], key[1], '00', key[3], key[4])):
+        for r in ds.prof:
+            if tuple(r[:5]) == k:
+                valid, invalid, votes, electors = (int(x or 0) for x in r[6:10])
+                return {'electors': electors, 'votes': votes, 'turnout': pct(votes, electors)}
     return None
 
 
@@ -184,13 +279,16 @@ def ranked(d):
 
 
 def sort_counties(items, key='county'):
-    order = {c: i for i, c in enumerate(COUNTY_ORDER)}
+    order = {c: i for i, c in enumerate(COUNTY_ORDER + LEGACY_COUNTIES)}
     return sorted(items, key=lambda x: order.get(x[key], 99))
 
 
 def convert(ar, e):
-    out = {'id': e['id'], 'title': e['title'], 'date': e['date'], 'kind': e['kind'], 'offices': {}}
-    trend = {'id': e['id'], 'date': e['date'], 'kind': e['kind']}
+    label = e.get('label', e['id'])
+    out = {'id': e['id'], 'label': label, 'title': e['title'], 'date': e['date'], 'kind': e['kind'], 'offices': {}}
+    if e.get('note'):
+        out['note'] = e['note']
+    trend = {'id': e['id'], 'label': label, 'date': e['date'], 'kind': e['kind']}
 
     if 'president' in e:
         ds = Dataset(ar, e['president'][0])
@@ -211,7 +309,11 @@ def convert(ar, e):
             'byCounty': sort_counties(by_county),
         }
         trend['turnout'] = out['offices']['president']['national'].get('turnout')
-        trend['presidentShare'] = {c['party']: c['pct'] for c in president}
+        # 同一政黨（如多位無黨籍）的得票率加總，避免互相覆蓋
+        share = defaultdict(float)
+        for c in president:
+            share[c['party']] += c['pct']
+        trend['presidentShare'] = {k: round(v, 2) for k, v in sorted(share.items(), key=lambda kv: -kv[1])}
 
     if 'legislator' in e:
         all_races = []
@@ -225,10 +327,9 @@ def convert(ar, e):
                     if c.get('elected'):
                         by_county[county][c['party']] += 1
         district_seats = seats_by_party(all_races)
-        pl = Dataset(ar, e['partylist'])
-        pl_party = {r[0]: r for r in pl.retks}
+        pl = Dataset(ar, e['partylist']) if e.get('partylist') else None
         partylist = []
-        for r in pl.retks:
+        for r in (pl.retks if pl else []):
             code, share1, _share2, _n, won = r[:5]
             partylist.append({'party': pl.party_name(code), 'pct': round(float(share1), 2), 'seats': int(won)})
         partylist.sort(key=lambda p: -p['pct'])
@@ -243,7 +344,6 @@ def convert(ar, e):
         }
         trend['legislatorSeats'] = out['offices']['legislator']['seats']
         trend['partyListShare'] = {p['party']: p['pct'] for p in partylist if p['pct'] >= 0.5}
-        del pl_party
 
     if 'mayor' in e:
         races_out = []
@@ -274,7 +374,7 @@ def convert(ar, e):
         all_races = []
         by_county = defaultdict(lambda: defaultdict(int))
         for folder in e['council']:
-            if not ar.has(VD + folder + '/elcand.csv'):
+            if not ar.find(VD + folder + '/', 'elcand'):
                 continue
             ds = Dataset(ar, folder)
             for key, cands in candidates_of(ds).items():
@@ -334,6 +434,9 @@ def chiayi_rerun(ar, folder):
 
 # 每屆選取代表性的選舉：地方選舉看縣市長，總統大選看總統與不分區政黨票
 VILLAGE_SOURCES = [
+    ('2014-mayor', '2014 縣市長', ['2014-103年地方公職人員選舉/直轄市市長', '2014-103年地方公職人員選舉/縣市市長']),
+    ('2016-president', '2016 總統', ['2016總統立委/總統']),
+    ('2016-party', '2016 政黨票', ['2016總統立委/不分區政黨']),
     ('2018-mayor', '2018 縣市長', ['2018-107年地方公職人員選舉/直轄市市長', '2018-107年地方公職人員選舉/縣市市長']),
     ('2020-president', '2020 總統', ['2020總統立委/總統']),
     ('2020-party', '2020 政黨票', ['2020總統立委/不分區政黨']),
@@ -468,7 +571,7 @@ def main():
         data, trend = convert(ar, e)
         data['source'] = SOURCE
         size = write_json(f"{e['id']}.json", data)
-        index.append({k: e[k] for k in ('id', 'title', 'date', 'kind')} | {'offices': list(data['offices'])})
+        index.append({k: e[k] for k in ('id', 'title', 'date', 'kind')} | {'label': data['label'], 'offices': list(data['offices'])})
         trends.append(trend)
         print(f"{e['id']}: {', '.join(data['offices'])}（{size // 1024} KB）")
     write_json('index.json', {
