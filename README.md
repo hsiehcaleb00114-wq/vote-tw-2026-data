@@ -1,6 +1,6 @@
-# 投給誰：線上資料
+# 選舉通：線上資料
 
-「投給誰」App 的參選人資料。App 每次開啟都會讀取這裡的 `election.json`，所以更新這個檔案就能更新所有使用者看到的名單、照片和政見，**不必重新送審 App**。
+「選舉通」App 的參選人資料。App 每次開啟都會讀取這裡的 `election.json`，所以更新這個檔案就能更新所有使用者看到的名單、照片和政見，**不必重新送審 App**。
 
 - 線上網址：`https://raw.githubusercontent.com/hsiehcaleb00114-wq/vote-tw-2026-data/main/election.json`
 - GitHub 有約 5 分鐘的快取，推上去後最多等 5 分鐘才會生效
