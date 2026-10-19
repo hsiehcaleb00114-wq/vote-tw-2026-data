@@ -15,16 +15,38 @@
 
 ## 從中選會名冊重新匯入
 
-目前資料來自中選會〈[115年地方公職人員選舉候選人登記名冊](https://web.cec.gov.tw/central/article/64709)〉，共 9 類、19,695 人。11/12、11/17 正式候選人名單公告後，若格式相同可直接重跑：
+目前資料（19,685 人）由三份中選會文件組成：
+
+| 內容 | 來源 | 工具 |
+|---|---|---|
+| 9 類參選人姓名、選區、政黨 | 〈[115年地方公職人員選舉候選人登記名冊](https://web.cec.gov.tw/central/article/64709)〉 | `tools/import_cec.py` |
+| 排除審定不合格的 10 位議員參選人 | 〈[115/10/16 審定候選人資格新聞稿](https://web.cec.gov.tw/central/article/65213)〉 | `tools/disqualified.json` |
+| 議員選舉區範圍、應選名額、婦女保障名額、原住民選區 | 〈[115/8/20 選舉公告](https://web.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf)〉 | `tools/import_districts.py` |
+
+11/12、11/17 正式候選人名單公告後，若格式相同可直接重跑：
 
 1. 下載各類的「x-1 候選人登記彙總表」PDF（只要 1-1、2-1、3-1、4-1、5、6、7、8、9），檔名保留開頭編號，放進同一個資料夾
 2. `pip install pdfplumber`
-3. `python tools/import_cec.py <PDF資料夾> --updated YYYY-MM-DD`
-4. 比對輸出的人數與 PDF，`node check.mjs` 通過後再推上來
+3. `python tools/import_cec.py <PDF資料夾> --updated YYYY-MM-DD --source "資料來源說明"`
+4. 選舉區劃分有變動時才需要：`python tools/import_districts.py <選舉公告.pdf>`
+5. 比對輸出的人數與 PDF，`node check.mjs` 通過後再推上來
 
-匯入時會保留既有的人工欄位（現任、號次、照片、政見、學經歷、來源網址）。
+匯入時會保留既有的人工欄位（現任、號次、照片、政見、學經歷、來源網址）與選區欄位（範圍、名額、原住民選區）。
 
-**罕用字姓名**：名冊中有 21 位參選人的姓名含罕用字，PDF 以圖片呈現且部分字無法顯示，已依圖片人工轉錄在 `tools/manual_names.json`（○ 為無法顯示的字），並在 App 中標示「待中選會公告確認」。正式名單公告後請逐筆核對修正。
+**罕用字**：名冊中以圖片呈現、部分字無法顯示的資料，記在 `tools/manual_names.json`：
+
+- 21 位參選人姓名，依圖片人工轉錄（○ 為無法顯示的字），App 中標示「待中選會公告確認」。正式名單公告後請逐筆核對修正。
+- 3 個村里名稱（臺中市大安區龜壳里、臺南市西港區檨林里、臺南市安南區塭南里、公塭里），依現行行政區名稱補正。
+
+## 開票結果
+
+在 `election.json` 根層加上 `results`，並在參選人加上 `votes`（得票數）與 `elected`（是否當選）：
+
+```jsonc
+"results": { "updatedAt": "2026-11-28T18:30:00+08:00", "final": false, "source": "中選會開票資料" }
+```
+
+App 用「`updated`＋`results.updatedAt`」判斷資料新舊，開票夜每次更新都要把 `results.updatedAt` 改成當下時間（含 `+08:00`），否則 App 不會採用。中選會公告當選人名單（12/4）後把 `final` 改成 `true`。
 
 ## 格式
 

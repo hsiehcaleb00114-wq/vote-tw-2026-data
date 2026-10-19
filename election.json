@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updated": "2026-10-20",
-  "source": "中選會「115年地方公職人員選舉候選人登記名冊」",
+  "source": "中選會「115年地方公職人員選舉候選人登記名冊」，議員以上已排除 10/16 審定不合格者",
   "races": [
     {"office": "mayor", "county": "臺北市", "candidates": [
       {"name": "郭璽", "party": "台灣麻將最大黨"},
@@ -128,7 +128,7 @@
       {"name": "王忠銘", "party": "中國國民黨", "incumbent": true},
       {"name": "曹爾元", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺北市", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "臺北市", "district": "第1選舉區", "area": "北投區、士林區", "seats": 12, "womenSeats": 3, "candidates": [
       {"name": "謝閔弘", "party": "時代力量"},
       {"name": "李文", "party": "無黨籍"},
       {"name": "陳彥廷", "party": "無黨籍"},
@@ -150,7 +150,7 @@
       {"name": "侯漢廷", "party": "新黨"},
       {"name": "林聖峰", "party": "天宙和平統一家庭黨"}
     ]},
-    {"office": "council", "county": "臺北市", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "臺北市", "district": "第2選舉區", "area": "內湖區、南港區", "seats": 9, "womenSeats": 2, "candidates": [
       {"name": "吳欣岱", "party": "台灣基進"},
       {"name": "李明賢", "party": "中國國民黨"},
       {"name": "陳冠安", "party": "中國國民黨"},
@@ -165,7 +165,7 @@
       {"name": "吳世正", "party": "中國國民黨"},
       {"name": "黃啟彬", "party": "永久和平自然法"}
     ]},
-    {"office": "council", "county": "臺北市", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "臺北市", "district": "第3選舉區", "area": "松山區、信義區", "seats": 9, "womenSeats": 2, "candidates": [
       {"name": "鄧樂強", "party": "台灣基進"},
       {"name": "詹為元", "party": "中國國民黨"},
       {"name": "張文潔", "party": "民主進步黨"},
@@ -180,7 +180,7 @@
       {"name": "林柏勛", "party": "無黨籍"},
       {"name": "許原榮", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "臺北市", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "臺北市", "district": "第4選舉區", "area": "中山區、大同區", "seats": 8, "womenSeats": 2, "candidates": [
       {"name": "朱政騏", "party": "無黨籍"},
       {"name": "顏若芳", "party": "民主進步黨"},
       {"name": "賴俊翰", "party": "民主進步黨"},
@@ -196,7 +196,7 @@
       {"name": "陳怡君", "party": "無黨籍"},
       {"name": "李惠暄", "party": "小民參政歐巴桑聯盟"}
     ]},
-    {"office": "council", "county": "臺北市", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "臺北市", "district": "第5選舉區", "area": "中正區、萬華區", "seats": 8, "womenSeats": 2, "candidates": [
       {"name": "張銘祐", "party": "民主進步黨"},
       {"name": "吳志剛", "party": "中國國民黨"},
       {"name": "鍾小平", "party": "中國國民黨"},
@@ -212,14 +212,13 @@
       {"name": "郭昭巖", "party": "中國國民黨"},
       {"name": "譚傳紹", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺北市", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "臺北市", "district": "第6選舉區", "area": "大安區、文山區", "seats": 13, "womenSeats": 3, "candidates": [
       {"name": "李道翔", "party": "左翼聯盟"},
       {"name": "陳峙穎", "party": "時代力量"},
       {"name": "李奇峯", "party": "無黨籍"},
       {"name": "簡舒培", "party": "民主進步黨"},
       {"name": "楊植斗", "party": "中國國民黨"},
       {"name": "陳聖文", "party": "民主進步黨"},
-      {"name": "游智彬", "party": "新黨"},
       {"name": "耿葳", "party": "中國國民黨"},
       {"name": "徐弘庭", "party": "中國國民黨"},
       {"name": "苗博雅", "party": "社會民主黨"},
@@ -233,20 +232,19 @@
       {"name": "王閔生", "party": "民主進步黨"},
       {"name": "張維學", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺北市", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "臺北市", "district": "第7選舉區", "area": "平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "李芳儒", "party": "中國國民黨"},
       {"name": "林筱薇Icyang Tamana", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺北市", "district": "第8選舉區", "candidates": [
+    {"office": "council", "county": "臺北市", "district": "第8選舉區", "area": "山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "林家豪", "party": "民主進步黨"},
       {"name": "李傅鈺婷", "party": "中國國民黨"},
       {"name": "孔垂崢Haisul Islituan", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "新北市", "district": "第10選舉區", "candidates": [
-      {"name": "林裔綺", "party": "民主進步黨"},
-      {"name": "林正峰", "party": "中國國民黨"}
+    {"office": "council", "county": "新北市", "district": "第10選舉區", "area": "平溪區、瑞芳區、雙溪區、貢寮區", "seats": 1, "candidates": [
+      {"name": "林裔綺", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "新北市", "district": "第11選舉區", "candidates": [
+    {"office": "council", "county": "新北市", "district": "第11選舉區", "area": "金山區、萬里區、汐止區", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "張錦豪", "party": "民主進步黨"},
       {"name": "陳語倢", "party": "台灣民眾黨"},
       {"name": "陳竹音", "party": "勞動黨"},
@@ -257,7 +255,7 @@
       {"name": "黃瑞傳", "party": "無黨籍"},
       {"name": "郭書成", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "新北市", "district": "第12選舉區", "candidates": [
+    {"office": "council", "county": "新北市", "district": "第12選舉區", "area": "平地原住民", "seats": 4, "womenSeats": 1, "indigenous": "plain", "candidates": [
       {"name": "忠仁‧達祿斯", "party": "無黨籍"},
       {"name": "吳國譽La‧Is‧Amid", "party": "中國國民黨"},
       {"name": "蘇錦雄Paylang‧Caya", "party": "民主進步黨"},
@@ -266,7 +264,7 @@
       {"name": "吳建智咖啡哥", "party": "親民黨"},
       {"name": "連祐崧", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "新北市", "district": "第13選舉區", "candidates": [
+    {"office": "council", "county": "新北市", "district": "第13選舉區", "area": "山地原住民", "seats": 2, "indigenous": "mountain", "candidates": [
       {"name": "何應明", "party": "中國國民黨"},
       {"name": "布落‧馬信", "party": "民主進步黨"},
       {"name": "王珍珍", "party": "無黨籍"},
@@ -274,14 +272,14 @@
       {"name": "林啟明", "party": "親民黨"},
       {"name": "羅美菁", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "新北市", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "新北市", "district": "第1選舉區", "area": "石門區、三芝區、淡水區、八里區", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "鄭宇恩", "party": "民主進步黨"},
       {"name": "陳偉杰", "party": "中國國民黨"},
       {"name": "游明諺", "party": "民主進步黨"},
       {"name": "陳家琪", "party": "中國國民黨"},
       {"name": "呂鈞鴻", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "新北市", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "新北市", "district": "第2選舉區", "area": "林口區、五股區、泰山區", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "戴翎育", "party": "民主進步黨"},
       {"name": "張昭隆", "party": "無黨籍"},
       {"name": "蔡淑君", "party": "中國國民黨"},
@@ -290,7 +288,7 @@
       {"name": "蔡佩呈", "party": "中國國民黨"},
       {"name": "李宇翔", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "新北市", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "新北市", "district": "第3選舉區", "area": "新莊區", "seats": 7, "womenSeats": 1, "candidates": [
       {"name": "翁震州", "party": "民主進步黨"},
       {"name": "簡麗花", "party": "無黨籍"},
       {"name": "林秉宥", "party": "民主進步黨"},
@@ -304,7 +302,7 @@
       {"name": "蕭夙玲", "party": "親民黨"},
       {"name": "陳茂嘉", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "新北市", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "新北市", "district": "第4選舉區", "area": "蘆洲區、三重區", "seats": 9, "womenSeats": 2, "candidates": [
       {"name": "李翁月娥", "party": "無黨籍"},
       {"name": "黃桂蘭", "party": "中國國民黨"},
       {"name": "彭佳芸", "party": "民主進步黨"},
@@ -323,7 +321,7 @@
       {"name": "許宏平", "party": "台聯黨"},
       {"name": "蕭告", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "新北市", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "新北市", "district": "第5選舉區", "area": "板橋區", "seats": 9, "womenSeats": 2, "candidates": [
       {"name": "李昆穎", "party": "民主進步黨"},
       {"name": "劉美芳", "party": "中國國民黨"},
       {"name": "戴瑋姗", "party": "民主進步黨"},
@@ -337,7 +335,7 @@
       {"name": "周韋翰", "party": "中國國民黨"},
       {"name": "黃淑珍", "party": "司法改革黨"}
     ]},
-    {"office": "council", "county": "新北市", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "新北市", "district": "第6選舉區", "area": "中和區", "seats": 6, "womenSeats": 1, "candidates": [
       {"name": "張維倩", "party": "民主進步黨"},
       {"name": "張志豪", "party": "民主進步黨"},
       {"name": "金瑞龍", "party": "中國國民黨"},
@@ -348,14 +346,14 @@
       {"name": "游輝宂", "party": "中國國民黨"},
       {"name": "陳錦錠", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "新北市", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "新北市", "district": "第7選舉區", "area": "永和區", "seats": 3, "candidates": [
       {"name": "羅文崇", "party": "民主進步黨"},
       {"name": "陳以樂", "party": "中國國民黨"},
       {"name": "許昭興", "party": "民主進步黨"},
       {"name": "陳鴻源", "party": "中國國民黨"},
       {"name": "蘇昭龍", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "新北市", "district": "第8選舉區", "candidates": [
+    {"office": "council", "county": "新北市", "district": "第8選舉區", "area": "樹林區、鶯歌區、土城區、三峽區", "seats": 9, "womenSeats": 2, "candidates": [
       {"name": "高乃芸", "party": "民主進步黨"},
       {"name": "廖宜琨", "party": "民主進步黨"},
       {"name": "吳亞倫", "party": "台灣民眾黨"},
@@ -369,7 +367,7 @@
       {"name": "洪佳君", "party": "中國國民黨"},
       {"name": "陳膺涵", "party": "愛民黨"}
     ]},
-    {"office": "council", "county": "新北市", "district": "第9選舉區", "candidates": [
+    {"office": "council", "county": "新北市", "district": "第9選舉區", "area": "新店區、深坑區、石碇區、坪林區、烏來區", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "張柏詠", "party": "無黨籍"},
       {"name": "邸聖德", "party": "台灣民眾黨"},
       {"name": "張佑輔", "party": "台灣綠黨"},
@@ -380,23 +378,23 @@
       {"name": "劉哲彰", "party": "中國國民黨"},
       {"name": "陳儀君", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "桃園市", "district": "第10選舉區", "candidates": [
+    {"office": "council", "county": "桃園市", "district": "第10選舉區", "area": "龍潭區", "seats": 3, "candidates": [
       {"name": "劉熒隆", "party": "中國國民黨"},
       {"name": "吳平娥", "party": "無黨籍"},
       {"name": "張贊聞", "party": "民主進步黨"},
       {"name": "徐玉樹", "party": "中國國民黨"},
       {"name": "林昭賢", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "桃園市", "district": "第11選舉區", "candidates": [
+    {"office": "council", "county": "桃園市", "district": "第11選舉區", "area": "新屋區", "seats": 1, "candidates": [
       {"name": "陳睿生", "party": "民主進步黨"},
       {"name": "邱文威", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "桃園市", "district": "第12選舉區", "candidates": [
+    {"office": "council", "county": "桃園市", "district": "第12選舉區", "area": "觀音區", "seats": 2, "candidates": [
       {"name": "張佩芸", "party": "民主進步黨"},
       {"name": "許更生", "party": "無黨籍"},
       {"name": "吳進昌", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "桃園市", "district": "第13選舉區", "candidates": [
+    {"office": "council", "county": "桃園市", "district": "第13選舉區", "area": "平地原住民", "seats": 4, "womenSeats": 1, "indigenous": "plain", "candidates": [
       {"name": "王仙蓮", "party": "中國國民黨"},
       {"name": "林志強", "party": "民主進步黨"},
       {"name": "張秀菊", "party": "無黨籍"},
@@ -404,7 +402,7 @@
       {"name": "楊進福", "party": "無黨籍"},
       {"name": "李鴻志", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "桃園市", "district": "第14選舉區", "candidates": [
+    {"office": "council", "county": "桃園市", "district": "第14選舉區", "area": "山地原住民", "seats": 4, "womenSeats": 1, "indigenous": "mountain", "candidates": [
       {"name": "陳瑛", "party": "中國國民黨"},
       {"name": "謝卓儒", "party": "民主進步黨"},
       {"name": "林秋霖", "party": "無黨籍"},
@@ -414,7 +412,7 @@
       {"name": "蘇偉恩", "party": "無黨籍"},
       {"name": "曾庭筠", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "桃園市", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "桃園市", "district": "第1選舉區", "area": "桃園區", "seats": 12, "womenSeats": 3, "candidates": [
       {"name": "黃婉如", "party": "中國國民黨"},
       {"name": "朱永煇", "party": "無黨籍"},
       {"name": "詹江村", "party": "中國國民黨"},
@@ -422,7 +420,6 @@
       {"name": "凌濤", "party": "中國國民黨"},
       {"name": "李光達", "party": "民主進步黨"},
       {"name": "許孟祥", "party": "勞動黨"},
-      {"name": "蕭湘瀚", "party": "無黨籍"},
       {"name": "陳美梅", "party": "中國國民黨"},
       {"name": "于北辰", "party": "無黨籍"},
       {"name": "余信憲", "party": "民主進步黨"},
@@ -436,7 +433,7 @@
       {"name": "佀廣洋", "party": "無黨籍"},
       {"name": "王妃天崩開局穿越整頓霸凌者佀廣洋", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "桃園市", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "桃園市", "district": "第2選舉區", "area": "龜山區", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "呂學記", "party": "無黨籍"},
       {"name": "陳雅倫", "party": "民主進步黨"},
       {"name": "周曉芸", "party": "台灣民眾黨"},
@@ -447,7 +444,7 @@
       {"name": "高華駿", "party": "中國國民黨"},
       {"name": "孫韻璇", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "桃園市", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "桃園市", "district": "第3選舉區", "area": "八德區", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "段林淑婷", "party": "無黨籍"},
       {"name": "林晏良", "party": "台灣民眾黨"},
       {"name": "許家睿", "party": "民主進步黨"},
@@ -457,7 +454,7 @@
       {"name": "楊朝偉", "party": "中國國民黨"},
       {"name": "呂林小鳳", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "桃園市", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "桃園市", "district": "第4選舉區", "area": "蘆竹區", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "許清順", "party": "民主進步黨"},
       {"name": "胡家智", "party": "民主進步黨"},
       {"name": "錢龍", "party": "中國國民黨"},
@@ -465,19 +462,19 @@
       {"name": "郭麗華", "party": "無黨籍"},
       {"name": "張桂綿", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "桃園市", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "桃園市", "district": "第5選舉區", "area": "大園區", "seats": 2, "candidates": [
       {"name": "游吾和", "party": "民主進步黨"},
       {"name": "徐其萬", "party": "中國國民黨"},
       {"name": "吳文凱", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "桃園市", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "桃園市", "district": "第6選舉區", "area": "大溪區、復興區", "seats": 2, "candidates": [
       {"name": "陳治文", "party": "民主進步黨"},
       {"name": "劉儲禎", "party": "無黨籍"},
       {"name": "徐慈檉", "party": "親民黨"},
       {"name": "李柏坊", "party": "中國國民黨"},
       {"name": "江國輝", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "桃園市", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "桃園市", "district": "第7選舉區", "area": "中壢區", "seats": 11, "womenSeats": 2, "candidates": [
       {"name": "張曉昀", "party": "民主進步黨"},
       {"name": "彭康傑", "party": "中國國民黨"},
       {"name": "葉明月", "party": "中國國民黨"},
@@ -496,7 +493,7 @@
       {"name": "謝美英", "party": "無黨籍"},
       {"name": "徐盛揚", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "桃園市", "district": "第8選舉區", "candidates": [
+    {"office": "council", "county": "桃園市", "district": "第8選舉區", "area": "平鎮區", "seats": 6, "womenSeats": 1, "candidates": [
       {"name": "高宇彥", "party": "無黨籍"},
       {"name": "王珮毓", "party": "民主進步黨"},
       {"name": "劉仁照", "party": "民主進步黨"},
@@ -508,7 +505,7 @@
       {"name": "彭柏霖", "party": "中國國民黨"},
       {"name": "羅文欽", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "桃園市", "district": "第9選舉區", "candidates": [
+    {"office": "council", "county": "桃園市", "district": "第9選舉區", "area": "楊梅區", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "劉定唐", "party": "無黨籍"},
       {"name": "項柏翰", "party": "民主進步黨"},
       {"name": "鄭淑方", "party": "民主進步黨"},
@@ -517,13 +514,13 @@
       {"name": "周玉琴", "party": "中國國民黨"},
       {"name": "古振豐", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第10選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第10選舉區", "area": "中區、西區", "seats": 3, "candidates": [
       {"name": "張彥彤", "party": "中國國民黨"},
       {"name": "黃守達", "party": "民主進步黨"},
       {"name": "林靈", "party": "勞動黨"},
       {"name": "江肇國", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第11選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第11選舉區", "area": "東區、南區", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "楊寶楨", "party": "無黨籍"},
       {"name": "陳雅惠", "party": "民主進步黨"},
       {"name": "鄭功進", "party": "民主進步黨"},
@@ -533,7 +530,7 @@
       {"name": "林英成", "party": "無黨籍"},
       {"name": "周啓揚", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第12選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第12選舉區", "area": "太平區", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "許書豪", "party": "台灣民眾黨"},
       {"name": "張玉嬿", "party": "民主進步黨"},
       {"name": "黃佳恬", "party": "中國國民黨"},
@@ -542,7 +539,7 @@
       {"name": "閻泰利", "party": "無黨籍"},
       {"name": "張書華", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第13選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第13選舉區", "area": "大里區、霧峰區", "seats": 6, "womenSeats": 1, "candidates": [
       {"name": "江和樹", "party": "台灣民眾黨"},
       {"name": "張芬郁", "party": "民主進步黨"},
       {"name": "林德宇", "party": "民主進步黨"},
@@ -550,35 +547,34 @@
       {"name": "蘇柏興", "party": "中國國民黨"},
       {"name": "林碧秀", "party": "中國國民黨"},
       {"name": "李天生", "party": "民主進步黨"},
-      {"name": "鄭伯其", "party": "無黨籍"},
       {"name": "鄒明諺", "party": "時代力量"},
       {"name": "段中仁", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第14選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第14選舉區", "area": "東勢區、石岡區、新社區、和平區", "seats": 2, "candidates": [
       {"name": "吳振嘉", "party": "中國國民黨"},
       {"name": "詹智翔", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第15選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第15選舉區", "area": "平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "吳建德", "party": "中國國民黨"},
       {"name": "楊玉花", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第16選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第16選舉區", "area": "和平區及大甲區、大安區、外埔區、清水區、后里區、豐原區、神岡區、大雅區、潭子區、東勢區、石岡區、新社區之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "古秀英", "party": "中國國民黨"},
       {"name": "黃永光", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第17選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第17選舉區", "area": "梧棲區、沙鹿區、龍井區、大肚區、烏日區、西屯區、南屯區、北屯區、北區、中區、西區、東區、南區、太平區、大里區、霧峰區之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "呂秀惠", "party": "無黨籍"},
       {"name": "柯靜志", "party": "無黨籍"},
       {"name": "朱元宏", "party": "中國國民黨"},
       {"name": "瓦力司．比尤", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第1選舉區", "area": "大甲區、大安區、外埔區", "seats": 3, "candidates": [
       {"name": "吳中源", "party": "民主進步黨"},
       {"name": "楊啓邦", "party": "中國國民黨"},
       {"name": "施志昌", "party": "民主進步黨"},
       {"name": "李文傑", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第2選舉區", "area": "清水區、梧棲區、沙鹿區", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "陳永祥", "party": "台灣民眾黨"},
       {"name": "王立任", "party": "民主進步黨"},
       {"name": "顏莉敏", "party": "中國國民黨"},
@@ -587,14 +583,14 @@
       {"name": "陳怡潔", "party": "民主進步黨"},
       {"name": "陳廷秀", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第3選舉區", "area": "龍井區、大肚區、烏日區", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "曾威", "party": "民主進步黨"},
       {"name": "張家銨", "party": "民主進步黨"},
       {"name": "林孟令", "party": "中國國民黨"},
       {"name": "吳瓊華", "party": "中國國民黨"},
       {"name": "林汝洲", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第4選舉區", "area": "后里區、豐原區", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "連小華", "party": "台灣民眾黨"},
       {"name": "邱愛珊", "party": "中國國民黨"},
       {"name": "蔡怡萱", "party": "民主進步黨"},
@@ -605,7 +601,7 @@
       {"name": "黃朝淵", "party": "親民黨"},
       {"name": "陳本添", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第5選舉區", "area": "神岡區、大雅區、潭子區", "seats": 6, "womenSeats": 1, "candidates": [
       {"name": "蕭隆澤", "party": "民主進步黨"},
       {"name": "吳呈賢", "party": "中國國民黨"},
       {"name": "陳清崧", "party": "中國國民黨"},
@@ -617,7 +613,7 @@
       {"name": "徐瑄灃", "party": "無黨籍"},
       {"name": "蔡慧君", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第6選舉區", "area": "西屯區", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "陳淑華", "party": "民主進步黨"},
       {"name": "劉芩妤", "party": "台灣民眾黨"},
       {"name": "楊大鋐", "party": "中國國民黨"},
@@ -625,14 +621,14 @@
       {"name": "黃馨慧", "party": "中國國民黨"},
       {"name": "張廖乃綸", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第7選舉區", "area": "南屯區", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "劉士州", "party": "中國國民黨"},
       {"name": "張耀中", "party": "民主進步黨"},
       {"name": "朱暖英", "party": "中國國民黨"},
       {"name": "何文海", "party": "民主進步黨"},
       {"name": "吳佩芸", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第8選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第8選舉區", "area": "北屯區", "seats": 7, "womenSeats": 1, "candidates": [
       {"name": "邱于珊", "party": "台灣民眾黨"},
       {"name": "賴順仁", "party": "中國國民黨"},
       {"name": "謝家宜", "party": "民主進步黨"},
@@ -647,13 +643,13 @@
       {"name": "許育璿", "party": "中國國民黨"},
       {"name": "楊政昱", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺中市", "district": "第9選舉區", "candidates": [
+    {"office": "council", "county": "臺中市", "district": "第9選舉區", "area": "北區", "seats": 3, "candidates": [
       {"name": "簡嘉佑", "party": "民主進步黨"},
       {"name": "陳文政", "party": "中國國民黨"},
       {"name": "陳政顯", "party": "中國國民黨"},
       {"name": "陳俞融", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "臺南市", "district": "第10選舉區", "candidates": [
+    {"office": "council", "county": "臺南市", "district": "第10選舉區", "area": "東區", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "歐政豪", "party": "中國國民黨"},
       {"name": "蔡筱薇", "party": "民主進步黨"},
       {"name": "陳金鐘", "party": "民主進步黨"},
@@ -662,7 +658,7 @@
       {"name": "陳進男", "party": "無黨籍"},
       {"name": "曾之婕", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺南市", "district": "第11選舉區", "candidates": [
+    {"office": "council", "county": "臺南市", "district": "第11選舉區", "area": "仁德區、歸仁區、關廟區、龍崎區", "seats": 6, "womenSeats": 1, "candidates": [
       {"name": "翁語含", "party": "中國國民黨"},
       {"name": "吳禹寰", "party": "無黨籍"},
       {"name": "鄭佳欣", "party": "民主進步黨"},
@@ -673,15 +669,15 @@
       {"name": "杜素吟", "party": "無黨籍"},
       {"name": "劉正昌", "party": "台聯黨"}
     ]},
-    {"office": "council", "county": "臺南市", "district": "第12選舉區", "candidates": [
+    {"office": "council", "county": "臺南市", "district": "第12選舉區", "area": "平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "李美素", "party": "無黨籍"},
       {"name": "吳東明", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "臺南市", "district": "第13選舉區", "candidates": [
+    {"office": "council", "county": "臺南市", "district": "第13選舉區", "area": "山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "施余興望Tjakumay Tagaw", "party": "無黨籍"},
       {"name": "辛晴晴Langui Tamapima", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "臺南市", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "臺南市", "district": "第1選舉區", "area": "後壁區、白河區、東山區、鹽水區、新營區、柳營區", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "李宗翰", "party": "民主進步黨"},
       {"name": "蔡育輝", "party": "中國國民黨"},
       {"name": "侯陸太", "party": "無黨籍"},
@@ -691,7 +687,7 @@
       {"name": "張新斛", "party": "無黨籍"},
       {"name": "陳詩薇", "party": "台灣民眾黨"}
     ]},
-    {"office": "council", "county": "臺南市", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "臺南市", "district": "第2選舉區", "area": "北門區、學甲區、將軍區、七股區、佳里區、西港區", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "謝舒凡", "party": "民主進步黨"},
       {"name": "蔡蘇秋金", "party": "民主進步黨"},
       {"name": "蔡秋蘭", "party": "民主進步黨"},
@@ -699,17 +695,17 @@
       {"name": "方一峰", "party": "中國國民黨"},
       {"name": "陳昆和", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺南市", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "臺南市", "district": "第3選舉區", "area": "下營區、六甲區、麻豆區、官田區、大內區", "seats": 3, "candidates": [
       {"name": "吳通龍", "party": "民主進步黨"},
       {"name": "陳秋宏", "party": "民主進步黨"},
       {"name": "尤淨寬", "party": "中國國民黨"},
       {"name": "施朝清", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺南市", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "臺南市", "district": "第4選舉區", "area": "楠西區、南化區、玉井區、左鎮區", "seats": 1, "candidates": [
       {"name": "賴懋慶", "party": "民主進步黨"},
       {"name": "周奕齊", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺南市", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "臺南市", "district": "第5選舉區", "area": "善化區、安定區、新市區、山上區、新化區", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "陳碧玉", "party": "民主進步黨"},
       {"name": "余柷青", "party": "民主進步黨"},
       {"name": "李偉智", "party": "民主進步黨"},
@@ -718,7 +714,7 @@
       {"name": "李文俊", "party": "無黨籍"},
       {"name": "廖俊道", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "臺南市", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "臺南市", "district": "第6選舉區", "area": "安南區", "seats": 6, "womenSeats": 1, "candidates": [
       {"name": "邱昭勝", "party": "無黨籍"},
       {"name": "郭信良", "party": "無黨籍"},
       {"name": "李中岑", "party": "中國國民黨"},
@@ -729,11 +725,10 @@
       {"name": "黃麗招", "party": "無黨籍"},
       {"name": "林緯", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺南市", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "臺南市", "district": "第7選舉區", "area": "永康區", "seats": 7, "womenSeats": 1, "candidates": [
       {"name": "黄肇輝", "party": "民主進步黨"},
       {"name": "林乃立", "party": "台灣民眾黨"},
       {"name": "周宏昌", "party": "中國國民黨"},
-      {"name": "曹暐國", "party": "無黨籍"},
       {"name": "楊中成", "party": "台聯黨"},
       {"name": "林燕祝", "party": "中國國民黨"},
       {"name": "陳秋萍", "party": "民主進步黨"},
@@ -743,7 +738,7 @@
       {"name": "吳依潔", "party": "台灣基進"},
       {"name": "林冠維", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺南市", "district": "第8選舉區", "candidates": [
+    {"office": "council", "county": "臺南市", "district": "第8選舉區", "area": "北區、中西區", "seats": 6, "womenSeats": 1, "candidates": [
       {"name": "沈震南", "party": "民主進步黨"},
       {"name": "江明宗", "party": "台灣民眾黨"},
       {"name": "林建南", "party": "民主進步黨"},
@@ -756,7 +751,7 @@
       {"name": "童小芸", "party": "中國國民黨"},
       {"name": "謝秉舟", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺南市", "district": "第9選舉區", "candidates": [
+    {"office": "council", "county": "臺南市", "district": "第9選舉區", "area": "安平區、南區", "seats": 6, "womenSeats": 1, "candidates": [
       {"name": "陳冠諭", "party": "中國國民黨"},
       {"name": "林依婷", "party": "民主進步黨"},
       {"name": "盧崑福", "party": "中國國民黨"},
@@ -767,7 +762,7 @@
       {"name": "蕭漍華", "party": "台灣民眾黨"},
       {"name": "李伯利", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "高雄市", "district": "第10選舉區", "candidates": [
+    {"office": "council", "county": "高雄市", "district": "第10選舉區", "area": "前鎮區、小港區", "seats": 7, "womenSeats": 1, "candidates": [
       {"name": "鄭光峰", "party": "民主進步黨"},
       {"name": "李政憲", "party": "司法改革黨"},
       {"name": "劉仙娥", "party": "勞動黨"},
@@ -782,7 +777,7 @@
       {"name": "湯茹婷", "party": "中國國民黨"},
       {"name": "張藝璉", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "高雄市", "district": "第11選舉區", "candidates": [
+    {"office": "council", "county": "高雄市", "district": "第11選舉區", "area": "大寮區、林園區", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "張耀中", "party": "民主進步黨"},
       {"name": "李雨庭", "party": "民主進步黨"},
       {"name": "王耀裕", "party": "中國國民黨"},
@@ -790,39 +785,39 @@
       {"name": "洪村銘", "party": "民主進步黨"},
       {"name": "邱于軒", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "高雄市", "district": "第12選舉區", "candidates": [
+    {"office": "council", "county": "高雄市", "district": "第12選舉區", "area": "平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "巫振興", "party": "民主進步黨"},
       {"name": "宋紹銘", "party": "中國國民黨"},
       {"name": "王義雄", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "高雄市", "district": "第13選舉區", "candidates": [
+    {"office": "council", "county": "高雄市", "district": "第13選舉區", "area": "那瑪夏區及甲仙區、杉林區、內門區、旗山區、茄萣區、湖內區、路竹區、永安區、彌陀區、梓官區、楠梓區、左營區、三民區之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "陳幸富", "party": "無黨籍"},
       {"name": "葛姵瑩", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "高雄市", "district": "第14選舉區", "candidates": [
+    {"office": "council", "county": "高雄市", "district": "第14選舉區", "area": "桃源區及六龜區、美濃區、阿蓮區、田寮區、岡山區、燕巢區、橋頭區、鼓山區、鹽埕區、前金區、新興區之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "林錫閔", "party": "無黨籍"},
       {"name": "洪英雄Salizan．binkinuan", "party": "中國國民黨"},
       {"name": "高忠德Takiludun．Anu", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "高雄市", "district": "第15選舉區", "candidates": [
+    {"office": "council", "county": "高雄市", "district": "第15選舉區", "area": "茂林區及大社區、大樹區、仁武區、鳥松區、鳳山區、大寮區、旗津區、苓雅區、前鎮區、小港區、林園區之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "金禾雅", "party": "無黨籍"},
       {"name": "陳奕蓁", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "高雄市", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "高雄市", "district": "第1選舉區", "area": "桃源區、那瑪夏區、甲仙區、六龜區、杉林區、內門區、旗山區、美濃區、茂林區", "seats": 3, "candidates": [
       {"name": "林富寶", "party": "民主進步黨"},
       {"name": "林慧欣", "party": "民主進步黨"},
       {"name": "林義迪", "party": "中國國民黨"},
       {"name": "鍾炳光", "party": "無黨籍"},
       {"name": "李振豪", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "高雄市", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "高雄市", "district": "第2選舉區", "area": "茄萣區、湖內區、路竹區、阿蓮區、田寮區", "seats": 3, "candidates": [
       {"name": "李柏融", "party": "無黨籍"},
       {"name": "黃明太", "party": "民主進步黨"},
       {"name": "鄭東元", "party": "無黨籍"},
       {"name": "陳琳潔", "party": "民主進步黨"},
       {"name": "李亞築", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "高雄市", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "高雄市", "district": "第3選舉區", "area": "永安區、岡山區、燕巢區、彌陀區、梓官區、橋頭區", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "張騏晟", "party": "無黨籍"},
       {"name": "林志誠", "party": "民主進步黨"},
       {"name": "方信淵", "party": "中國國民黨"},
@@ -832,7 +827,7 @@
       {"name": "黃韻涵", "party": "中國國民黨"},
       {"name": "蔣黃女", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "高雄市", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "高雄市", "district": "第4選舉區", "area": "楠梓區、左營區", "seats": 9, "womenSeats": 2, "candidates": [
       {"name": "陳冠宇", "party": "無黨籍"},
       {"name": "尹立", "party": "民主進步黨"},
       {"name": "陳麗珍", "party": "中國國民黨"},
@@ -846,7 +841,7 @@
       {"name": "李眉蓁", "party": "中國國民黨"},
       {"name": "白喬茵", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "高雄市", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "高雄市", "district": "第5選舉區", "area": "大社區、仁武區、鳥松區、大樹區", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "邱俊憲", "party": "民主進步黨"},
       {"name": "黃飛鳳", "party": "民主進步黨"},
       {"name": "張勝富", "party": "民主進步黨"},
@@ -855,13 +850,13 @@
       {"name": "吳利成", "party": "中國國民黨"},
       {"name": "陳惠君", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "高雄市", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "高雄市", "district": "第6選舉區", "area": "鼓山區、鹽埕區、旗津區", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "簡煥宗", "party": "民主進步黨"},
       {"name": "陳美雅", "party": "中國國民黨"},
       {"name": "李喬如", "party": "民主進步黨"},
       {"name": "蔡金晏", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "高雄市", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "高雄市", "district": "第7選舉區", "area": "三民區", "seats": 8, "womenSeats": 2, "candidates": [
       {"name": "鄭孟洳", "party": "民主進步黨"},
       {"name": "黃柏霖", "party": "中國國民黨"},
       {"name": "黃淑美", "party": "無黨籍"},
@@ -875,7 +870,7 @@
       {"name": "黃香菽", "party": "中國國民黨"},
       {"name": "林于凱", "party": "台灣民眾黨"}
     ]},
-    {"office": "council", "county": "高雄市", "district": "第8選舉區", "candidates": [
+    {"office": "council", "county": "高雄市", "district": "第8選舉區", "area": "前金區、新興區、苓雅區", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "黃文益", "party": "民主進步黨"},
       {"name": "郭建盟", "party": "民主進步黨"},
       {"name": "湯詠瑜", "party": "民主進步黨"},
@@ -886,7 +881,7 @@
       {"name": "黃裕庭", "party": "中國國民黨"},
       {"name": "黃鈺婷", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "高雄市", "district": "第9選舉區", "candidates": [
+    {"office": "council", "county": "高雄市", "district": "第9選舉區", "area": "鳳山區", "seats": 8, "womenSeats": 2, "candidates": [
       {"name": "林智鴻", "party": "民主進步黨"},
       {"name": "鄭安秝", "party": "中國國民黨"},
       {"name": "蘇致榮", "party": "民主進步黨"},
@@ -898,7 +893,7 @@
       {"name": "鍾易仲", "party": "中國國民黨"},
       {"name": "徐尚賢", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "基隆市", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "基隆市", "district": "第1選舉區", "area": "中正區", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "藍敏煌", "party": "中國國民黨"},
       {"name": "林孟泓", "party": "無黨籍"},
       {"name": "呂美玲", "party": "中國國民黨"},
@@ -908,7 +903,7 @@
       {"name": "王珍玨", "party": "無黨籍"},
       {"name": "江清容", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "基隆市", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "基隆市", "district": "第2選舉區", "area": "信義區", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "李嘉濠", "party": "無黨籍"},
       {"name": "何淑萍", "party": "中國國民黨"},
       {"name": "韓世昱", "party": "中國國民黨"},
@@ -919,14 +914,13 @@
       {"name": "陳宜", "party": "民主進步黨"},
       {"name": "林廷奕", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "基隆市", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "基隆市", "district": "第3選舉區", "area": "仁愛區", "seats": 3, "candidates": [
       {"name": "林杏潔", "party": "無黨籍"},
       {"name": "曾維祥", "party": "中國國民黨"},
-      {"name": "張芳麗", "party": "無黨籍"},
       {"name": "鄭文婷", "party": "民主進步黨"},
       {"name": "莊傑宇", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "基隆市", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "基隆市", "district": "第4選舉區", "area": "中山區", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "李昀靜", "party": "無黨籍"},
       {"name": "莊敬聖", "party": "無黨籍"},
       {"name": "林祐德", "party": "中國國民黨"},
@@ -937,7 +931,7 @@
       {"name": "宋瑋莉", "party": "中國國民黨"},
       {"name": "郭美秀", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "基隆市", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "基隆市", "district": "第5選舉區", "area": "安樂區", "seats": 7, "womenSeats": 1, "candidates": [
       {"name": "張家馨", "party": "中國國民黨"},
       {"name": "黃永翔", "party": "無黨籍"},
       {"name": "俞叁發", "party": "中國國民黨"},
@@ -951,14 +945,14 @@
       {"name": "吳驊珈", "party": "民主進步黨"},
       {"name": "劉韋巡", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "基隆市", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "基隆市", "district": "第6選舉區", "area": "暖暖區", "seats": 3, "candidates": [
       {"name": "莫璦緁", "party": "台灣進步黨"},
       {"name": "連恩典", "party": "中國國民黨"},
       {"name": "蔡長宏", "party": "無黨籍"},
       {"name": "陳冠羽", "party": "無黨籍"},
       {"name": "朱書昕", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "基隆市", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "基隆市", "district": "第7選舉區", "area": "七堵區", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "蔡旺璉", "party": "中國國民黨"},
       {"name": "楊秀玉", "party": "親民黨"},
       {"name": "陳安淇", "party": "無黨籍"},
@@ -966,17 +960,17 @@
       {"name": "張耿輝", "party": "無黨籍"},
       {"name": "戴璟安", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "基隆市", "district": "第8選舉區", "candidates": [
+    {"office": "council", "county": "基隆市", "district": "第8選舉區", "area": "平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "陳明建", "party": "無黨籍"},
       {"name": "拔耐．茹妮老王", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "基隆市", "district": "第9選舉區", "candidates": [
+    {"office": "council", "county": "基隆市", "district": "第9選舉區", "area": "山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "高願孝", "party": "民主進步黨"},
       {"name": "徐馬政妘", "party": "無黨籍"},
       {"name": "林崇道 Motu Quyat", "party": "無黨籍"},
       {"name": "高李茂俊", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "新竹市", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "新竹市", "district": "第1選舉區", "area": "東門里、榮光里、成功里、育賢里、中正里、親仁里、文華里、復中里、三民里、公園里、東園里、東山里、東勢里、光復里、前溪里、水源里、千甲里、綠水里、埔頂里、仙宮里、龍山里、新莊里、關新里、仙水里、金山里、建功里、光明里、立功里、軍功里、武功里、豐功里、科園里、關東里、建華里、錦華里、復興里", "seats": 12, "womenSeats": 3, "candidates": [
       {"name": "黃文政", "party": "無黨籍"},
       {"name": "劉崇顯", "party": "無黨籍"},
       {"name": "劉詳樽", "party": "無黨籍"},
@@ -997,7 +991,7 @@
       {"name": "陳珍裕", "party": "無黨籍"},
       {"name": "鍾淑英", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "新竹市", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "新竹市", "district": "第2選舉區", "area": "南門里、關帝里、南市里、福德里、振興里、新興里、竹蓮里、南大里、寺前里、下竹里、頂竹里、光鎮里、高峰里、柴橋里、新光里、湖濱里、明湖里", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "施乃如", "party": "民主進步黨"},
       {"name": "李玫", "party": "台灣民眾黨"},
       {"name": "陳鶴文", "party": "無黨籍"},
@@ -1005,12 +999,12 @@
       {"name": "許修睿", "party": "中國國民黨"},
       {"name": "田雅芳", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "新竹市", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "新竹市", "district": "第3選舉區", "area": "客雅里、中雅里、育英里、曲溪里、西雅里、南勢里、大鵬里、西門里、仁德里、潛園里、中央里、崇禮里、石坊里、興南里、台溪里", "seats": 2, "candidates": [
       {"name": "施淑婷", "party": "台灣民眾黨"},
       {"name": "陳思妤", "party": "中國國民黨"},
       {"name": "陳建名", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "新竹市", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "新竹市", "district": "第4選舉區", "area": "北門里、中興里、大同里、中山里、長和里、新民里、民富里、水田里、文雅里、光田里、士林里、福林里、古賢里、湳雅里、舊社里、武陵里、南寮里、舊港里、康樂里、港北里、中寮里、海濱里、磐石里、新雅里、光華里、金華里、境福里、金竹里、湳中里、金雅里", "seats": 9, "womenSeats": 2, "candidates": [
       {"name": "彭昆耀", "party": "無黨籍"},
       {"name": "王雲慶", "party": "中國國民黨"},
       {"name": "蕭志潔", "party": "中國國民黨"},
@@ -1025,7 +1019,7 @@
       {"name": "孫宗孝", "party": "無黨籍"},
       {"name": "蔡文盛", "party": "台灣民眾黨"}
     ]},
-    {"office": "council", "county": "新竹市", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "新竹市", "district": "第5選舉區", "area": "頂埔里、中埔里、埔前里、牛埔里、樹下里、浸水里、虎林里、虎山里、港南里、大庄里、美山里、朝山里、東香里、香山里、香村里、海山里、鹽水里、內湖里、南港里、中隘里、南隘里、大湖里、茄苳里、頂福里", "seats": 6, "womenSeats": 1, "candidates": [
       {"name": "吳若茵", "party": "中國國民黨"},
       {"name": "吳國寶", "party": "無黨籍"},
       {"name": "葉國文", "party": "台灣民眾黨"},
@@ -1035,42 +1029,42 @@
       {"name": "廖子齊", "party": "時代力量"},
       {"name": "林盈徹", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "新竹市", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "新竹市", "district": "第6選舉區", "area": "平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "李雅雯", "party": "中國國民黨"},
       {"name": "林慈愛", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "新竹市", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "新竹市", "district": "第7選舉區", "area": "山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "趙若芸", "party": "台灣民眾黨"},
       {"name": "林夏陞", "party": "中國國民黨"},
       {"name": "楊家玲", "party": "無黨籍"},
       {"name": "雲翔", "party": "無黨籍"},
       {"name": "卡伊．馬賴", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "新竹縣", "district": "第10選舉區", "candidates": [
+    {"office": "council", "county": "新竹縣", "district": "第10選舉區", "area": "寶山鄉", "seats": 1, "candidates": [
       {"name": "邱坤桶", "party": "中國國民黨"},
       {"name": "何時名", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "新竹縣", "district": "第11選舉區", "candidates": [
+    {"office": "council", "county": "新竹縣", "district": "第11選舉區", "area": "北埔鄉、峨眉鄉", "seats": 1, "candidates": [
       {"name": "王辰翔", "party": "中國國民黨"},
       {"name": "范文鴻", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "新竹縣", "district": "第12選舉區", "candidates": [
+    {"office": "council", "county": "新竹縣", "district": "第12選舉區", "area": "平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "法隆伊佑", "party": "無黨籍"},
       {"name": "林秉君kaying．kuying．kalang", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "新竹縣", "district": "第13選舉區", "candidates": [
+    {"office": "council", "county": "新竹縣", "district": "第13選舉區", "area": "尖石鄉及竹北市、湖口鄉、新豐鄉、關西鎮、新埔鎮、橫山鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "曾國大 Masaw．Moto", "party": "中國國民黨"},
       {"name": "羅恩加", "party": "無黨籍"},
       {"name": "林世偉", "party": "無黨籍"},
       {"name": "范經生", "party": "無黨籍"},
       {"name": "高忠正", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "新竹縣", "district": "第14選舉區", "candidates": [
+    {"office": "council", "county": "新竹縣", "district": "第14選舉區", "area": "五峰鄉及芎林鄉、竹東鎮、寶山鄉、北埔鄉、峨眉鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "張雁萍", "party": "無黨籍"},
       {"name": "Laling Yumin", "party": "民主進步黨"},
       {"name": "張益生", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "新竹縣", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "新竹縣", "district": "第1選舉區", "area": "竹北市尚義里、崇義里、新港里、大義里、白地里、大眉里、麻園里、溪州里、新庄里、聯興里、泰和里、新社里、新國里、竹義里、新崙里", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "陳凱榮", "party": "中國國民黨"},
       {"name": "王炳漢", "party": "中國國民黨"},
       {"name": "李雅芬", "party": "時代力量"},
@@ -1078,7 +1072,7 @@
       {"name": "陳秀玲", "party": "無黨籍"},
       {"name": "鄭美琴", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "新竹縣", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "新竹縣", "district": "第2選舉區", "area": "竹北市竹北里、竹仁里、福德里、北崙里、中崙里、文化里、興安里、斗崙里、北興里、十興里、鹿場里、東興里、中興里、東平里、東海里、隘口里", "seats": 9, "womenSeats": 2, "candidates": [
       {"name": "游雅婷", "party": "台灣民眾黨"},
       {"name": "歐陽霆", "party": "民主進步黨"},
       {"name": "邵啟月", "party": "民主進步黨"},
@@ -1094,7 +1088,7 @@
       {"name": "范揚琪", "party": "無黨籍"},
       {"name": "邱靖雅", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "新竹縣", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "新竹縣", "district": "第3選舉區", "area": "湖口鄉", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "甄克堅", "party": "中國國民黨"},
       {"name": "余筱菁", "party": "民主進步黨"},
       {"name": "羅美文", "party": "勞動黨"},
@@ -1107,7 +1101,7 @@
       {"name": "楊勝馭", "party": "無黨籍"},
       {"name": "戴翊如", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "新竹縣", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "新竹縣", "district": "第4選舉區", "area": "新豐鄉", "seats": 3, "candidates": [
       {"name": "徐勝凌", "party": "台灣民眾黨"},
       {"name": "何昌臨", "party": "無黨籍"},
       {"name": "徐源發", "party": "中國國民黨"},
@@ -1115,23 +1109,23 @@
       {"name": "吳傳地", "party": "民主進步黨"},
       {"name": "林茂青", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "新竹縣", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "新竹縣", "district": "第5選舉區", "area": "關西鎮", "seats": 2, "candidates": [
       {"name": "羅仕琦", "party": "中國國民黨"},
       {"name": "徐瑜新", "party": "中國國民黨"},
       {"name": "蔡澄均", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "新竹縣", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "新竹縣", "district": "第6選舉區", "area": "新埔鎮", "seats": 2, "candidates": [
       {"name": "黃路加", "party": "中國國民黨"},
       {"name": "呂宛庭", "party": "無黨籍"},
       {"name": "陳新源", "party": "勞動黨"}
     ]},
-    {"office": "council", "county": "新竹縣", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "新竹縣", "district": "第7選舉區", "area": "橫山鄉、尖石鄉", "seats": 1, "candidates": [
       {"name": "張良印", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "新竹縣", "district": "第8選舉區", "candidates": [
+    {"office": "council", "county": "新竹縣", "district": "第8選舉區", "area": "芎林鄉", "seats": 1, "candidates": [
       {"name": "黃正彪", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "新竹縣", "district": "第9選舉區", "candidates": [
+    {"office": "council", "county": "新竹縣", "district": "第9選舉區", "area": "竹東鎮、五峰鄉", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "羅俊傑", "party": "中國國民黨"},
       {"name": "黃豪杰", "party": "中國國民黨"},
       {"name": "上官秋燕", "party": "中國國民黨"},
@@ -1142,7 +1136,7 @@
       {"name": "鍾心渝", "party": "台灣民眾黨"},
       {"name": "楊昌德", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "苗栗縣", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "苗栗縣", "district": "第1選舉區", "area": "苗栗市、公館鄉、頭屋鄉", "seats": 9, "womenSeats": 2, "candidates": [
       {"name": "魏漢相", "party": "無黨籍"},
       {"name": "林志豪", "party": "無黨籍"},
       {"name": "彭賢淳", "party": "無黨籍"},
@@ -1159,12 +1153,12 @@
       {"name": "鄭碧玉", "party": "中國國民黨"},
       {"name": "張志宇", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "苗栗縣", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "苗栗縣", "district": "第2選舉區", "area": "銅鑼鄉、三義鄉、西湖鄉", "seats": 3, "candidates": [
       {"name": "謝昌年", "party": "無黨籍"},
       {"name": "黎尚安", "party": "中國國民黨"},
       {"name": "羅貴星", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "苗栗縣", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "苗栗縣", "district": "第3選舉區", "area": "通霄鎮、苑裡鎮", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "翁杰", "party": "民主進步黨"},
       {"name": "陳薈茗", "party": "無黨籍"},
       {"name": "郭汶沂", "party": "無黨籍"},
@@ -1173,7 +1167,7 @@
       {"name": "周玉滿", "party": "無黨籍"},
       {"name": "徐瑞轅", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "苗栗縣", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "苗栗縣", "district": "第4選舉區", "area": "後龍鎮、造橋鄉、竹南鎮", "seats": 9, "womenSeats": 2, "candidates": [
       {"name": "李文斌", "party": "中國國民黨"},
       {"name": "林寶珠", "party": "中國國民黨"},
       {"name": "鄭秋風", "party": "無黨籍"},
@@ -1187,7 +1181,7 @@
       {"name": "張佳玲", "party": "無黨籍"},
       {"name": "廖英利", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "苗栗縣", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "苗栗縣", "district": "第5選舉區", "area": "頭份市、三灣鄉、南庄鄉", "seats": 8, "womenSeats": 2, "candidates": [
       {"name": "古益弦", "party": "無黨籍"},
       {"name": "彭茜柔", "party": "無黨籍"},
       {"name": "陳詩弦", "party": "民主進步黨"},
@@ -1201,20 +1195,20 @@
       {"name": "温俊勇", "party": "無黨籍"},
       {"name": "林志學", "party": "台灣民眾黨"}
     ]},
-    {"office": "council", "county": "苗栗縣", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "苗栗縣", "district": "第6選舉區", "area": "大湖鄉、獅潭鄉、卓蘭鎮、泰安鄉", "seats": 2, "candidates": [
       {"name": "楊恭林", "party": "無黨籍"},
       {"name": "詹錦章", "party": "無黨籍"},
       {"name": "盛瑛", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "苗栗縣", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "苗栗縣", "district": "第7選舉區", "area": "平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "風志雄", "party": "無黨籍"},
       {"name": "朱仲一 Kalih．Tahes．Didiyun", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "苗栗縣", "district": "第8選舉區", "candidates": [
+    {"office": "council", "county": "苗栗縣", "district": "第8選舉區", "area": "山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "黃茹君Haking Yumaʼ", "party": "無黨籍"},
       {"name": "劉美蘭 Iwan．Sigiy", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "彰化縣", "district": "第10選舉區", "candidates": [
+    {"office": "council", "county": "彰化縣", "district": "第10選舉區", "area": "山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "金凱傑 Ilia．Nangavulan", "party": "中國國民黨"},
       {"name": "高世鴻", "party": "無黨籍"},
       {"name": "吳秋祿", "party": "中國國民黨"},
@@ -1224,7 +1218,7 @@
       {"name": "肯當．迪洛安", "party": "無黨籍"},
       {"name": "高采翎", "party": "台灣民眾黨"}
     ]},
-    {"office": "council", "county": "彰化縣", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "彰化縣", "district": "第1選舉區", "area": "彰化市、花壇鄉、芬園鄉", "seats": 12, "womenSeats": 3, "candidates": [
       {"name": "莊陞漢", "party": "民主進步黨"},
       {"name": "許原龍", "party": "中國國民黨"},
       {"name": "謝宗樺", "party": "無黨籍"},
@@ -1241,7 +1235,7 @@
       {"name": "陳銌銌", "party": "無黨籍"},
       {"name": "李成濟", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "彰化縣", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "彰化縣", "district": "第2選舉區", "area": "鹿港鎮、福興鄉、秀水鄉", "seats": 7, "womenSeats": 1, "candidates": [
       {"name": "林英嘉", "party": "無黨籍"},
       {"name": "蔡匡威", "party": "民主進步黨"},
       {"name": "許志宏", "party": "中國國民黨"},
@@ -1252,7 +1246,7 @@
       {"name": "王信筌", "party": "中國國民黨"},
       {"name": "郭燕陵", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "彰化縣", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "彰化縣", "district": "第3選舉區", "area": "和美鎮、伸港鄉、線西鄉", "seats": 6, "womenSeats": 1, "candidates": [
       {"name": "蕭文雄", "party": "民主進步黨"},
       {"name": "王國忠", "party": "無黨籍"},
       {"name": "林宗翰", "party": "無黨籍"},
@@ -1264,7 +1258,7 @@
       {"name": "蘇智弦", "party": "台灣民眾黨"},
       {"name": "柯振杯", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "彰化縣", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "彰化縣", "district": "第4選舉區", "area": "員林市、大村鄉、永靖鄉", "seats": 9, "womenSeats": 2, "candidates": [
       {"name": "賴澤民", "party": "民主進步黨"},
       {"name": "張欣倩", "party": "民主進步黨"},
       {"name": "詹雅婷", "party": "無黨籍"},
@@ -1279,7 +1273,7 @@
       {"name": "林俊毅", "party": "無黨籍"},
       {"name": "曹嘉豪", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "彰化縣", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "彰化縣", "district": "第5選舉區", "area": "溪湖鎮、埔鹽鄉、埔心鄉", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "楊仁彬", "party": "中國國民黨"},
       {"name": "陳玉姫", "party": "中國國民黨"},
       {"name": "張春洋", "party": "無黨籍"},
@@ -1287,7 +1281,7 @@
       {"name": "黃佳惠", "party": "中國國民黨"},
       {"name": "許文萍", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "彰化縣", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "彰化縣", "district": "第6選舉區", "area": "田中鎮、社頭鄉、二水鄉", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "許書維", "party": "民主進步黨"},
       {"name": "蕭妤亘", "party": "中國國民黨"},
       {"name": "彭世和", "party": "中國國民黨"},
@@ -1295,7 +1289,7 @@
       {"name": "詹琬惠", "party": "民主進步黨"},
       {"name": "鄭俊雄", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "彰化縣", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "彰化縣", "district": "第7選舉區", "area": "北斗鎮、田尾鄉、埤頭鄉、溪州鄉", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "陳世凱", "party": "無黨籍"},
       {"name": "江熊一楓", "party": "無黨籍"},
       {"name": "鄭朝元", "party": "無黨籍"},
@@ -1305,7 +1299,7 @@
       {"name": "李浩誠", "party": "中國國民黨"},
       {"name": "謝典霖", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "彰化縣", "district": "第8選舉區", "candidates": [
+    {"office": "council", "county": "彰化縣", "district": "第8選舉區", "area": "二林鎮、大城鄉、芳苑鄉、竹塘鄉", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "謝淑如", "party": "無黨籍"},
       {"name": "吳淑娟", "party": "無黨籍"},
       {"name": "洪子超", "party": "民主進步黨"},
@@ -1316,11 +1310,11 @@
       {"name": "洪建興", "party": "無黨籍"},
       {"name": "黄淑儀", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "彰化縣", "district": "第9選舉區", "candidates": [
+    {"office": "council", "county": "彰化縣", "district": "第9選舉區", "area": "平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "陳榮妹", "party": "中國國民黨"},
       {"name": "陳明義", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "南投縣", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "南投縣", "district": "第1選舉區", "area": "南投市、名間鄉", "seats": 10, "womenSeats": 2, "candidates": [
       {"name": "陳聰鑑", "party": "無黨籍"},
       {"name": "林儒暘", "party": "中國國民黨"},
       {"name": "許纘融", "party": "無黨籍"},
@@ -1339,7 +1333,7 @@
       {"name": "史雪燕", "party": "無黨籍"},
       {"name": "吳淳祐", "party": "台灣民眾黨"}
     ]},
-    {"office": "council", "county": "南投縣", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "南投縣", "district": "第2選舉區", "area": "草屯鎮、中寮鄉", "seats": 9, "womenSeats": 2, "candidates": [
       {"name": "張至順", "party": "無黨籍"},
       {"name": "廖梓佑", "party": "無黨籍"},
       {"name": "洪巧娟", "party": "民主進步黨"},
@@ -1354,7 +1348,7 @@
       {"name": "李帛璋", "party": "民主進步黨"},
       {"name": "林友友", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "南投縣", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "南投縣", "district": "第3選舉區", "area": "集集鎮、水里鄉、魚池鄉、信義鄉", "seats": 3, "candidates": [
       {"name": "王秋淑", "party": "民主進步黨"},
       {"name": "謝明謀", "party": "中國國民黨"},
       {"name": "蕭志全", "party": "無黨籍"},
@@ -1362,7 +1356,7 @@
       {"name": "黃馨瑩", "party": "無黨籍"},
       {"name": "黃春麟", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "南投縣", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "南投縣", "district": "第4選舉區", "area": "竹山鎮、鹿谷鄉", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "何勝豐", "party": "無黨籍"},
       {"name": "李廣演", "party": "勞動黨"},
       {"name": "林哲生", "party": "無黨籍"},
@@ -1373,7 +1367,7 @@
       {"name": "陳玉鈴", "party": "民主進步黨"},
       {"name": "劉子維", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "南投縣", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "南投縣", "district": "第5選舉區", "area": "埔里鎮、國姓鄉、仁愛鄉", "seats": 7, "womenSeats": 1, "candidates": [
       {"name": "戴世詮", "party": "無黨籍"},
       {"name": "羅俞欣", "party": "中國國民黨"},
       {"name": "許文忠", "party": "勞動黨"},
@@ -1385,19 +1379,19 @@
       {"name": "陳宜君", "party": "民主進步黨"},
       {"name": "黃國裕", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "南投縣", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "南投縣", "district": "第6選舉區", "area": "平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "石慶龍Rungquan‧Lhkatafatu", "party": "無黨籍"},
       {"name": "江秉翰", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "南投縣", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "南投縣", "district": "第7選舉區", "area": "信義鄉及南投市、竹山鎮、集集鎮、名間鄉、鹿谷鄉、水里鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "王榮儀", "party": "無黨籍"},
       {"name": "田東憲", "party": "無黨籍"},
       {"name": "全文才 Balan‧Soqluman", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "南投縣", "district": "第8選舉區", "candidates": [
+    {"office": "council", "county": "南投縣", "district": "第8選舉區", "area": "仁愛鄉及草屯鎮、中寮鄉、魚池鄉、國姓鄉、埔里鎮之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "林庭秝 Ali Walis", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "雲林縣", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "雲林縣", "district": "第1選舉區", "area": "斗六市、莿桐鄉、林內鄉", "seats": 10, "womenSeats": 2, "candidates": [
       {"name": "廖昶淳", "party": "時代力量"},
       {"name": "黃釋瑩", "party": "無黨籍"},
       {"name": "陳永修", "party": "中國國民黨"},
@@ -1417,7 +1411,7 @@
       {"name": "楊朝祈", "party": "無黨籍"},
       {"name": "陳芳盈", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "雲林縣", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "雲林縣", "district": "第2選舉區", "area": "斗南鎮、古坑鄉、大埤鄉", "seats": 6, "womenSeats": 1, "candidates": [
       {"name": "陳麗蘭", "party": "無黨籍"},
       {"name": "賴明源", "party": "無黨籍"},
       {"name": "王秋足", "party": "中國國民黨"},
@@ -1428,7 +1422,7 @@
       {"name": "林森寳", "party": "無黨籍"},
       {"name": "吳延豐", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "雲林縣", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "雲林縣", "district": "第3選舉區", "area": "虎尾鎮、土庫鎮、褒忠鄉、元長鄉", "seats": 9, "womenSeats": 2, "candidates": [
       {"name": "陳乙辰", "party": "台灣民眾黨"},
       {"name": "黃美瑤", "party": "無黨籍"},
       {"name": "魏順興", "party": "無黨籍"},
@@ -1441,10 +1435,9 @@
       {"name": "林文彬", "party": "民主進步黨"},
       {"name": "王鈺齊", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "雲林縣", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "雲林縣", "district": "第4選舉區", "area": "西螺鎮、二崙鄉、崙背鄉", "seats": 6, "womenSeats": 1, "candidates": [
       {"name": "廖子漢", "party": "無黨籍"},
       {"name": "廖偉晴", "party": "中國國民黨"},
-      {"name": "鍾任明", "party": "中國國民黨"},
       {"name": "廖庭輝", "party": "無黨籍"},
       {"name": "洪如萍", "party": "民主進步黨"},
       {"name": "游淑雲", "party": "無黨籍"},
@@ -1454,7 +1447,7 @@
       {"name": "李明哲", "party": "中國國民黨"},
       {"name": "楊智凱", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "雲林縣", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "雲林縣", "district": "第5選舉區", "area": "臺西鄉、麥寮鄉、東勢鄉、四湖鄉", "seats": 7, "womenSeats": 1, "candidates": [
       {"name": "郭佩瑄", "party": "民主進步黨"},
       {"name": "林宜豊", "party": "台灣民眾黨"},
       {"name": "蔡永順", "party": "民主進步黨"},
@@ -1466,7 +1459,7 @@
       {"name": "蔡梨美", "party": "無黨籍"},
       {"name": "林建鴻", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "雲林縣", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "雲林縣", "district": "第6選舉區", "area": "北港鎮、口湖鄉、水林鄉", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "蔡孟真", "party": "民主進步黨"},
       {"name": "蔡岳儒", "party": "民主進步黨"},
       {"name": "黃文祥", "party": "無黨籍"},
@@ -1475,18 +1468,18 @@
       {"name": "王承宏", "party": "無黨籍"},
       {"name": "王新堯", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "雲林縣", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "雲林縣", "district": "第7選舉區", "area": "平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "呂佶娜 Aniu．Wuhsin", "party": "中國國民黨"},
       {"name": "周志祥 Kacaw．Kaco", "party": "無黨籍"},
       {"name": "鄭玫惠", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "雲林縣", "district": "第8選舉區", "candidates": [
+    {"office": "council", "county": "雲林縣", "district": "第8選舉區", "area": "山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "高瑛翠", "party": "無黨籍"},
       {"name": "蔡嘉峻 Pisaw Hakaw", "party": "無黨籍"},
       {"name": "李丘威達", "party": "無黨籍"},
       {"name": "張忠豪", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "嘉義市", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "嘉義市", "district": "第1選舉區", "area": "東區", "seats": 10, "womenSeats": 2, "candidates": [
       {"name": "凌子楚", "party": "民主進步黨"},
       {"name": "郭文居", "party": "無黨籍"},
       {"name": "何苡睿", "party": "台聯黨"},
@@ -1504,7 +1497,7 @@
       {"name": "傅大偉", "party": "中國國民黨"},
       {"name": "洪斐昭", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "嘉義市", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "嘉義市", "district": "第2選舉區", "area": "西區", "seats": 13, "womenSeats": 3, "candidates": [
       {"name": "陳嘉弘", "party": "無黨籍"},
       {"name": "陳姿妏", "party": "無黨籍"},
       {"name": "鄭光宏", "party": "中國國民黨"},
@@ -1527,7 +1520,7 @@
       {"name": "魏志軒", "party": "無黨籍"},
       {"name": "孫貫志", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "嘉義縣", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "嘉義縣", "district": "第1選舉區", "area": "鹿草鄉、太保市、水上鄉", "seats": 8, "womenSeats": 2, "candidates": [
       {"name": "江佩曄", "party": "民主進步黨"},
       {"name": "黃榮俊", "party": "民主進步黨"},
       {"name": "賴瓊如", "party": "無黨籍"},
@@ -1538,7 +1531,7 @@
       {"name": "黃惠汝", "party": "民主進步黨"},
       {"name": "楊秀琴", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "嘉義縣", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "嘉義縣", "district": "第2選舉區", "area": "民雄鄉、新港鄉", "seats": 8, "womenSeats": 2, "candidates": [
       {"name": "廖昱婧", "party": "無黨籍"},
       {"name": "林岱杰", "party": "無黨籍"},
       {"name": "許韶珍", "party": "無黨籍"},
@@ -1554,7 +1547,7 @@
       {"name": "魏彰儀", "party": "無黨籍"},
       {"name": "陳文忠", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "嘉義縣", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "嘉義縣", "district": "第3選舉區", "area": "大林鎮、溪口鄉、梅山鄉", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "孫維聰", "party": "民主進步黨"},
       {"name": "吳思蓉", "party": "中國國民黨"},
       {"name": "江明赫", "party": "無黨籍"},
@@ -1563,7 +1556,7 @@
       {"name": "江志明", "party": "民主進步黨"},
       {"name": "簡志偉", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "嘉義縣", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "嘉義縣", "district": "第4選舉區", "area": "朴子市、六腳鄉、東石鄉", "seats": 6, "womenSeats": 1, "candidates": [
       {"name": "黃鈺惠", "party": "民主進步黨"},
       {"name": "萬家甫", "party": "台灣民眾黨"},
       {"name": "李佳豪", "party": "中國國民黨"},
@@ -1573,60 +1566,59 @@
       {"name": "潘麗惠", "party": "無黨籍"},
       {"name": "蔡政宜", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "嘉義縣", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "嘉義縣", "district": "第5選舉區", "area": "布袋鎮、義竹鄉", "seats": 3, "candidates": [
       {"name": "黃金茂", "party": "無黨籍"},
       {"name": "陳鳳梅", "party": "民主進步黨"},
       {"name": "翁聰賢", "party": "民主進步黨"},
       {"name": "蔡信典", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "嘉義縣", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "嘉義縣", "district": "第6選舉區", "area": "中埔鄉、竹崎鄉、番路鄉、大埔鄉、阿里山鄉", "seats": 7, "womenSeats": 1, "candidates": [
       {"name": "曾亮哲", "party": "民主進步黨"},
       {"name": "詹黃素蓮", "party": "中國國民黨"},
       {"name": "陳柏麟", "party": "民主進步黨"},
       {"name": "莊竣傑", "party": "無黨籍"},
-      {"name": "何博倫", "party": "無黨籍"},
       {"name": "江季珍", "party": "民主進步黨"},
       {"name": "羅士洋", "party": "民主進步黨"},
       {"name": "詹志暉", "party": "無黨籍"},
       {"name": "張明達", "party": "民主進步黨"},
       {"name": "張倖鈺", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "嘉義縣", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "嘉義縣", "district": "第7選舉區", "area": "山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "武清山", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "屏東縣", "district": "第10選舉區", "candidates": [
+    {"office": "council", "county": "屏東縣", "district": "第10選舉區", "area": "瑪家鄉及屏東市、長治鄉、麟洛鄉、內埔鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "高惠芬", "party": "中國國民黨"},
       {"name": "蕭惠美Zuljezulje Qapulu", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "屏東縣", "district": "第11選舉區", "candidates": [
+    {"office": "council", "county": "屏東縣", "district": "第11選舉區", "area": "泰武鄉及萬丹鄉、萬巒鄉、竹田鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "何長成", "party": "無黨籍"},
       {"name": "邱登星Adrucangalj·Drusaljiyan", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "屏東縣", "district": "第12選舉區", "candidates": [
+    {"office": "council", "county": "屏東縣", "district": "第12選舉區", "area": "來義鄉及潮州鎮、新埤鄉、新園鄉、崁頂鄉、南州鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "越秋女", "party": "無黨籍"},
       {"name": "鄭鴻耀", "party": "無黨籍"},
       {"name": "莊景星", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "屏東縣", "district": "第13選舉區", "candidates": [
+    {"office": "council", "county": "屏東縣", "district": "第13選舉區", "area": "春日鄉及東港鎮、枋寮鄉、林邊鄉、佳冬鄉、琉球鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "周陳曉玟", "party": "無黨籍"},
       {"name": "鄭志偉", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "屏東縣", "district": "第14選舉區", "candidates": [
+    {"office": "council", "county": "屏東縣", "district": "第14選舉區", "area": "獅子鄉及枋山鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "周英傑", "party": "中國國民黨"},
       {"name": "李振榮", "party": "無黨籍"},
       {"name": "侯廉聰 Aljim Pacikel", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "屏東縣", "district": "第15選舉區", "candidates": [
+    {"office": "council", "county": "屏東縣", "district": "第15選舉區", "area": "牡丹鄉及恆春鎮、車城鄉、滿州鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "許金吉", "party": "中國國民黨"},
       {"name": "洪亞男", "party": "無黨籍"},
       {"name": "林明德", "party": "無黨籍"},
       {"name": "劉忠義", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "屏東縣", "district": "第16選舉區", "candidates": [
+    {"office": "council", "county": "屏東縣", "district": "第16選舉區", "area": "霧臺鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "杜玉慧", "party": "無黨籍"},
       {"name": "杜仁勇", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "屏東縣", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "屏東縣", "district": "第1選舉區", "area": "屏東市", "seats": 12, "womenSeats": 3, "candidates": [
       {"name": "蔣月惠", "party": "無黨籍"},
       {"name": "張平原", "party": "無黨籍"},
       {"name": "林建志", "party": "無黨籍"},
@@ -1648,7 +1640,7 @@
       {"name": "劉振隆", "party": "無黨籍"},
       {"name": "陳韋強", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "屏東縣", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "屏東縣", "district": "第2選舉區", "area": "長治鄉、麟洛鄉、九如鄉、里港鄉、鹽埔鄉、高樹鄉、三地門鄉、霧臺鄉、瑪家鄉", "seats": 8, "womenSeats": 2, "candidates": [
       {"name": "宋麗華", "party": "中國國民黨"},
       {"name": "盧文瑞", "party": "中國國民黨"},
       {"name": "莊瓊如", "party": "無黨籍"},
@@ -1661,7 +1653,7 @@
       {"name": "蘇孟淳", "party": "無黨籍"},
       {"name": "鍾慶平", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "屏東縣", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "屏東縣", "district": "第3選舉區", "area": "潮州鎮、萬巒鄉、內埔鄉、竹田鄉、新埤鄉、枋寮鄉、泰武鄉、來義鄉、春日鄉", "seats": 10, "womenSeats": 2, "candidates": [
       {"name": "魏楓淩", "party": "無黨籍"},
       {"name": "陳宗廷", "party": "無黨籍"},
       {"name": "許馨勻", "party": "中國國民黨"},
@@ -1677,7 +1669,7 @@
       {"name": "潘炩禕", "party": "民主進步黨"},
       {"name": "李世淦", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "屏東縣", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "屏東縣", "district": "第4選舉區", "area": "東港鎮、新園鄉、萬丹鄉", "seats": 8, "womenSeats": 2, "candidates": [
       {"name": "劉孟君", "party": "民主進步黨"},
       {"name": "胡嘉玲", "party": "中國國民黨"},
       {"name": "許展維", "party": "民主進步黨"},
@@ -1689,47 +1681,47 @@
       {"name": "周芸均", "party": "中國國民黨"},
       {"name": "林宇澤", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "屏東縣", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "屏東縣", "district": "第5選舉區", "area": "崁頂鄉、林邊鄉、南州鄉、佳冬鄉", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "周碧雲", "party": "民主進步黨"},
       {"name": "羅平道", "party": "民主進步黨"},
       {"name": "黃盈裕", "party": "無黨籍"},
       {"name": "陳靜芳", "party": "中國國民黨"},
       {"name": "張榮傑", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "屏東縣", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "屏東縣", "district": "第6選舉區", "area": "恆春鎮、車城鄉、滿州鄉、枋山鄉、獅子鄉、牡丹鄉", "seats": 3, "candidates": [
       {"name": "盧邑宸", "party": "無黨籍"},
       {"name": "張榮志", "party": "中國國民黨"},
       {"name": "潘芳泉", "party": "民主進步黨"},
       {"name": "李建華", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "屏東縣", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "屏東縣", "district": "第7選舉區", "area": "琉球鄉", "seats": 1, "candidates": [
       {"name": "陳建興", "party": "無黨籍"},
       {"name": "陳國在", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "屏東縣", "district": "第8選舉區", "candidates": [
+    {"office": "council", "county": "屏東縣", "district": "第8選舉區", "area": "平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "潘翠雲", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "屏東縣", "district": "第9選舉區", "candidates": [
+    {"office": "council", "county": "屏東縣", "district": "第9選舉區", "area": "三地門鄉及九如鄉、里港鄉、鹽埔鄉、高樹鄉之山地原住民", "seats": 1, "womenSeats": 2, "indigenous": "mountain", "candidates": [
       {"name": "江金妹", "party": "無黨籍"},
       {"name": "張利惠", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "宜蘭縣", "district": "第10選舉區", "candidates": [
+    {"office": "council", "county": "宜蘭縣", "district": "第10選舉區", "area": "蘇澳鎮、南澳鄉", "seats": 2, "candidates": [
       {"name": "黃士駿", "party": "中國國民黨"},
       {"name": "李明哲", "party": "民主進步黨"},
       {"name": "陳玉萍", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "宜蘭縣", "district": "第11選舉區", "candidates": [
+    {"office": "council", "county": "宜蘭縣", "district": "第11選舉區", "area": "平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "孫湯玉惠 aly saku", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "宜蘭縣", "district": "第12選舉區", "candidates": [
+    {"office": "council", "county": "宜蘭縣", "district": "第12選舉區", "area": "大同鄉及宜蘭市、頭城鎮、礁溪鄉、員山鄉、壯圍鄉、三星鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "沈志弘", "party": "中國國民黨"},
       {"name": "陳傑麟", "party": "親民黨"}
     ]},
-    {"office": "council", "county": "宜蘭縣", "district": "第13選舉區", "candidates": [
+    {"office": "council", "county": "宜蘭縣", "district": "第13選舉區", "area": "南澳鄉及羅東鎮、五結鄉、冬山鄉、蘇澳鎮之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "曹天民", "party": "無黨籍"},
       {"name": "李勝雄", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "宜蘭縣", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "宜蘭縣", "district": "第1選舉區", "area": "宜蘭市", "seats": 7, "womenSeats": 1, "candidates": [
       {"name": "林麗", "party": "民主進步黨"},
       {"name": "劉仲書", "party": "時代力量"},
       {"name": "游國連", "party": "民主進步黨"},
@@ -1746,30 +1738,30 @@
       {"name": "黃奎翰", "party": "無黨籍"},
       {"name": "項秀蘭", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "宜蘭縣", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "宜蘭縣", "district": "第2選舉區", "area": "頭城鎮", "seats": 2, "candidates": [
       {"name": "林詩穎", "party": "民主進步黨"},
       {"name": "賴良洲", "party": "中國國民黨"},
       {"name": "林瑞文", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "宜蘭縣", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "宜蘭縣", "district": "第3選舉區", "area": "礁溪鄉", "seats": 3, "candidates": [
       {"name": "李淑芬", "party": "民主進步黨"},
       {"name": "林聰池", "party": "無黨籍"},
       {"name": "游順評", "party": "無黨籍"},
       {"name": "吳秋玟", "party": "無黨籍"},
       {"name": "張永德", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "宜蘭縣", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "宜蘭縣", "district": "第4選舉區", "area": "員山鄉", "seats": 2, "candidates": [
       {"name": "李姿婷", "party": "民主進步黨"},
       {"name": "黃浴沂", "party": "中國國民黨"},
       {"name": "陳玉麟", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "宜蘭縣", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "宜蘭縣", "district": "第5選舉區", "area": "壯圍鄉", "seats": 2, "candidates": [
       {"name": "江子言", "party": "無黨籍"},
       {"name": "沈清山", "party": "無黨籍"},
       {"name": "黃建勇", "party": "中國國民黨"},
       {"name": "陳福山", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "宜蘭縣", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "宜蘭縣", "district": "第6選舉區", "area": "羅東鎮", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "陳漢鍾", "party": "中國國民黨"},
       {"name": "謝家倫", "party": "民主進步黨"},
       {"name": "薛呈懿", "party": "民主進步黨"},
@@ -1779,30 +1771,30 @@
       {"name": "黃琤婷", "party": "中國國民黨"},
       {"name": "王乾明", "party": "台灣民眾黨"}
     ]},
-    {"office": "council", "county": "宜蘭縣", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "宜蘭縣", "district": "第7選舉區", "area": "五結鄉", "seats": 3, "candidates": [
       {"name": "黃子堯", "party": "無黨籍"},
       {"name": "林義剛", "party": "中國國民黨"},
       {"name": "沈信雄", "party": "無黨籍"},
       {"name": "張明華", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "宜蘭縣", "district": "第8選舉區", "candidates": [
+    {"office": "council", "county": "宜蘭縣", "district": "第8選舉區", "area": "冬山鄉", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "楊弘旻", "party": "中國國民黨"},
       {"name": "邱素梅", "party": "無黨籍"},
       {"name": "林佩螢", "party": "民主進步黨"},
       {"name": "林峻輔", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "宜蘭縣", "district": "第9選舉區", "candidates": [
+    {"office": "council", "county": "宜蘭縣", "district": "第9選舉區", "area": "三星鄉、大同鄉", "seats": 1, "candidates": [
       {"name": "黃賢能", "party": "無黨籍"},
       {"name": "游雅絢", "party": "民主進步黨"},
       {"name": "曾茂照", "party": "中國國民黨"},
       {"name": "江信賢", "party": "無黨籍"},
       {"name": "郭嘉呈", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "花蓮縣", "district": "第10選舉區", "candidates": [
+    {"office": "council", "county": "花蓮縣", "district": "第10選舉區", "area": "卓溪鄉及玉里鎮、富里鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "李忠祥", "party": "無黨籍"},
       {"name": "金淑敏", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "花蓮縣", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "花蓮縣", "district": "第1選舉區", "area": "花蓮市", "seats": 9, "womenSeats": 2, "candidates": [
       {"name": "許願神", "party": "無黨籍"},
       {"name": "陳財能", "party": "無黨籍"},
       {"name": "謝國榮", "party": "無黨籍"},
@@ -1819,11 +1811,11 @@
       {"name": "韓林梅", "party": "中國國民黨"},
       {"name": "蔡翼陽", "party": "台灣民眾黨"}
     ]},
-    {"office": "council", "county": "花蓮縣", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "花蓮縣", "district": "第2選舉區", "area": "新城鄉、秀林鄉", "seats": 1, "candidates": [
       {"name": "張美華", "party": "中國國民黨"},
       {"name": "鄭寶秀", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "花蓮縣", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "花蓮縣", "district": "第3選舉區", "area": "吉安鄉、壽豐鄉、鳳林鎮、光復鄉、豐濱鄉、萬榮鄉", "seats": 10, "womenSeats": 2, "candidates": [
       {"name": "劉靜文", "party": "無黨籍"},
       {"name": "張宸瑋", "party": "無黨籍"},
       {"name": "鄭乾龍", "party": "無黨籍"},
@@ -1839,72 +1831,71 @@
       {"name": "吳建志", "party": "中國國民黨"},
       {"name": "蔡文隆", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "花蓮縣", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "花蓮縣", "district": "第4選舉區", "area": "瑞穗鄉、玉里鎮、富里鄉、卓溪鄉", "seats": 3, "candidates": [
       {"name": "鍾素政", "party": "中國國民黨"},
       {"name": "黃玲蘭", "party": "無黨籍"},
       {"name": "林宏熙", "party": "無黨籍"},
       {"name": "吳新文", "party": "中國國民黨"},
       {"name": "詹金富", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "花蓮縣", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "花蓮縣", "district": "第5選舉區", "area": "花蓮市、新城鄉、秀林鄉、吉安鄉之平地原住民", "seats": 4, "womenSeats": 1, "indigenous": "plain", "candidates": [
       {"name": "李正文", "party": "中國國民黨"},
       {"name": "笛布斯．顗賚", "party": "無黨籍"},
       {"name": "陳進德", "party": "中國國民黨"},
-      {"name": "那莫 諾虎Namoh Nofu", "party": "無黨籍"},
-      {"name": "周駿宥", "party": "無黨籍"}
+      {"name": "那莫 諾虎Namoh Nofu", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "花蓮縣", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "花蓮縣", "district": "第6選舉區", "area": "壽豐鄉、鳳林鎮、萬榮鄉、光復鄉、豐濱鄉之平地原住民", "seats": 2, "indigenous": "plain", "candidates": [
       {"name": "邱福順Kacaw．Folaw", "party": "無黨籍"},
       {"name": "蔡依靜 Lamen‧Panay", "party": "無黨籍"},
       {"name": "林正福", "party": "中國國民黨"},
       {"name": "萬中興", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "花蓮縣", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "花蓮縣", "district": "第7選舉區", "area": "瑞穗鄉、玉里鎮、富里鄉、卓溪鄉之平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "哈尼．噶照Hani Kacaw", "party": "無黨籍"},
       {"name": "秀吉．撒夫洛", "party": "中國國民黨"},
       {"name": "林玉芬", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "花蓮縣", "district": "第8選舉區", "candidates": [
+    {"office": "council", "county": "花蓮縣", "district": "第8選舉區", "area": "秀林鄉及花蓮市、新城鄉、吉安鄉、壽豐鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "王玫瑰Sitang Yuci", "party": "中國國民黨"},
       {"name": "王沈剛竹", "party": "中國國民黨"},
       {"name": "田韻馨", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "花蓮縣", "district": "第9選舉區", "candidates": [
+    {"office": "council", "county": "花蓮縣", "district": "第9選舉區", "area": "萬榮鄉及鳳林鎮、光復鄉、豐濱鄉、瑞穗鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "伊布．達納畢瑪Ibu·Tanapinma", "party": "無黨籍"},
       {"name": "陳群", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "臺東縣", "district": "第10選舉區", "candidates": [
+    {"office": "council", "county": "臺東縣", "district": "第10選舉區", "area": "鹿野鄉、延平鄉、關山鎮、海端鄉、池上鄉之平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "楊清順Cinsun Pawtawan", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺東縣", "district": "第11選舉區", "candidates": [
+    {"office": "council", "county": "臺東縣", "district": "第11選舉區", "area": "東河鄉、綠島鄉、成功鎮、長濱鄉之平地原住民", "seats": 2, "indigenous": "plain", "candidates": [
       {"name": "楊秋珍", "party": "中國國民黨"},
       {"name": "高美珠", "party": "無黨籍"},
       {"name": "武雪恩", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺東縣", "district": "第12選舉區", "candidates": [
+    {"office": "council", "county": "臺東縣", "district": "第12選舉區", "area": "延平鄉及卑南鄉、東河鄉、成功鎮、長濱鄉之山地原住民", "seats": 1, "womenSeats": 1, "indigenous": "mountain", "candidates": [
       {"name": "邱文俊", "party": "中國國民黨"},
       {"name": "温源田", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺東縣", "district": "第13選舉區", "candidates": [
+    {"office": "council", "county": "臺東縣", "district": "第13選舉區", "area": "海端鄉及鹿野鄉、關山鎮、池上鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "胡金至", "party": "中國國民黨"},
       {"name": "余桂花", "party": "無黨籍"},
       {"name": "余瑋廷 Kavas Ispalidaz", "party": "無黨籍"},
       {"name": "胡淑貞", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺東縣", "district": "第14選舉區", "candidates": [
+    {"office": "council", "county": "臺東縣", "district": "第14選舉區", "area": "金峰鄉及太麻里鄉、臺東市、綠島鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "蔣爭光", "party": "中國國民黨"},
       {"name": "章正輝Lemaljiz‧Kusaza", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "臺東縣", "district": "第15選舉區", "candidates": [
+    {"office": "council", "county": "臺東縣", "district": "第15選舉區", "area": "達仁鄉及大武鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "林芳如", "party": "中國國民黨"},
       {"name": "包惠玲", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "臺東縣", "district": "第16選舉區", "candidates": [
+    {"office": "council", "county": "臺東縣", "district": "第16選舉區", "area": "蘭嶼鄉之山地原住民", "seats": 1, "indigenous": "mountain", "candidates": [
       {"name": "董昌華", "party": "無黨籍"},
       {"name": "李奉祈", "party": "無黨籍"},
       {"name": "鍾文明", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺東縣", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "臺東縣", "district": "第1選舉區", "area": "臺東市、蘭嶼鄉", "seats": 10, "womenSeats": 2, "candidates": [
       {"name": "傅文鵬", "party": "中國國民黨"},
       {"name": "林文隆", "party": "無黨籍"},
       {"name": "簡維國", "party": "民主進步黨"},
@@ -1923,28 +1914,28 @@
       {"name": "周達三", "party": "中國國民黨"},
       {"name": "吳佩珊", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺東縣", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "臺東縣", "district": "第2選舉區", "area": "卑南鄉、延平鄉", "seats": 1, "candidates": [
       {"name": "楊招信", "party": "中國國民黨"},
       {"name": "張家瑋", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺東縣", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "臺東縣", "district": "第3選舉區", "area": "東河鄉、成功鎮、長濱鄉", "seats": 2, "candidates": [
       {"name": "林東滿", "party": "中國國民黨"},
       {"name": "許進榮", "party": "無黨籍"},
       {"name": "鄭銘顯", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "臺東縣", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "臺東縣", "district": "第4選舉區", "area": "鹿野鄉、關山鎮、海端鄉、池上鄉", "seats": 2, "candidates": [
       {"name": "潘貴蘭", "party": "無黨籍"},
       {"name": "陳宏宗", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "臺東縣", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "臺東縣", "district": "第5選舉區", "area": "太麻里鄉、金峰鄉、達仁鄉、大武鄉", "seats": 1, "candidates": [
       {"name": "翁麗吟", "party": "中國國民黨"},
       {"name": "廖雙穎", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "臺東縣", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "臺東縣", "district": "第6選舉區", "area": "綠島鄉", "seats": 1, "candidates": [
       {"name": "王益凱", "party": "中國國民黨"},
       {"name": "謝賢裕", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "臺東縣", "district": "第7選舉區", "candidates": [
+    {"office": "council", "county": "臺東縣", "district": "第7選舉區", "area": "臺東市之平地原住民", "seats": 3, "womenSeats": 2, "indigenous": "plain", "candidates": [
       {"name": "陳政宗", "party": "無黨籍"},
       {"name": "陽奇良", "party": "中國國民黨"},
       {"name": "陽昇宏", "party": "中國國民黨"},
@@ -1953,15 +1944,15 @@
       {"name": "林茂松", "party": "無黨籍"},
       {"name": "巫化‧巴阿立佑司", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "臺東縣", "district": "第8選舉區", "candidates": [
+    {"office": "council", "county": "臺東縣", "district": "第8選舉區", "area": "卑南鄉、蘭嶼鄉之平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "鄭崗山", "party": "中國國民黨"},
       {"name": "沙順恩", "party": "民主進步黨"}
     ]},
-    {"office": "council", "county": "臺東縣", "district": "第9選舉區", "candidates": [
+    {"office": "council", "county": "臺東縣", "district": "第9選舉區", "area": "太麻里鄉、金峰鄉、達仁鄉、大武鄉之平地原住民", "seats": 1, "indigenous": "plain", "candidates": [
       {"name": "羅春明", "party": "中國國民黨"},
       {"name": "尤忠正", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "澎湖縣", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "澎湖縣", "district": "第1選舉區", "area": "馬公市", "seats": 11, "womenSeats": 2, "candidates": [
       {"name": "吳仁祥", "party": "無黨籍"},
       {"name": "顏家康", "party": "民主進步黨"},
       {"name": "蘇育德", "party": "民主進步黨"},
@@ -1982,34 +1973,34 @@
       {"name": "胡正仁", "party": "無黨籍"},
       {"name": "莊國輝", "party": "台灣民眾黨"}
     ]},
-    {"office": "council", "county": "澎湖縣", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "澎湖縣", "district": "第2選舉區", "area": "湖西鄉", "seats": 3, "candidates": [
       {"name": "李麗美", "party": "無黨籍"},
       {"name": "蔡清續", "party": "民主進步黨"},
       {"name": "許育愷", "party": "無黨籍"},
       {"name": "吳政杰", "party": "無黨籍"},
       {"name": "廖璟華", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "澎湖縣", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "澎湖縣", "district": "第3選舉區", "area": "白沙鄉", "seats": 2, "candidates": [
       {"name": "許皆詳", "party": "無黨籍"},
       {"name": "宋昀芝", "party": "無黨籍"},
       {"name": "宋萬富", "party": "無黨籍"},
       {"name": "魏睿宏", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "澎湖縣", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "澎湖縣", "district": "第4選舉區", "area": "西嶼鄉", "seats": 1, "candidates": [
       {"name": "許月里", "party": "無黨籍"},
       {"name": "李家萱", "party": "無黨籍"},
       {"name": "許嘉峻", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "澎湖縣", "district": "第5選舉區", "candidates": [
+    {"office": "council", "county": "澎湖縣", "district": "第5選舉區", "area": "望安鄉", "seats": 1, "candidates": [
       {"name": "陳佩真", "party": "無黨籍"},
       {"name": "黃榮焜", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "澎湖縣", "district": "第6選舉區", "candidates": [
+    {"office": "council", "county": "澎湖縣", "district": "第6選舉區", "area": "七美鄉", "seats": 1, "candidates": [
       {"name": "鄭淑卿", "party": "無黨籍"},
       {"name": "張仁和", "party": "無黨籍"},
       {"name": "夏晨榮", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "金門縣", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "金門縣", "district": "第1選舉區", "area": "金城鎮、金寧鄉、烏坵鄉", "seats": 10, "womenSeats": 2, "candidates": [
       {"name": "尚文凱", "party": "台灣民眾黨"},
       {"name": "戴德滿", "party": "新黨"},
       {"name": "許大鴻", "party": "無黨籍"},
@@ -2018,7 +2009,6 @@
       {"name": "蔡其雍", "party": "民主進步黨"},
       {"name": "倪于媃", "party": "中國國民黨"},
       {"name": "董家瑋", "party": "中國國民黨"},
-      {"name": "石永城", "party": "無黨籍"},
       {"name": "許玉仙", "party": "無黨籍"},
       {"name": "楊霈璿", "party": "台灣民眾黨"},
       {"name": "洪允典", "party": "中國國民黨"},
@@ -2031,7 +2021,7 @@
       {"name": "陳子芸", "party": "中國國民黨"},
       {"name": "傅蒼松", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "金門縣", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "金門縣", "district": "第2選舉區", "area": "金湖鎮、金沙鎮", "seats": 7, "womenSeats": 1, "candidates": [
       {"name": "周子傑", "party": "中國國民黨"},
       {"name": "李應文", "party": "無黨籍"},
       {"name": "王秀玉", "party": "中國國民黨"},
@@ -2044,13 +2034,13 @@
       {"name": "楊育菡", "party": "無黨籍"},
       {"name": "陳錦偉", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "金門縣", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "金門縣", "district": "第3選舉區", "area": "烈嶼鄉", "seats": 2, "candidates": [
       {"name": "洪長享", "party": "無黨籍"},
       {"name": "洪毓壕", "party": "無黨籍"},
       {"name": "洪若珊", "party": "無黨籍"},
       {"name": "洪和興", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "連江縣", "district": "第1選舉區", "candidates": [
+    {"office": "council", "county": "連江縣", "district": "第1選舉區", "area": "南竿鄉", "seats": 5, "womenSeats": 1, "candidates": [
       {"name": "曹丞君", "party": "中國國民黨"},
       {"name": "吳軾子", "party": "更生黨"},
       {"name": "曹以標", "party": "無黨籍"},
@@ -2059,16 +2049,16 @@
       {"name": "陳書建", "party": "中國國民黨"},
       {"name": "林明揚", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "連江縣", "district": "第2選舉區", "candidates": [
+    {"office": "council", "county": "連江縣", "district": "第2選舉區", "area": "北竿鄉", "seats": 2, "candidates": [
       {"name": "陳玉發", "party": "中國國民黨"},
       {"name": "周瑞國", "party": "中國國民黨"},
       {"name": "謝秉軒", "party": "無黨籍"}
     ]},
-    {"office": "council", "county": "連江縣", "district": "第3選舉區", "candidates": [
+    {"office": "council", "county": "連江縣", "district": "第3選舉區", "area": "莒光鄉", "seats": 1, "candidates": [
       {"name": "王孝榛", "party": "無黨籍"},
       {"name": "陳貽斌", "party": "中國國民黨"}
     ]},
-    {"office": "council", "county": "連江縣", "district": "第4選舉區", "candidates": [
+    {"office": "council", "county": "連江縣", "district": "第4選舉區", "area": "東引鄉", "seats": 1, "candidates": [
       {"name": "林德建", "party": "中國國民黨"},
       {"name": "馮印才", "party": "無黨籍"}
     ]},
@@ -15951,10 +15941,6 @@
     {"office": "village", "county": "臺中市", "district": "外埔區馬鳴里", "candidates": [
       {"name": "顏慶慰", "party": "無黨籍"}
     ]},
-    {"office": "village", "county": "臺中市", "district": "大安區", "candidates": [
-      {"name": "洪正義", "party": "無黨籍"},
-      {"name": "余連銓", "party": "無黨籍"}
-    ]},
     {"office": "village", "county": "臺中市", "district": "大安區中庄里", "candidates": [
       {"name": "莊明堯", "party": "無黨籍"},
       {"name": "李承憲", "party": "無黨籍"}
@@ -15995,6 +15981,10 @@
     {"office": "village", "county": "臺中市", "district": "大安區頂安里", "candidates": [
       {"name": "陳麗涓", "party": "無黨籍"},
       {"name": "葉振堂", "party": "無黨籍"}
+    ]},
+    {"office": "village", "county": "臺中市", "district": "大安區龜壳里", "candidates": [
+      {"name": "洪正義", "party": "無黨籍"},
+      {"name": "余連銓", "party": "無黨籍"}
     ]},
     {"office": "village", "county": "臺中市", "district": "大甲區中山里", "candidates": [
       {"name": "廖嘉佐", "party": "中國國民黨"}
@@ -18538,17 +18528,15 @@
       {"name": "賴清田", "party": "無黨籍"},
       {"name": "賴華湖", "party": "無黨籍"}
     ]},
-    {"office": "village", "county": "臺南市", "district": "安南區", "candidates": [
-      {"name": "蘇龍池", "party": "無黨籍"},
-      {"name": "林同寳", "party": "無黨籍"},
-      {"name": "林宏男", "party": "無黨籍"}
-    ]},
     {"office": "village", "county": "臺南市", "district": "安南區佃東里", "candidates": [
       {"name": "程全祿", "party": "無黨籍"}
     ]},
     {"office": "village", "county": "臺南市", "district": "安南區佃西里", "candidates": [
       {"name": "高進見", "party": "無黨籍"},
       {"name": "黃靜宜", "party": "無黨籍"}
+    ]},
+    {"office": "village", "county": "臺南市", "district": "安南區公塭里", "candidates": [
+      {"name": "林宏男", "party": "無黨籍"}
     ]},
     {"office": "village", "county": "臺南市", "district": "安南區公親里", "candidates": [
       {"name": "王金樹", "party": "無黨籍"}
@@ -18590,6 +18578,10 @@
     {"office": "village", "county": "臺南市", "district": "安南區塩田里", "candidates": [
       {"name": "謝博勳", "party": "無黨籍"},
       {"name": "朱小蓮", "party": "無黨籍"}
+    ]},
+    {"office": "village", "county": "臺南市", "district": "安南區塭南里", "candidates": [
+      {"name": "蘇龍池", "party": "無黨籍"},
+      {"name": "林同寳", "party": "無黨籍"}
     ]},
     {"office": "village", "county": "臺南市", "district": "安南區大安里", "candidates": [
       {"name": "廖玉菁", "party": "無黨籍"},
@@ -19922,9 +19914,6 @@
       {"name": "李寶珠", "party": "無黨籍"},
       {"name": "黃文勇", "party": "無黨籍"}
     ]},
-    {"office": "village", "county": "臺南市", "district": "西港區", "candidates": [
-      {"name": "謝文賢", "party": "無黨籍"}
-    ]},
     {"office": "village", "county": "臺南市", "district": "西港區劉厝里", "candidates": [
       {"name": "呂慶昇", "party": "無黨籍"},
       {"name": "劉盈發", "party": "無黨籍"},
@@ -19943,6 +19932,9 @@
     ]},
     {"office": "village", "county": "臺南市", "district": "西港區新復里", "candidates": [
       {"name": "黃國文", "party": "無黨籍"}
+    ]},
+    {"office": "village", "county": "臺南市", "district": "西港區檨林里", "candidates": [
+      {"name": "謝文賢", "party": "無黨籍"}
     ]},
     {"office": "village", "county": "臺南市", "district": "西港區永樂里", "candidates": [
       {"name": "凃育民", "party": "無黨籍"},

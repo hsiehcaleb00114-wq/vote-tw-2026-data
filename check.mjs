@@ -34,6 +34,12 @@ for (const [i, r] of (data.races ?? []).entries()) {
   if (!COUNTIES.includes(r.county)) err(where, `county「${r.county}」不在縣市清單（注意用「臺」不是「台」）`);
   if (r.office !== 'mayor' && !r.district) err(where, '非縣市長的選舉需要 district（選區名稱）');
 
+  if (r.indigenous !== undefined && !['plain', 'mountain'].includes(r.indigenous)) err(where, 'indigenous 只能是 plain 或 mountain');
+  for (const f of ['seats', 'womenSeats']) {
+    if (r[f] !== undefined && !(Number.isInteger(r[f]) && r[f] >= 0)) err(where, `${f} 必須是非負整數`);
+  }
+  if (r.office === 'council' && !r.area) err(where, '議員選區缺少 area（選區範圍），請執行 tools/import_districts.py');
+
   const key = [r.office, r.county, r.district ?? ''].join('~');
   if (raceKeys.has(key)) err(where, '同一職位、縣市、選區重複出現');
   raceKeys.add(key);
@@ -54,6 +60,7 @@ for (const [i, r] of (data.races ?? []).entries()) {
     if (c.photo !== undefined && !/^https:\/\//.test(c.photo)) err(who, 'photo 必須是 https 網址');
     if (c.photo && !c.photoCredit) err(who, '有照片時必須填 photoCredit（照片來源）');
     if (c.sourceUrl !== undefined && !/^https:\/\//.test(c.sourceUrl)) err(who, 'sourceUrl 必須是 https 網址');
+    if (c.photoSourceUrl !== undefined && !/^https:\/\//.test(c.photoSourceUrl)) err(who, 'photoSourceUrl 必須是 https 網址');
     for (const f of LIST_FIELDS) {
       if (c[f] !== undefined && !(Array.isArray(c[f]) && c[f].every((s) => typeof s === 'string' && s.trim())))
         err(who, `${f} 必須是非空字串的陣列`);

@@ -40,7 +40,9 @@ COUNTIES = [
 ]
 
 # 由人工維護、匯入時要保留的欄位
-MANUAL_FIELDS = ['number', 'incumbent', 'photo', 'photoCredit', 'education', 'experience', 'platform', 'sourceUrl']
+MANUAL_FIELDS = ['number', 'incumbent', 'photo', 'photoCredit', 'photoSourceUrl', 'education', 'experience', 'platform', 'sourceUrl']
+# 選區層級、由其他來源補上的欄位（import_districts.py）
+RACE_FIELDS = ['area', 'seats', 'womenSeats', 'indigenous']
 
 LATIN = re.compile(r'[A-Za-z]')
 
@@ -100,13 +102,17 @@ def main():
 
     old = json.load(open(OUT, encoding='utf-8')) if os.path.exists(OUT) else {'races': []}
     keep = {}
+    keep_race = {}
     for r in old['races']:
+        keep_race[(r['office'], r['county'], r.get('district') or '')] = {k: r[k] for k in RACE_FIELDS if k in r}
         for c in r['candidates']:
             key = (r['office'], r['county'], r.get('district') or '', c['name'])
             keep[key] = {k: c[k] for k in MANUAL_FIELDS if k in c}
 
     manual = json.load(open(os.path.join(ROOT, 'tools', 'manual_names.json'), encoding='utf-8'))
     manual_note = manual['_note']
+    disqualified = json.load(open(os.path.join(ROOT, 'tools', 'disqualified.json'), encoding='utf-8'))
+    excluded = []
 
     races = {}
     notes = []
@@ -127,9 +133,17 @@ def main():
                     print(f'✗ {f} {area} 姓名讀不到，也不在 manual_names.json', file=sys.stderr)
                     continue
                 name, flag = manual[area], manual_note
+            # 村里名含罕用字、PDF 只剩鄉鎮名的，依對照表補正
+            area = manual['_areas'].get(f'{area}|{name}', area)
+            if disqualified.get(office, {}).get(area) == name:
+                excluded.append(f'{area} {name}')
+                continue
             county, district = split_area(area)
             key = (office, county, district or '')
-            race = races.setdefault(key, {'office': office, 'county': county, **({'district': district} if district else {}), 'candidates': []})
+            race = races.setdefault(
+                key,
+                {'office': office, 'county': county, **({'district': district} if district else {}), **keep_race.get(key, {}), 'candidates': []},
+            )
             c = {'name': name, 'party': '無黨籍' if party in ('', '無') else party}
             c.update(keep.get((*key, name), {}))
             if flag:
@@ -151,7 +165,10 @@ def main():
 
     for f, n in counts.items():
         print(f'{f}: {n} 人')
-    print(f'合計 {sum(counts.values())} 人、{len(sorted_races)} 個選區')
+    print(f'合計 {sum(counts.values())} 人、{len(sorted_races)} 個選區（排除審定不合格 {len(excluded)} 人）')
+    expected = sum(len(v) for k, v in disqualified.items() if not k.startswith('_'))
+    if len(excluded) != expected:
+        print(f'✗ disqualified.json 有 {expected} 人，但只排除了 {len(excluded)} 人，請檢查姓名或選區寫法', file=sys.stderr)
     if notes:
         print('備註欄有內容（請人工確認）：')
         for line in notes:
