@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+# 照片比對工具暫緩，先不納入版本控制
+tools/wikidata_photos.mjs
+tools/photo_matches.tsv
