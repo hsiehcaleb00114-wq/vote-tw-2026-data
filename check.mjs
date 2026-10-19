@@ -25,6 +25,14 @@ try {
 if (!Number.isInteger(data.version)) err('根', 'version 必須是整數');
 if (!/^\d{4}-\d{2}-\d{2}$/.test(data.updated ?? '')) err('根', 'updated 必須是 YYYY-MM-DD');
 if (!Array.isArray(data.races)) err('根', 'races 必須是陣列');
+if (data.results !== undefined) {
+  const r = data.results;
+  if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?\+08:00$/.test(r.updatedAt ?? '')) err('results', 'updatedAt 必須是台灣時間 ISO 格式，如 2026-11-28T18:30:00+08:00');
+  if (!r.source) err('results', '缺少 source（開票資料來源）');
+  if (/模擬/.test(r.source ?? '')) err('results', 'source 是模擬資料，請勿推上 GitHub');
+  if (r.progress && !(Number.isInteger(r.progress.reported) && Number.isInteger(r.progress.total) && r.progress.reported <= r.progress.total))
+    err('results', 'progress 的 reported 與 total 必須是整數，且 reported ≤ total');
+}
 
 const raceKeys = new Set();
 let people = 0;
@@ -60,6 +68,8 @@ for (const [i, r] of (data.races ?? []).entries()) {
     if (c.photo !== undefined && !/^https:\/\//.test(c.photo)) err(who, 'photo 必須是 https 網址');
     if (c.photo && !c.photoCredit) err(who, '有照片時必須填 photoCredit（照片來源）');
     if (c.sourceUrl !== undefined && !/^https:\/\//.test(c.sourceUrl)) err(who, 'sourceUrl 必須是 https 網址');
+    if (c.votes !== undefined && !(Number.isInteger(c.votes) && c.votes >= 0)) err(who, 'votes 必須是非負整數');
+    if (c.elected !== undefined && typeof c.elected !== 'boolean') err(who, 'elected 必須是 true 或 false');
     if (c.photoSourceUrl !== undefined && !/^https:\/\//.test(c.photoSourceUrl)) err(who, 'photoSourceUrl 必須是 https 網址');
     for (const f of LIST_FIELDS) {
       if (c[f] !== undefined && !(Array.isArray(c[f]) && c[f].every((s) => typeof s === 'string' && s.trim())))

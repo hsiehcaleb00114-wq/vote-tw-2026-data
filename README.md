@@ -48,6 +48,19 @@
 
 App 用「`updated`＋`results.updatedAt`」判斷資料新舊，開票夜每次更新都要把 `results.updatedAt` 改成當下時間（含 `+08:00`），否則 App 不會採用。中選會公告當選人名單（12/4）後把 `final` 改成 `true`。
 
+### 開票夜流程
+
+1. 取得票數，整理成 CSV：`office,county,district,name,votes,elected,reported,total`（縣市長的 district 留空；當選填 `Y`）
+2. `node tools/apply_results.mjs 票數.csv --reported 已回報投開票所數 --total 總投開票所數`（最終結果加 `--final`）
+   - 會自動把 `results.updatedAt` 設成現在時間；對不到參選人的列會列出來並以錯誤結束
+3. `node check.mjs` 通過後 commit、push，App 約 5 分鐘內更新（GitHub 快取）
+
+中選會即時開票的資料格式要等 2026 開票網站上線才能確認，屆時再寫轉換程式產生上面的 CSV。
+
+### 測試用模擬資料
+
+`node tools/simulate_results.mjs 0.35`（開票 35%，加 `--final` 為最終結果）會產生**假的**票數到 `tools/sim/`（不納入版本控制），只用來測試 App 畫面。`check.mjs` 會擋下來源標示為模擬的資料，避免誤推。
+
 ## 歷屆選舉（history/）
 
 App「歷屆選舉」「我的地區」使用的資料，由中選會選舉資料庫（[db.cec.gov.tw](https://db.cec.gov.tw/)）的批次下載檔轉換：
