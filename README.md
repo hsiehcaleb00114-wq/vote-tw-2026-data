@@ -13,12 +13,26 @@
 3. 檢查格式：`node check.mjs`
 4. 看到 ✓ 才 commit 並 push
 
+## 從中選會名冊重新匯入
+
+目前資料來自中選會〈[115年地方公職人員選舉候選人登記名冊](https://web.cec.gov.tw/central/article/64709)〉，共 9 類、19,695 人。11/12、11/17 正式候選人名單公告後，若格式相同可直接重跑：
+
+1. 下載各類的「x-1 候選人登記彙總表」PDF（只要 1-1、2-1、3-1、4-1、5、6、7、8、9），檔名保留開頭編號，放進同一個資料夾
+2. `pip install pdfplumber`
+3. `python tools/import_cec.py <PDF資料夾> --updated YYYY-MM-DD`
+4. 比對輸出的人數與 PDF，`node check.mjs` 通過後再推上來
+
+匯入時會保留既有的人工欄位（現任、號次、照片、政見、學經歷、來源網址）。
+
+**罕用字姓名**：名冊中有 21 位參選人的姓名含罕用字，PDF 以圖片呈現且部分字無法顯示，已依圖片人工轉錄在 `tools/manual_names.json`（○ 為無法顯示的字），並在 App 中標示「待中選會公告確認」。正式名單公告後請逐筆核對修正。
+
 ## 格式
 
 ```jsonc
 {
   "version": 1,
   "updated": "2026-11-17",
+  "source": "中選會「115年地方公職人員選舉候選人登記名冊」", // 選填：顯示在 App 參選人頁底部
   "races": [
     {
       "office": "council",          // mayor 縣市長｜council 縣市議員｜township 鄉鎮市長｜township_rep 鄉鎮市民代表｜village 村里長
