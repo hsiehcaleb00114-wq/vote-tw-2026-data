@@ -1,0 +1,498 @@
+{
+  "version": 1,
+  "updated": "2026-09-19",
+  "races": [
+    {
+      "office": "mayor",
+      "county": "臺北市",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "蔣萬安",
+          "party": "中國國民黨",
+          "incumbent": true
+        },
+        {
+          "name": "沈伯洋",
+          "party": "民主進步黨"
+        },
+        {
+          "name": "郭璽",
+          "party": "台灣麻將最大黨"
+        },
+        {
+          "name": "蕭文乾",
+          "party": "台灣SoR無法黨"
+        },
+        {
+          "name": "唐新民",
+          "party": "三勢團結促進聯盟"
+        },
+        {
+          "name": "林志成",
+          "party": "無黨籍"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "新北市",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "蘇巧慧",
+          "party": "民主進步黨"
+        },
+        {
+          "name": "李四川",
+          "party": "中國國民黨"
+        },
+        {
+          "name": "蘇輝湟",
+          "party": "無黨籍"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "桃園市",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "張善政",
+          "party": "中國國民黨",
+          "incumbent": true
+        },
+        {
+          "name": "黃世杰",
+          "party": "民主進步黨"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "臺中市",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "何欣純",
+          "party": "民主進步黨"
+        },
+        {
+          "name": "江啟臣",
+          "party": "中國國民黨"
+        },
+        {
+          "name": "洪麗華",
+          "party": "司法正義黨"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "臺南市",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "謝龍介",
+          "party": "中國國民黨"
+        },
+        {
+          "name": "陳亭妃",
+          "party": "民主進步黨"
+        },
+        {
+          "name": "蕭燐洪",
+          "party": "台灣SoR無法黨"
+        },
+        {
+          "name": "葉人文",
+          "party": "無黨籍"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "高雄市",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "賴瑞隆",
+          "party": "民主進步黨"
+        },
+        {
+          "name": "柯志恩",
+          "party": "中國國民黨"
+        },
+        {
+          "name": "張靜",
+          "party": "司法改革黨"
+        },
+        {
+          "name": "王肇民",
+          "party": "無黨籍"
+        },
+        {
+          "name": "洪方隆",
+          "party": "無黨籍"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "基隆市",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "謝國樑",
+          "party": "中國國民黨",
+          "incumbent": true
+        },
+        {
+          "name": "童子瑋",
+          "party": "民主進步黨"
+        },
+        {
+          "name": "魏造文",
+          "party": "無黨籍"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "新竹市",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "高虹安",
+          "party": "無黨籍",
+          "incumbent": true
+        },
+        {
+          "name": "莊競程",
+          "party": "民主進步黨"
+        },
+        {
+          "name": "何志勇",
+          "party": "無黨籍"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "新竹縣",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "鄭朝方",
+          "party": "民主進步黨"
+        },
+        {
+          "name": "徐欣瑩",
+          "party": "中國國民黨"
+        },
+        {
+          "name": "朱定瑀",
+          "party": "無黨籍"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "苗栗縣",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "鍾東錦",
+          "party": "中國國民黨",
+          "incumbent": true
+        },
+        {
+          "name": "陳品安",
+          "party": "民主進步黨"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "彰化縣",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "陳素月",
+          "party": "民主進步黨"
+        },
+        {
+          "name": "魏平政",
+          "party": "中國國民黨"
+        },
+        {
+          "name": "陳重嘉",
+          "party": "無黨籍"
+        },
+        {
+          "name": "邱建富",
+          "party": "無黨籍"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "南投縣",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "許淑華",
+          "party": "中國國民黨",
+          "incumbent": true
+        },
+        {
+          "name": "温世政",
+          "party": "民主進步黨"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "雲林縣",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "張嘉郡",
+          "party": "中國國民黨"
+        },
+        {
+          "name": "劉建國",
+          "party": "民主進步黨"
+        },
+        {
+          "name": "吳炳輝",
+          "party": "無黨籍"
+        },
+        {
+          "name": "林佳瑜",
+          "party": "無黨籍"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "嘉義市",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "張啓楷",
+          "party": "台灣民眾黨"
+        },
+        {
+          "name": "王美惠",
+          "party": "民主進步黨"
+        },
+        {
+          "name": "黃宏成台灣阿成世界偉人財神總統",
+          "party": "無黨籍"
+        },
+        {
+          "name": "陳愷璜",
+          "party": "無黨籍"
+        },
+        {
+          "name": "王義成",
+          "party": "無黨籍"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "嘉義縣",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "吳品叡",
+          "party": "無黨籍"
+        },
+        {
+          "name": "蔡易餘",
+          "party": "民主進步黨"
+        },
+        {
+          "name": "蔡松益",
+          "party": "無黨籍",
+          "unverified": "僅見於維基百科，待中選會公告確認"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "屏東縣",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "周春米",
+          "party": "民主進步黨",
+          "incumbent": true
+        },
+        {
+          "name": "蘇清泉",
+          "party": "中國國民黨"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "宜蘭縣",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "吳宗憲",
+          "party": "中國國民黨"
+        },
+        {
+          "name": "林國漳",
+          "party": "民主進步黨"
+        },
+        {
+          "name": "陳宏毅",
+          "party": "無黨籍"
+        },
+        {
+          "name": "劉燦輝",
+          "party": "無黨籍"
+        },
+        {
+          "name": "楊鉯婷",
+          "party": "無黨籍"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "花蓮縣",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "游淑貞",
+          "party": "中國國民黨"
+        },
+        {
+          "name": "張峻",
+          "party": "無黨籍"
+        },
+        {
+          "name": "魏嘉賢",
+          "party": "無黨籍"
+        },
+        {
+          "name": "羅佩秦",
+          "party": "台灣工黨"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "臺東縣",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "陳瑩",
+          "party": "民主進步黨"
+        },
+        {
+          "name": "吳秀華",
+          "party": "中國國民黨"
+        },
+        {
+          "name": "李吳穎智",
+          "party": "無黨籍"
+        },
+        {
+          "name": "王志偉",
+          "party": "無黨籍"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "澎湖縣",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "吳淑瑾",
+          "party": "民主進步黨"
+        },
+        {
+          "name": "陳振中",
+          "party": "中國國民黨"
+        },
+        {
+          "name": "周倪安",
+          "party": "台灣團結聯盟"
+        },
+        {
+          "name": "許智富",
+          "party": "無黨籍"
+        },
+        {
+          "name": "陳盡川",
+          "party": "無黨籍"
+        },
+        {
+          "name": "葉竹林",
+          "party": "無黨籍"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "金門縣",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "陳玉珍",
+          "party": "中國國民黨"
+        },
+        {
+          "name": "洪和成",
+          "party": "無黨籍"
+        },
+        {
+          "name": "李文良",
+          "party": "無黨籍"
+        },
+        {
+          "name": "黃世團",
+          "party": "無黨籍"
+        },
+        {
+          "name": "張國威",
+          "party": "無黨籍"
+        },
+        {
+          "name": "梁文韜",
+          "party": "無黨籍"
+        },
+        {
+          "name": "張火木",
+          "party": "無黨籍",
+          "unverified": "部分來源寫作「張木火」，待中選會公告確認"
+        }
+      ]
+    },
+    {
+      "office": "mayor",
+      "county": "連江縣",
+      "seats": 1,
+      "candidates": [
+        {
+          "name": "王忠銘",
+          "party": "中國國民黨",
+          "incumbent": true
+        },
+        {
+          "name": "曹爾元",
+          "party": "無黨籍"
+        }
+      ]
+    }
+  ]
+}
