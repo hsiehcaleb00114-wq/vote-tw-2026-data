@@ -48,6 +48,16 @@
 
 App 用「`updated`＋`results.updatedAt`」判斷資料新舊，開票夜每次更新都要把 `results.updatedAt` 改成當下時間（含 `+08:00`），否則 App 不會採用。中選會公告當選人名單（12/4）後把 `final` 改成 `true`。
 
+### 號次
+
+1. 整理成 CSV 放在 `tools/ballot_numbers/`：`office,county,district,name,number`（縣市長的 district 留空）
+2. `node tools/apply_numbers.mjs tools/ballot_numbers/<檔名>.csv --source "來源"`
+   - 任何一人對不到或號次重複就整批不寫入；整個選區都有號次後會依號次排序
+   - 重新執行 `import_cec.py` 後號次會保留，但順序會回到登記順序，要再跑一次這個指令
+3. `node check.mjs` 通過後 commit、push
+
+目前已匯入：縣市長 81 人（`mayor.csv`，中央社 10/27 整理各縣市選委會抽籤結果，並與 TVBS 報導逐筆核對一致）。議員、鄉鎮市長、代表、村里長待各選委會公告。
+
 ### 開票夜流程
 
 1. 取得票數，整理成 CSV：`office,county,district,name,votes,elected,reported,total`（縣市長的 district 留空；當選填 `Y`）

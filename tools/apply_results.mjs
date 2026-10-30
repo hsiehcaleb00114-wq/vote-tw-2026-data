@@ -13,9 +13,11 @@
 // 會自動把 results.updatedAt 設成現在時間，App 才會把同一天的多次更新視為新資料。
 // 執行後請跑 node check.mjs，通過再 commit、push。
 
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+
+import { writeElection } from './write_election.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'election.json');
@@ -75,19 +77,7 @@ data.results = {
 };
 if (data.updated < taipei.slice(0, 10)) data.updated = taipei.slice(0, 10);
 
-// 沿用 import_cec.py 的排版：每位參選人一行
-const dump = (v) => JSON.stringify(v);
-const out = ['{', `  "version": ${dump(data.version)},`, `  "updated": ${dump(data.updated)},`];
-if (data.source) out.push(`  "source": ${dump(data.source)},`);
-out.push(`  "results": ${dump(data.results)},`, '  "races": [');
-data.races.forEach((r, i) => {
-  const { candidates, ...head } = r;
-  out.push('    ' + dump(head).slice(0, -1) + ', "candidates": [');
-  candidates.forEach((c, j) => out.push('      ' + dump(c) + (j < candidates.length - 1 ? ',' : '')));
-  out.push('    ]}' + (i < data.races.length - 1 ? ',' : ''));
-});
-out.push('  ]', '}');
-writeFileSync(DATA, out.join('\n') + '\n');
+writeElection(DATA, data);
 
 console.log(`✓ 更新 ${updated} 位參選人的票數，results.updatedAt = ${taipei}`);
 if (missing.length) {
