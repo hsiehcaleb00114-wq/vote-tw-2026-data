@@ -127,3 +127,11 @@ App「歷屆選舉」「我的地區」使用的資料，由中選會選舉資�
 - 政見、學經歷、照片：中選會選舉公報，原文照錄、不改寫不評論
 - 照片一律註明來源；沒有可用的照片就不放，App 會顯示姓名首字
 - 本資料為民間整理，非中選會官方資料
+
+### 公投與無人登記村里
+
+`tools/extras.json` 放不是來自登記名冊的資料：同日公投（`referendums`）與沒有人登記參選村里長的村里（`vacantVillages`）。修改後執行 `node tools/apply_extras.mjs`；重新執行 `import_cec.py` 也會保留這些欄位。
+
+- 公投第 22 案主文依中選會 115/8/28 公告原文；理由書是提案方說明，不轉載，只附公告連結
+- 無人登記村里：內政部國土測繪中心村里界圖（1150817 版，7,780 村里）與中選會村里長登記名冊比對，目前為新北市永和區永成里、桃園市中壢區普強里
+- 開票夜公投票數：`node tools/apply_referendum.mjs --no 22 --agree N --disagree N --electorate 投票權人總額 [--invalid N --reported N --total N] [--final]`

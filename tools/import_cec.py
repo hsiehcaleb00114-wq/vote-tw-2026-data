@@ -160,7 +160,9 @@ def main():
         races.values(),
         key=lambda r: (office_order.index(r['office']), order[r['county']], r.get('district') or ''),
     )
-    data = {'version': 1, 'updated': args.updated, 'source': args.source, 'races': sorted_races}
+    # 公投、無人登記村里、開票結果等不是來自名冊的欄位原樣保留
+    extra = {k: v for k, v in old.items() if k not in ('version', 'updated', 'source', 'races')}
+    data = {'version': 1, 'updated': args.updated, 'source': args.source, **extra, 'races': sorted_races}
     write_compact(data, OUT)
 
     for f, n in counts.items():
@@ -182,6 +184,9 @@ def write_compact(data, path):
     lines.append(f'  "version": {dump(data["version"])},')
     lines.append(f'  "updated": {dump(data["updated"])},')
     lines.append(f'  "source": {dump(data["source"])},')
+    for k, v in data.items():
+        if k not in ('version', 'updated', 'source', 'races'):
+            lines.append(f'  {dump(k)}: {dump(v)},')
     lines.append('  "races": [')
     for i, r in enumerate(data['races']):
         head = {k: v for k, v in r.items() if k != 'candidates'}

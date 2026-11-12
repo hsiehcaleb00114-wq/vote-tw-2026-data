@@ -34,6 +34,30 @@ if (data.results !== undefined) {
     err('results', 'progress 的 reported 與 total 必須是整數，且 reported ≤ total');
 }
 
+const nonNegInt = (v) => Number.isInteger(v) && v >= 0;
+for (const [i, q] of (data.referendums ?? []).entries()) {
+  const where = `referendums[${i}] 第${q.no ?? '?'}案`;
+  if (!nonNegInt(q.no)) err(where, 'no 必須是整數');
+  if (!q.question?.trim()) err(where, '缺少 question（主文）');
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(q.date ?? '')) err(where, 'date 必須是 YYYY-MM-DD');
+  if (!/^https:\/\//.test(q.sourceUrl ?? '')) err(where, 'sourceUrl 必須是 https 網址（中選會公告）');
+  const r = q.result;
+  if (r) {
+    for (const f of ['agree', 'disagree', 'electorate']) if (!nonNegInt(r[f])) err(where, `result.${f} 必須是非負整數`);
+    for (const f of ['invalid', 'reported', 'total']) if (r[f] !== undefined && !nonNegInt(r[f])) err(where, `result.${f} 必須是非負整數`);
+    if (r.passed !== undefined && typeof r.passed !== 'boolean') err(where, 'result.passed 必須是 true 或 false');
+    if (r.passed !== undefined && r.passed !== (r.agree > r.disagree && r.agree * 4 >= r.electorate))
+      err(where, 'result.passed 與票數不符（同意多於不同意，且同意票達投票權人總額四分之一才通過）');
+  }
+}
+const villageKeys = new Set((data.races ?? []).filter((r) => r.office === 'village').map((r) => r.county + r.district));
+for (const [i, v] of (data.vacantVillages ?? []).entries()) {
+  const where = `vacantVillages[${i}] ${v.county ?? '?'} ${v.district ?? ''}`;
+  if (!COUNTIES.includes(v.county)) err(where, 'county 不在縣市清單');
+  if (!/^.+?[區鄉鎮市].+[里村]$/.test(v.district ?? '')) err(where, 'district 要寫成「鄉鎮市區＋村里」，如「永和區永成里」');
+  if (villageKeys.has(v.county + v.district)) err(where, '這個村里已有村里長參選人，不能列為無人登記');
+}
+
 const raceKeys = new Set();
 let people = 0;
 for (const [i, r] of (data.races ?? []).entries()) {

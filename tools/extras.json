@@ -1,0 +1,19 @@
+{
+  "_說明": "不是來自登記名冊的資料。修改後執行 node tools/apply_extras.mjs 寫入 election.json。",
+  "referendums": [
+    {
+      "no": 22,
+      "question": "你是否支持政府使用「核電」振興經濟，以廢除「非核家園」的能源政策？",
+      "proposer": "立法院",
+      "date": "2026-11-28",
+      "forums": "2026-11-09/2026-11-21",
+      "sourceUrl": "https://web.cec.gov.tw/api/file/3ea9497f-7945-49a2-bd4b-375e3d6f1ddf.pdf",
+      "infoUrl": "https://web.cec.gov.tw/referendum"
+    }
+  ],
+  "vacantVillages": [
+    {"county": "新北市", "district": "永和區永成里"},
+    {"county": "桃園市", "district": "中壢區普強里"}
+  ],
+  "_vacantVillagesSource": "內政部國土測繪中心村里界圖（1150817 版，7,780 村里）與中選會村里長候選人登記名冊比對，名冊中沒有登記者的村里"
+}

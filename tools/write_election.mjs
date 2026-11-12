@@ -13,7 +13,10 @@ const dump = (v) => {
 export function writeElection(path, data) {
   const out = ['{', `  "version": ${dump(data.version)},`, `  "updated": ${dump(data.updated)},`];
   if (data.source) out.push(`  "source": ${dump(data.source)},`);
-  if (data.results) out.push(`  "results": ${dump(data.results)},`);
+  // results、referendums、vacantVillages 等其他欄位，每個一行
+  for (const [k, v] of Object.entries(data)) {
+    if (!['version', 'updated', 'source', 'races'].includes(k)) out.push(`  ${JSON.stringify(k)}: ${dump(v)},`);
+  }
   out.push('  "races": [');
   data.races.forEach((r, i) => {
     const { candidates, ...head } = r;
