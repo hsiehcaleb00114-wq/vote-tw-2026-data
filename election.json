@@ -9506,7 +9506,7 @@
       {"name": "張宏聖", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "臺北市", "district": "萬華區柳鄉里", "candidates": [
-      {"name": "蔡和益", "party": "無黨籍"}
+      {"name": "蔡和韋", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "臺北市", "district": "萬華區榮德里", "candidates": [
       {"name": "陳欣漢", "party": "無黨籍", "number": 1}
@@ -10405,7 +10405,8 @@
       {"name": "趙道君", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "新北市", "district": "中和區秀景里", "candidates": [
-      {"name": "李淙河", "party": "中國國民黨"}
+      {"name": "李蘇秀梅", "party": "無黨籍", "number": 1},
+      {"name": "林均澔", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "新北市", "district": "中和區秀水里", "candidates": [
       {"name": "湯寶珠", "party": "無黨籍", "number": 1},
@@ -10585,7 +10586,10 @@
       {"name": "洪永富", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "新北市", "district": "土城區員信里", "candidates": [
-      {"name": "杜萬來", "party": "中國國民黨"}
+      {"name": "杜書文", "party": "無黨籍", "number": 1},
+      {"name": "周大爲", "party": "無黨籍", "number": 2},
+      {"name": "陶莉莉", "party": "無黨籍", "number": 3},
+      {"name": "張庭瑋", "party": "無黨籍", "number": 4}
     ]},
     {"office": "village", "county": "新北市", "district": "土城區員林里", "candidates": [
       {"name": "黃友志", "party": "無黨籍", "number": 1},
@@ -13569,8 +13573,7 @@
       {"name": "劉明賢", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "桃園市", "district": "中壢區興福里", "candidates": [
-      {"name": "劉元", "party": "無黨籍"},
-      {"name": "廖國光", "party": "無黨籍"}
+      {"name": "廖國光", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "桃園市", "district": "中壢區興華里", "candidates": [
       {"name": "陳俊諺", "party": "無黨籍", "number": 1}
@@ -14474,9 +14477,8 @@
       {"name": "楊智宇", "party": "無黨籍", "number": 3}
     ]},
     {"office": "village", "county": "桃園市", "district": "桃園區忠義里", "candidates": [
-      {"name": "陳淑珮", "party": "無黨籍"},
-      {"name": "彭許妙貞", "party": "無黨籍"},
-      {"name": "范佳欣", "party": "無黨籍"}
+      {"name": "陳淑珮", "party": "無黨籍", "number": 1},
+      {"name": "彭許妙貞", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "桃園市", "district": "桃園區慈文里", "candidates": [
       {"name": "錡春發", "party": "無黨籍", "number": 1}
@@ -14623,8 +14625,7 @@
       {"name": "林秀貞", "party": "無黨籍", "number": 3}
     ]},
     {"office": "village", "county": "桃園市", "district": "桃園區雲林里", "candidates": [
-      {"name": "翁啟桓", "party": "無黨籍"},
-      {"name": "游春德", "party": "無黨籍"}
+      {"name": "翁啟桓", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "桃園市", "district": "桃園區青溪里", "candidates": [
       {"name": "簡鏡還", "party": "無黨籍", "number": 1},
@@ -17021,7 +17022,8 @@
       {"name": "林東潭", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "臺中市", "district": "烏日區北里里", "candidates": [
-      {"name": "魏周森", "party": "無黨籍"}
+      {"name": "楊文慶", "party": "無黨籍", "number": 1},
+      {"name": "林耀南", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "臺中市", "district": "烏日區南里里", "candidates": [
       {"name": "蔡敏陽", "party": "無黨籍", "number": 1}
@@ -18519,7 +18521,8 @@
       {"name": "陳智耀", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "臺南市", "district": "學甲區新達里", "candidates": [
-      {"name": "陳敏男", "party": "無黨籍"}
+      {"name": "蔡祐倉", "party": "無黨籍", "number": 1},
+      {"name": "黃美雲", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "臺南市", "district": "學甲區明宜里", "candidates": [
       {"name": "凃志宏", "party": "無黨籍", "number": 1},
@@ -19810,7 +19813,9 @@
       {"name": "嚴福春", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "臺南市", "district": "玉井區望明里", "candidates": [
-      {"name": "李麗華", "party": "無黨籍"}
+      {"name": "郭福龍", "party": "無黨籍", "number": 1},
+      {"name": "買茂林", "party": "無黨籍", "number": 2},
+      {"name": "黃怡菁", "party": "無黨籍", "number": 3}
     ]},
     {"office": "village", "county": "臺南市", "district": "玉井區沙田里", "candidates": [
       {"name": "王美華", "party": "無黨籍", "number": 1}
@@ -20043,7 +20048,9 @@
       {"name": "白春桐", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "臺南市", "district": "鹽水區橋南里", "candidates": [
-      {"name": "陳榮斌", "party": "無黨籍"}
+      {"name": "吳美香", "party": "無黨籍", "number": 1},
+      {"name": "林冠銍", "party": "無黨籍", "number": 2},
+      {"name": "李芳明", "party": "無黨籍", "number": 3}
     ]},
     {"office": "village", "county": "臺南市", "district": "鹽水區歡雅里", "candidates": [
       {"name": "趙榮其", "party": "無黨籍", "number": 1}
@@ -21654,7 +21661,9 @@
       {"name": "林昱彣", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "高雄市", "district": "彌陀區南寮里", "candidates": [
-      {"name": "吳宏桂", "party": "無黨籍"}
+      {"name": "吳榮村", "party": "無黨籍", "number": 1},
+      {"name": "黃志偉", "party": "無黨籍", "number": 2},
+      {"name": "林居發", "party": "無黨籍", "number": 3}
     ]},
     {"office": "village", "county": "高雄市", "district": "彌陀區彌仁里", "candidates": [
       {"name": "梁天賞", "party": "無黨籍", "number": 1},
@@ -21954,7 +21963,9 @@
       {"name": "劉曉君", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "高雄市", "district": "杉林區木梓里", "candidates": [
-      {"name": "林同德", "party": "無黨籍"}
+      {"name": "林美照", "party": "無黨籍", "number": 1},
+      {"name": "候世賢", "party": "無黨籍", "number": 2},
+      {"name": "方林敏金", "party": "無黨籍", "number": 3}
     ]},
     {"office": "village", "county": "高雄市", "district": "杉林區杉林里", "candidates": [
       {"name": "廖振興", "party": "無黨籍", "number": 1},
@@ -25239,7 +25250,7 @@
       {"name": "王瀚立", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "新竹縣", "district": "竹東鎮商華里", "candidates": [
-      {"name": "鍾宏達", "party": "無黨籍"}
+      {"name": "陳瑞玉", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "新竹縣", "district": "竹東鎮大鄉里", "candidates": [
       {"name": "陳鏡文", "party": "無黨籍", "number": 1},
@@ -25296,7 +25307,7 @@
       {"name": "彭達棟", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "新竹縣", "district": "芎林鄉下山村", "candidates": [
-      {"name": "何信橋", "party": "無黨籍"}
+      {"name": "謝玉凌", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "新竹縣", "district": "芎林鄉中坑村", "candidates": [
       {"name": "林永堯", "party": "無黨籍", "number": 1}
@@ -31715,7 +31726,8 @@
       {"name": "羅偉銘", "party": "無黨籍"}
     ]},
     {"office": "village", "county": "嘉義縣", "district": "中埔鄉龍門村", "candidates": [
-      {"name": "張羅麵粉", "party": "無黨籍"}
+      {"name": "張志峯", "party": "無黨籍", "number": 1},
+      {"name": "張嘉樺", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "嘉義縣", "district": "六腳鄉三義村", "candidates": [
       {"name": "蔡聰享", "party": "無黨籍", "number": 1}
@@ -32042,7 +32054,7 @@
       {"name": "翁振家", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "嘉義縣", "district": "布袋鎮考試里", "candidates": [
-      {"name": "陳泰和", "party": "無黨籍"}
+      {"name": "楊麗玉", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "嘉義縣", "district": "布袋鎮興中里", "candidates": [
       {"name": "蔡俊凱", "party": "無黨籍", "number": 1},
@@ -32261,7 +32273,7 @@
       {"name": "蕭振部", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "嘉義縣", "district": "東石鄉下揖村", "candidates": [
-      {"name": "陳慶堂", "party": "無黨籍"}
+      {"name": "林秀汝", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "嘉義縣", "district": "東石鄉副瀨村", "candidates": [
       {"name": "林泰平", "party": "無黨籍", "number": 1},
@@ -32632,7 +32644,8 @@
       {"name": "葉得祿", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "嘉義縣", "district": "溪口鄉林腳村", "candidates": [
-      {"name": "許彩鳳", "party": "無黨籍"}
+      {"name": "陳文俊", "party": "無黨籍", "number": 1},
+      {"name": "蘇緗瀅", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "嘉義縣", "district": "溪口鄉柳溝村", "candidates": [
       {"name": "王永浚", "party": "無黨籍", "number": 1},
@@ -32800,7 +32813,7 @@
       {"name": "李樺鑫", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "嘉義縣", "district": "義竹鄉中平村", "candidates": [
-      {"name": "謝勝麒", "party": "無黨籍"}
+      {"name": "翁盈盈", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "嘉義縣", "district": "義竹鄉五厝村", "candidates": [
       {"name": "顏廷宇", "party": "無黨籍", "number": 1},
@@ -32958,8 +32971,8 @@
       {"name": "林芳慶", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "嘉義縣", "district": "鹿草鄉竹山村", "candidates": [
-      {"name": "蔡鴻章", "party": "無黨籍"},
-      {"name": "歐陽群宏", "party": "無黨籍"}
+      {"name": "蔡鴻章", "party": "無黨籍", "number": 1},
+      {"name": "林正德", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "嘉義縣", "district": "鹿草鄉西井村", "candidates": [
       {"name": "陳俊安", "party": "無黨籍", "number": 1},

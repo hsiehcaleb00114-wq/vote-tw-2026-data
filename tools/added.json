@@ -2,16 +2,360 @@
   "_說明": "中選會候選人登記彙總表漏列、但列在選舉公報（候選人公告）上的參選人。import_cec.py 匯入時補上，apply_added.mjs 寫入 election.json。姓名、號次、推薦政黨依公報原文。",
   "added": [
     {
-      "office": "village", "county": "桃園市", "district": "中壢區普強里",
+      "office": "village",
+      "county": "桃園市",
+      "district": "中壢區普強里",
       "source": "https://eebulletin.cec.gov.tw/115/06%E6%A1%83%E5%9C%92%E5%B8%82/03%E6%9D%91%E9%87%8C%E9%95%B7/%E4%B8%AD%E5%A3%A2%E5%8D%80/78-%E6%99%AE%E5%BC%B7%E9%87%8C%E9%87%8C%E9%95%B7%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1%28%E5%85%AD%E4%BD%8D%E5%80%99%E9%81%B8%E4%BA%BA%29600X540mm.pdf",
       "note": "115/9 登記彙總表（https://web.cec.gov.tw/api/file/f1abbda2-229b-4a02-8dfb-58beb3ceca61.pdf）沒有普強里，原列為無人登記；11/17 選舉公報刊登六位候選人，推薦之政黨皆為「無」",
       "candidates": [
-        {"name": "何沛穎", "party": "無黨籍", "number": 1},
-        {"name": "簡紹軒", "party": "無黨籍", "number": 2},
-        {"name": "沈文鐿", "party": "無黨籍", "number": 3},
-        {"name": "陳柏堯", "party": "無黨籍", "number": 4},
-        {"name": "蔡秋桂", "party": "無黨籍", "number": 5},
-        {"name": "張儀辰", "party": "無黨籍", "number": 6}
+        {
+          "name": "何沛穎",
+          "party": "無黨籍",
+          "number": 1
+        },
+        {
+          "name": "簡紹軒",
+          "party": "無黨籍",
+          "number": 2
+        },
+        {
+          "name": "沈文鐿",
+          "party": "無黨籍",
+          "number": 3
+        },
+        {
+          "name": "陳柏堯",
+          "party": "無黨籍",
+          "number": 4
+        },
+        {
+          "name": "蔡秋桂",
+          "party": "無黨籍",
+          "number": 5
+        },
+        {
+          "name": "張儀辰",
+          "party": "無黨籍",
+          "number": 6
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "嘉義縣",
+      "district": "中埔鄉龍門村",
+      "source": "https://web.cec.gov.tw/api/file/d493b809-dc63-41ca-ae93-46164cc6e5ec.pdf",
+      "note": "10/27 號次抽籤結果；11/17 選舉公報（https://eebulletin.cec.gov.tw/115/12%E5%98%89%E7%BE%A9%E7%B8%A3/05%E6%9D%91%E9%87%8C%E9%95%B7/%E4%B8%AD%E5%9F%94%E9%84%89/%E4%B8%AD%E5%9F%94%E9%84%89%E7%AC%AC3%E9%81%B8%E8%88%89%E5%8D%80%E6%9D%91%E9%95%B7.pdf）姓名相同；登記彙總表原列 張羅麵粉",
+      "candidates": [
+        {
+          "name": "張志峯",
+          "party": "無黨籍",
+          "number": 1
+        },
+        {
+          "name": "張嘉樺",
+          "party": "無黨籍",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "嘉義縣",
+      "district": "布袋鎮考試里",
+      "source": "https://web.cec.gov.tw/api/file/d493b809-dc63-41ca-ae93-46164cc6e5ec.pdf",
+      "note": "10/27 號次抽籤結果；11/17 選舉公報（https://eebulletin.cec.gov.tw/115/12%E5%98%89%E7%BE%A9%E7%B8%A3/05%E6%9D%91%E9%87%8C%E9%95%B7/%E5%B8%83%E8%A2%8B%E9%8E%AE/%E5%B8%83%E8%A2%8B%E9%8E%AE%E7%AC%AC3%E9%81%B8%E5%8D%80%E9%87%8C%E9%95%B7.pdf）姓名相同；登記彙總表原列 陳泰和",
+      "candidates": [
+        {
+          "name": "楊麗玉",
+          "party": "無黨籍",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "嘉義縣",
+      "district": "東石鄉下揖村",
+      "source": "https://web.cec.gov.tw/api/file/d493b809-dc63-41ca-ae93-46164cc6e5ec.pdf",
+      "note": "10/27 號次抽籤結果；11/17 選舉公報（https://eebulletin.cec.gov.tw/115/12%E5%98%89%E7%BE%A9%E7%B8%A3/05%E6%9D%91%E9%87%8C%E9%95%B7/%E6%9D%B1%E7%9F%B3%E9%84%89/%E6%9D%B1%E7%9F%B3%E9%84%89%E7%AC%AC2%E9%81%B8%E8%88%89%E5%8D%80%E6%9D%91%E9%95%B702.pdf）姓名相同；登記彙總表原列 陳慶堂",
+      "candidates": [
+        {
+          "name": "林秀汝",
+          "party": "無黨籍",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "嘉義縣",
+      "district": "溪口鄉林腳村",
+      "source": "https://web.cec.gov.tw/api/file/d493b809-dc63-41ca-ae93-46164cc6e5ec.pdf",
+      "note": "10/27 號次抽籤結果；11/17 選舉公報（https://eebulletin.cec.gov.tw/115/12%E5%98%89%E7%BE%A9%E7%B8%A3/05%E6%9D%91%E9%87%8C%E9%95%B7/%E6%BA%AA%E5%8F%A3%E9%84%89/%E6%BA%AA%E5%8F%A3%E9%84%89%E7%AC%AC2%E9%81%B8%E8%88%89%E5%8D%80%E6%9D%91%E9%95%B7.pdf）姓名相同；登記彙總表原列 許彩鳳",
+      "candidates": [
+        {
+          "name": "陳文俊",
+          "party": "無黨籍",
+          "number": 1
+        },
+        {
+          "name": "蘇緗瀅",
+          "party": "無黨籍",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "嘉義縣",
+      "district": "義竹鄉中平村",
+      "source": "https://web.cec.gov.tw/api/file/d493b809-dc63-41ca-ae93-46164cc6e5ec.pdf",
+      "note": "10/27 號次抽籤結果；11/17 選舉公報（https://eebulletin.cec.gov.tw/115/12%E5%98%89%E7%BE%A9%E7%B8%A3/05%E6%9D%91%E9%87%8C%E9%95%B7/%E7%BE%A9%E7%AB%B9%E9%84%89/%E7%BE%A9%E7%AB%B9%E9%84%89%E7%AC%AC1%E9%81%B8%E5%8D%80%E6%9D%91%E9%95%B7.pdf）姓名相同；登記彙總表原列 謝勝麒",
+      "candidates": [
+        {
+          "name": "翁盈盈",
+          "party": "無黨籍",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "嘉義縣",
+      "district": "鹿草鄉竹山村",
+      "source": "https://web.cec.gov.tw/api/file/d493b809-dc63-41ca-ae93-46164cc6e5ec.pdf",
+      "note": "10/27 號次抽籤結果；11/17 選舉公報（https://eebulletin.cec.gov.tw/115/12%E5%98%89%E7%BE%A9%E7%B8%A3/05%E6%9D%91%E9%87%8C%E9%95%B7/%E9%B9%BF%E8%8D%89%E9%84%89/%E9%B9%BF%E8%8D%89%E9%84%89%E7%AC%AC2%E9%81%B8%E5%8D%80%E6%9D%91%E9%95%B7.pdf）姓名相同；登記彙總表原列 歐陽群宏",
+      "candidates": [
+        {
+          "name": "林正德",
+          "party": "無黨籍",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "新北市",
+      "district": "中和區秀景里",
+      "source": "https://web.cec.gov.tw/api/file/0009f7fc-c744-46a9-9b67-3aa463eab7c8.pdf",
+      "note": "10/27 號次抽籤結果；11/17 選舉公報（https://eebulletin.cec.gov.tw/115/02%E6%96%B0%E5%8C%97%E5%B8%82/03%E6%9D%91%E9%87%8C%E9%95%B7/%E4%B8%AD%E5%92%8C%E5%8D%80/115%E5%B9%B4%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%92%8C%E5%8D%80%E7%AC%AC5%E5%B1%86%E9%87%8C%E9%95%B7%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1.pdf）姓名相同；登記彙總表原列 李淙河",
+      "candidates": [
+        {
+          "name": "李蘇秀梅",
+          "party": "無黨籍",
+          "number": 1
+        },
+        {
+          "name": "林均澔",
+          "party": "無黨籍",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "新北市",
+      "district": "土城區員信里",
+      "source": "https://web.cec.gov.tw/api/file/0009f7fc-c744-46a9-9b67-3aa463eab7c8.pdf",
+      "note": "10/27 號次抽籤結果；11/17 選舉公報（https://eebulletin.cec.gov.tw/115/02%E6%96%B0%E5%8C%97%E5%B8%82/03%E6%9D%91%E9%87%8C%E9%95%B7/%E5%9C%9F%E5%9F%8E%E5%8D%80/115%E5%B9%B4%E6%96%B0%E5%8C%97%E5%B8%82%E5%9C%9F%E5%9F%8E%E5%8D%80%E7%AC%AC5%E5%B1%86%E9%87%8C%E9%95%B7%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1.pdf）姓名相同；登記彙總表原列 杜萬來",
+      "candidates": [
+        {
+          "name": "杜書文",
+          "party": "無黨籍",
+          "number": 1
+        },
+        {
+          "name": "周大爲",
+          "party": "無黨籍",
+          "number": 2
+        },
+        {
+          "name": "陶莉莉",
+          "party": "無黨籍",
+          "number": 3
+        },
+        {
+          "name": "張庭瑋",
+          "party": "無黨籍",
+          "number": 4
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "新竹縣",
+      "district": "竹東鎮商華里",
+      "source": "https://web.cec.gov.tw/api/file/896537f4-4c49-471a-a834-b8f9cec1b3bf.pdf",
+      "note": "10/27 號次抽籤結果；11/17 選舉公報（https://eebulletin.cec.gov.tw/115/07%E6%96%B0%E7%AB%B9%E7%B8%A3/05%E6%9D%91%E9%87%8C%E9%95%B7/%E7%AB%B9%E6%9D%B1%E9%8E%AE%E5%A4%A7%E9%84%89%E9%87%8C%E4%B8%AD%E5%B1%B1%E9%87%8C%E5%8D%97%E8%8F%AF%E9%87%8C%E6%9D%B1%E8%8F%AF%E9%87%8C%E5%95%86%E8%8F%AF%E9%87%8C%E7%AB%B9%E6%9D%B1%E9%87%8C%E5%BF%A0%E5%AD%9D%E9%87%8C%E9%87%8C%E9%95%B7.pdf）姓名相同；登記彙總表原列 鍾宏達",
+      "candidates": [
+        {
+          "name": "陳瑞玉",
+          "party": "無黨籍",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "新竹縣",
+      "district": "芎林鄉下山村",
+      "source": "https://web.cec.gov.tw/api/file/896537f4-4c49-471a-a834-b8f9cec1b3bf.pdf",
+      "note": "10/27 號次抽籤結果；11/17 選舉公報（https://eebulletin.cec.gov.tw/115/07%E6%96%B0%E7%AB%B9%E7%B8%A3/05%E6%9D%91%E9%87%8C%E9%95%B7/%E8%8A%8E%E6%9E%97%E9%84%89%E6%9D%91%E9%95%B7%E5%85%AC%E5%A0%B1.pdf）姓名相同；登記彙總表原列 何信橋",
+      "candidates": [
+        {
+          "name": "謝玉凌",
+          "party": "無黨籍",
+          "number": 1
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "臺中市",
+      "district": "烏日區北里里",
+      "source": "https://web.cec.gov.tw/api/file/a236515a-2b4f-47c8-a8d5-579c26d03c78.pdf",
+      "note": "10/27 號次抽籤結果；11/17 選舉公報（https://eebulletin.cec.gov.tw/115/03%E8%87%BA%E4%B8%AD%E5%B8%82/03%E6%9D%91%E9%87%8C%E9%95%B7/09-%E7%83%8F%E6%97%A5%E9%87%8C%E9%95%B7/14%E8%87%BA%E4%B8%AD%E5%B8%82%E7%83%8F%E6%97%A5%E5%8D%80%E5%8C%97%E9%87%8C%E9%87%8C.pdf）姓名相同；登記彙總表原列 魏周森",
+      "candidates": [
+        {
+          "name": "楊文慶",
+          "party": "無黨籍",
+          "number": 1
+        },
+        {
+          "name": "林耀南",
+          "party": "無黨籍",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "臺南市",
+      "district": "學甲區新達里",
+      "source": "https://web.cec.gov.tw/api/file/6d8036af-3b54-494c-b225-fc43e6b2a840.pdf",
+      "note": "10/27 號次抽籤結果；11/17 選舉公報（https://eebulletin.cec.gov.tw/115/04%E8%87%BA%E5%8D%97%E5%B8%82/03%E6%9D%91%E9%87%8C%E9%95%B7/%E5%AD%B8%E7%94%B2%E5%8D%80/06%E8%88%88%E9%81%94%E9%87%8C.pdf）姓名相同；登記彙總表原列 陳敏男",
+      "candidates": [
+        {
+          "name": "蔡祐倉",
+          "party": "無黨籍",
+          "number": 1
+        },
+        {
+          "name": "黃美雲",
+          "party": "無黨籍",
+          "number": 2
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "臺南市",
+      "district": "玉井區望明里",
+      "source": "https://web.cec.gov.tw/api/file/6d8036af-3b54-494c-b225-fc43e6b2a840.pdf",
+      "note": "10/27 號次抽籤結果；11/17 選舉公報（https://eebulletin.cec.gov.tw/115/04%E8%87%BA%E5%8D%97%E5%B8%82/03%E6%9D%91%E9%87%8C%E9%95%B7/%E7%8E%89%E4%BA%95%E5%8D%80/08%E6%9C%9B%E6%98%8E%E9%87%8C.pdf）姓名相同；登記彙總表原列 李麗華",
+      "candidates": [
+        {
+          "name": "郭福龍",
+          "party": "無黨籍",
+          "number": 1
+        },
+        {
+          "name": "買茂林",
+          "party": "無黨籍",
+          "number": 2
+        },
+        {
+          "name": "黃怡菁",
+          "party": "無黨籍",
+          "number": 3
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "臺南市",
+      "district": "鹽水區橋南里",
+      "source": "https://web.cec.gov.tw/api/file/6d8036af-3b54-494c-b225-fc43e6b2a840.pdf",
+      "note": "10/27 號次抽籤結果；11/17 選舉公報（https://eebulletin.cec.gov.tw/115/04%E8%87%BA%E5%8D%97%E5%B8%82/03%E6%9D%91%E9%87%8C%E9%95%B7/%E9%B9%BD%E6%B0%B4%E5%8D%80/13%E6%A9%8B%E5%8D%97%E9%87%8C.pdf）姓名相同；登記彙總表原列 陳榮斌",
+      "candidates": [
+        {
+          "name": "吳美香",
+          "party": "無黨籍",
+          "number": 1
+        },
+        {
+          "name": "林冠銍",
+          "party": "無黨籍",
+          "number": 2
+        },
+        {
+          "name": "李芳明",
+          "party": "無黨籍",
+          "number": 3
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "高雄市",
+      "district": "彌陀區南寮里",
+      "source": "https://eebulletin.cec.gov.tw/115/05%E9%AB%98%E9%9B%84%E5%B8%82/05%E9%87%8C%E9%95%B7/28%E5%BD%8C%E9%99%80%E5%8D%80/12.%E5%8D%97%E5%AF%AE%E9%87%8C.pdf",
+      "note": "11/17 選舉公報（逐頁看圖核對姓名、號次、推薦政黨）；高雄市 10/27 抽籤結果沒有此里；登記彙總表原列 吳宏桂",
+      "candidates": [
+        {
+          "name": "吳榮村",
+          "party": "無黨籍",
+          "number": 1
+        },
+        {
+          "name": "黃志偉",
+          "party": "無黨籍",
+          "number": 2
+        },
+        {
+          "name": "林居發",
+          "party": "無黨籍",
+          "number": 3
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "高雄市",
+      "district": "杉林區木梓里",
+      "source": "https://eebulletin.cec.gov.tw/115/05%E9%AB%98%E9%9B%84%E5%B8%82/05%E9%87%8C%E9%95%B7/34%E6%9D%89%E6%9E%97%E5%8D%80/%E6%9D%89%E6%9E%97%E5%8D%80%E6%9C%A8%E6%A2%93%E9%87%8C%E9%87%8C%E9%95%B7.pdf",
+      "note": "11/17 選舉公報（逐頁看圖核對姓名、號次、推薦政黨）；高雄市 10/27 抽籤結果沒有此里；登記彙總表原列 林同德",
+      "candidates": [
+        {
+          "name": "林美照",
+          "party": "無黨籍",
+          "number": 1
+        },
+        {
+          "name": "候世賢",
+          "party": "無黨籍",
+          "number": 2
+        },
+        {
+          "name": "方林敏金",
+          "party": "無黨籍",
+          "number": 3
+        }
+      ]
+    },
+    {
+      "office": "village",
+      "county": "臺北市",
+      "district": "萬華區柳鄉里",
+      "source": "https://web.cec.gov.tw/api/file/d0ab0c69-6f49-463b-9de2-91207639fbec.pdf",
+      "note": "10/27 號次抽籤結果；11/17 選舉公報（https://eebulletin.cec.gov.tw/115/01%E8%87%BA%E5%8C%97%E5%B8%82/03%E6%9D%91%E9%87%8C%E9%95%B7/%E8%90%AC%E8%8F%AF%E5%8D%80/%E8%90%AC%E8%8F%AF%E5%8D%80%E6%9F%B3%E9%84%89%E9%87%8C%E9%87%8C%E9%95%B7.pdf）姓名相同；登記彙總表原列 蔡和益",
+      "candidates": [
+        {
+          "name": "蔡和韋",
+          "party": "無黨籍",
+          "number": 1
+        }
       ]
     }
   ]
