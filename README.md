@@ -135,3 +135,16 @@ App「歷屆選舉」「我的地區」使用的資料，由中選會選舉資�
 - 公投第 22 案主文依中選會 115/8/28 公告原文；理由書是提案方說明，不轉載，只附公告連結
 - 無人登記村里：內政部國土測繪中心村里界圖（1150817 版，7,780 村里）與中選會村里長登記名冊比對，目前為新北市永和區永成里、桃園市中壢區普強里
 - 開票夜公投票數：`node tools/apply_referendum.mjs --no 22 --agree N --disagree N --electorate 投票權人總額 [--invalid N --reported N --total N] [--final]`
+
+### 選舉公報核對（號次、未公告者）
+
+中選會選舉公報（https://eebulletin.cec.gov.tw/ ，115/11/17 起）有每位候選人的號次。
+
+1. `python tools/bulletin_crawl.py bulletins.tsv`：列出全部公報 PDF（115 年約 5,300 個）
+2. `python tools/bulletin_extract.py bulletins.tsv <快取資料夾>`：下載並擷取文字位置（需要 PyMuPDF，PDF 不保留）
+3. `python tools/bulletin_match.py <快取資料夾> <輸出資料夾> <村里清單.txt>`：依姓名找出號次，並列出找不到的姓名、掃描圖片檔
+4. 只採用號次剛好是 1～n、每人都對得上的選區（`tools/ballot_numbers/bulletin_1117.csv`），再用 `apply_numbers.mjs` 寫入
+
+目前結果：12,254 / 19,679 人有號次（縣市長全部、議員 1,206 人）。其餘多半是公報為掃描圖片（約 580 檔）、姓名含罕用字或版面特殊，需要 OCR 或人工補。
+
+名單公告前死亡或資格不合、未列入公報的參選人記在 `tools/removed.json`（附公報連結），以 `node tools/apply_removed.mjs` 移除，`import_cec.py` 也會排除。

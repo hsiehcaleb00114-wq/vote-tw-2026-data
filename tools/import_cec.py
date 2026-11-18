@@ -113,6 +113,11 @@ def main():
     manual_note = manual['_note']
     disqualified = json.load(open(os.path.join(ROOT, 'tools', 'disqualified.json'), encoding='utf-8'))
     excluded = []
+    # 名單公告前死亡或資格不合、未列入選舉公報的參選人
+    removed = {
+        (x['office'], x['county'], x.get('district') or '', x['name'])
+        for x in json.load(open(os.path.join(ROOT, 'tools', 'removed.json'), encoding='utf-8'))['removed']
+    }
 
     races = {}
     notes = []
@@ -140,6 +145,9 @@ def main():
                 continue
             county, district = split_area(area)
             key = (office, county, district or '')
+            if (*key, name) in removed:
+                excluded.append(f'{area} {name}（未列入公告）')
+                continue
             race = races.setdefault(
                 key,
                 {'office': office, 'county': county, **({'district': district} if district else {}), **keep_race.get(key, {}), 'candidates': []},
@@ -168,7 +176,7 @@ def main():
     for f, n in counts.items():
         print(f'{f}: {n} 人')
     print(f'合計 {sum(counts.values())} 人、{len(sorted_races)} 個選區（排除審定不合格 {len(excluded)} 人）')
-    expected = sum(len(v) for k, v in disqualified.items() if not k.startswith('_'))
+    expected = sum(len(v) for k, v in disqualified.items() if not k.startswith("_")) + len(removed)
     if len(excluded) != expected:
         print(f'✗ disqualified.json 有 {expected} 人，但只排除了 {len(excluded)} 人，請檢查姓名或選區寫法', file=sys.stderr)
     if notes:

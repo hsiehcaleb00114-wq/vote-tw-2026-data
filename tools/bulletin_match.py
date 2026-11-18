@@ -1,0 +1,248 @@
+"""比對選舉公報快取與 election.json：找出每位參選人的號次，以及公報裡找不到的參選人。
+
+用法：python tools/bulletin_match.py <快取資料夾> <輸出資料夾> <村里清單.txt>
+  快取資料夾：bulletin_extract.py 的輸出
+  村里清單：內政部國土測繪中心村里界圖匯出檔，每行「縣市|鄉鎮市區|村里|備註」，
+            用來判斷每個公報檔涵蓋哪些鄉鎮
+輸出：
+  numbers.csv   可交給 apply_numbers.mjs 的號次（號次在選區內不重複才列入）
+  report.txt    找不到姓名、無法自動核對、號次衝突等需要人工確認的項目
+
+部分公報是掃描圖片、沒有文字；這些檔案涵蓋的參選人列為「無法自動核對」，不算找不到。
+"""
+import csv
+import json
+import os
+import re
+import sys
+import unicodedata
+from collections import defaultdict
+
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
+
+OFFICE_OF_FOLDER = [
+    ('原住民區民代表', 'township_rep'),
+    ('區民代表', 'township_rep'),
+    ('鄉鎮市民代表', 'township_rep'),
+    ('原住民區長', 'township'),
+    ('鄉鎮市長', 'township'),
+    ('區長', 'township'),
+    ('議員', 'council'),
+    ('村里長', 'village'),
+    ('里長', 'village'),
+    ('縣長', 'mayor'),
+    ('市長', 'mayor'),
+]
+DIGITS = re.compile(r'^\d{1,2}$')
+SPACE = re.compile(r'\s+')
+
+# 公報與登記名冊常見的異體字寫法不同，比對前統一
+VARIANTS = str.maketrans({
+    '眞': '真', '峯': '峰', '勲': '勳', '啓': '啟', '温': '溫', '敎': '教', '淸': '清', '靑': '青',
+    '鷄': '雞', '寛': '寬', '黄': '黃', '呉': '吳', '徳': '德', '恵': '惠', '琍': '莉', '晧': '皓',
+    '册': '冊', '强': '強', '舘': '館', '綫': '線', '湧': '涌', '麪': '麵', '玆': '茲', '飮': '飲',
+    '臺': '台', '羣': '群', '粧': '妝', '銹': '鏽', '濓': '濂',
+})
+LATIN = re.compile(r"[A-Za-z'’\-‧．·・•.\s]+")
+
+
+def office_of(folder):
+    name = re.sub(r'^\d+', '', folder)
+    for key, office in OFFICE_OF_FOLDER:
+        if name.endswith(key):
+            return office
+    return None
+
+
+def county_of(folder):
+    return re.sub(r'^\d+', '', folder).replace('台', '臺')
+
+
+def norm(s):
+    # NFKC：部分公報用康熙部首字（如「⽂」）代替一般漢字
+    return SPACE.sub('', unicodedata.normalize('NFKC', s)).translate(VARIANTS)
+
+
+def cjk(s):
+    """只留漢字部分：原住民姓名的羅馬拼音在公報裡寫法常不同"""
+    return LATIN.sub('', norm(s))
+
+
+def merge_lines(page):
+    """同一列、緊鄰的片段合併：罕用字或異體字常用別的字型，會被拆成獨立片段"""
+    # 先依高度分列（相差 4 點以內算同一列），列內再依水平位置排序
+    lines = []
+    for s in sorted(page, key=lambda s: s[1]):
+        if lines and abs(lines[-1][-1][1] - s[1]) <= 4:
+            lines[-1].append(s)
+        else:
+            lines.append([s])
+    spans = [s for line in lines for s in sorted(line, key=lambda s: s[0])]
+    merged = []
+    for s in spans:
+        if merged:
+            p = merged[-1]
+            same_line = abs(p[1] - s[1]) <= 4 and abs(p[2] - s[2]) <= 3
+            gap = s[0] - (p[0] + p[4] * p[2])
+            if same_line and -p[2] < gap < p[2] * 0.9:
+                p[3] += s[3]
+                p[4] += len(s[3])
+                continue
+        merged.append([s[0], s[1], s[2], s[3], len(s[3])])
+    return [m[:4] for m in merged]
+
+
+def find_number(page, name_span):
+    """名字附近最可能的號次：上方或同列、水平距離不遠的 1～2 位數字"""
+    nx, ny, _, _ = name_span
+    best, best_score = None, 1e9
+    for x, y, size, text in page:
+        if not DIGITS.match(text) or size < 10:
+            continue
+        dy = ny - y
+        dx = abs(x - nx)
+        if dy < -8 or dy > 140 or dx > 160:
+            continue
+        score = max(dy, 0) + 0.6 * dx - size
+        if score < best_score:
+            best, best_score = int(text), score
+    return best
+
+
+def load_towns(path):
+    towns = defaultdict(set)
+    for line in open(path, encoding='utf-8'):
+        parts = [p.strip() for p in line.rstrip('\n').split('|')]
+        if len(parts) >= 3 and not (len(parts) > 3 and parts[3]):
+            towns[parts[0].replace('台', '臺')].add(parts[1])
+    return towns
+
+
+def town_of(district, towns):
+    best = ''
+    for t in towns:
+        if district.startswith(t) and len(t) > len(best):
+            best = t
+    return best or None
+
+
+def file_scope(doc, towns):
+    """公報檔涵蓋的鄉鎮（依資料夾與檔名判斷）；判斷不出來時回傳 None，代表可能涵蓋全縣市"""
+    label = (doc.get('sub') or '') + doc['file']
+    hit = {t for t in towns if t in label or (len(t) >= 3 and t[:-1] in label)}
+    return hit or None
+
+
+def main():
+    cache, out_dir, village_list = sys.argv[1], sys.argv[2], sys.argv[3]
+    os.makedirs(out_dir, exist_ok=True)
+    data = json.load(open(os.path.join(ROOT, 'election.json'), encoding='utf-8'))
+    towns_of = load_towns(village_list)
+
+    # 參選人索引：(縣市, 職位) -> 名字 -> [選區鍵]
+    pool = defaultdict(lambda: defaultdict(list))
+    race_of = {}
+    for r in data['races']:
+        rk = (r['office'], r['county'], r.get('district') or '')
+        race_of[rk] = r
+        for c in r['candidates']:
+            pool[(r['county'], r['office'])][cjk(c['name'])].append(rk)
+
+    image_scopes = defaultdict(list)  # (縣市, 職位) -> 掃描圖片檔涵蓋的鄉鎮（None 為全縣市）
+    found_numbers = defaultdict(lambda: defaultdict(set))  # rk -> 名字 -> {號次}
+    seen_text = defaultdict(list)  # (縣市, 職位) -> 公報文字
+    files = 0
+    for f in os.listdir(cache):
+        if not f.endswith('.json'):
+            continue
+        doc = json.load(open(os.path.join(cache, f), encoding='utf-8'))
+        office = office_of(doc['office'])
+        county = county_of(doc['county'])
+        if not office:
+            continue
+        files += 1
+        names = pool[(county, office)]
+        scope = file_scope(doc, towns_of[county])
+        if sum(len(p) for p in doc['pages']) < 20:
+            image_scopes[(county, office)].append(scope)
+            continue
+        for raw in doc['pages']:
+            page = merge_lines(raw)
+            seen_text[(county, office)].append(''.join(cjk(s[3]) for s in page))
+            seen_text[(county, office)].append(''.join(cjk(s[3]) for s in raw))
+            for span in page:
+                key = cjk(span[3])
+                if key not in names:
+                    continue
+                rks = names[key]
+                if len(rks) > 1 and scope:
+                    rks = [rk for rk in rks if town_of(rk[2], scope)] or rks
+                if len(rks) != 1:
+                    continue  # 同縣市同職位同名，無法單靠姓名判斷
+                n = find_number(page, span)
+                if n is not None:
+                    found_numbers[rks[0]][key].add(n)
+
+    def checkable(county, office, district):
+        town = town_of(district, towns_of[county]) if office not in ('mayor', 'council') else None
+        for scope in image_scopes.get((county, office), []):
+            if scope is None or town is None or town in scope:
+                return False
+        return True
+
+    absent, unverifiable = [], []
+    for (county, office), names in pool.items():
+        text = '|'.join(seen_text.get((county, office), []))
+        for key, rks in names.items():
+            if not key or key in text:
+                continue
+            for rk in rks:
+                line = f'{rk[1]} {rk[2]} {key}（{office}）'
+                (absent if text and checkable(county, office, rk[2]) else unverifiable).append(line)
+
+    rows, conflict, bad_race = [], [], []
+    complete = partial = 0
+    for rk, r in race_of.items():
+        nums = {}
+        ok = True
+        for c in r['candidates']:
+            got = found_numbers.get(rk, {}).get(cjk(c['name']), set())
+            if len(got) == 1:
+                nums[c['name']] = next(iter(got))
+            elif len(got) > 1:
+                conflict.append(f'{rk[1]} {rk[2]} {c["name"]}：{sorted(got)}')
+                ok = False
+            else:
+                ok = False
+        values = list(nums.values())
+        if len(values) != len(set(values)):
+            bad_race.append(f'{rk[1]} {rk[2]}（{rk[0]}）號次重複：{nums}')
+            continue
+        if ok and nums:
+            complete += 1
+        elif nums:
+            partial += 1
+        for name, n in nums.items():
+            rows.append([rk[0], rk[1], rk[2] if rk[0] != 'mayor' else '', name, n])
+
+    with open(os.path.join(out_dir, 'numbers.csv'), 'w', encoding='utf-8', newline='') as fh:
+        w = csv.writer(fh, lineterminator='\n')
+        w.writerow(['office', 'county', 'district', 'name', 'number'])
+        w.writerows(sorted(rows))
+    images = sum(len(v) for v in image_scopes.values())
+    summary = (
+        f'公報 {files} 檔（掃描圖片 {images}）；號次全部找到的選區 {complete}、部分 {partial}、共 {len(rows)} 人；'
+        f'找不到 {len(absent)}、無法核對 {len(unverifiable)}、衝突 {len(conflict)}、重複 {len(bad_race)}'
+    )
+    with open(os.path.join(out_dir, 'report.txt'), 'w', encoding='utf-8') as fh:
+        fh.write(summary + '\n\n')
+        fh.write(f'## 公報裡找不到姓名（{len(absent)}）\n' + '\n'.join(sorted(absent)) + '\n\n')
+        fh.write(f'## 公報是掃描圖片，無法自動核對（{len(unverifiable)}）\n' + '\n'.join(sorted(unverifiable)) + '\n\n')
+        fh.write(f'## 同一人找到多個號次（{len(conflict)}）\n' + '\n'.join(conflict) + '\n\n')
+        fh.write(f'## 同選區號次重複（{len(bad_race)}）\n' + '\n'.join(bad_race) + '\n')
+    print(summary)
+
+
+if __name__ == '__main__':
+    sys.stdout.reconfigure(encoding='utf-8')
+    main()
