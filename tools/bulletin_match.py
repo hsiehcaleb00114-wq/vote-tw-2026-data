@@ -34,6 +34,7 @@ OFFICE_OF_FOLDER = [
     ('市長', 'mayor'),
 ]
 DIGITS = re.compile(r'^\d{1,2}$')
+NUM_PUNCT = '·.、．:：'  # 號次後面接的標點，如「1·」
 SPACE = re.compile(r'[\s\x00-\x1f]+')  # 部分公報在字與字之間夾控制字元
 CJK_CHAR = re.compile(r'[\u3400-\u9fff\uf900-\ufaff\u2e80-\u2fdf]')
 
@@ -43,6 +44,8 @@ VARIANTS = str.maketrans({
     '鷄': '雞', '寛': '寬', '黄': '黃', '呉': '吳', '徳': '德', '恵': '惠', '琍': '莉', '晧': '皓',
     '册': '冊', '强': '強', '舘': '館', '綫': '線', '湧': '涌', '麪': '麵', '玆': '茲', '飮': '飲',
     '臺': '台', '羣': '群', '粧': '妝', '銹': '鏽', '濓': '濂',
+    # NFKC 不會轉換的 CJK 部首補充字元，部分公報用來代替整個漢字
+    '⺠': '民', '⻑': '長', '⻄': '西', '⺝': '月', '⻘': '青', '⻝': '食', '⻁': '虎', '⺯': '糸',
 })
 LATIN = re.compile(r"[A-Za-z'’\-‧．·・•.\s]+")
 
@@ -100,6 +103,40 @@ def garbled(pages):
     return len(text) > 0 and len(CJK_CHAR.findall(text)) < 0.5 * len(text)
 
 
+def glyph_digits(pages):
+    """部分公報（如雲林縣口湖鄉）的號次用自訂字型，U+0200 起依序代表 1、2、3…。
+    檔案裡單獨成片段的這類字元若剛好是從 U+0200 起連續的一段，就換成阿拉伯數字"""
+    lone = {s[3].strip() for p in pages for s in p if len(s[3].strip()) == 1 and 0x200 <= ord(s[3].strip()) < 0x264}
+    codes = sorted(ord(c) for c in lone)
+    if not codes or codes != list(range(0x200, 0x200 + len(codes))):
+        return pages
+    fix = lambda s: s[:3] + [str(ord(s[3].strip()) - 0x1FF)] + s[4:] if s[3].strip() in lone else s
+    return [[fix(s) for s in p] for p in pages]
+
+
+def spaced_words(raw):
+    """字距拉開的橫排姓名：同一列、同字級、間距一致的單字片段連成一個詞，回傳 [x, y, size, text, None, 右緣]"""
+    singles = [s for s in raw if len(norm(s[3])) == 1 and CJK_CHAR.match(norm(s[3]))]
+    singles.sort(key=lambda s: (round(s[1]), s[0]))
+    out, run = [], []
+    def flush():
+        if 2 <= len(run) <= 4:
+            out.append([run[0][0], run[0][1], run[0][2], ''.join(r[3] for r in run), None, run[-1][0] + run[-1][2]])
+    for s in singles:
+        if run:
+            p = run[-1]
+            gap = s[0] - p[0]
+            same = abs(p[1] - s[1]) <= 1 and abs(p[2] - s[2]) <= 0.5 and p[2] < gap <= 4 * p[2]
+            if same and (len(run) < 2 or abs(gap - (run[1][0] - run[0][0])) <= 0.15 * gap):
+                run.append(s)
+                continue
+            flush()
+        run = [s]
+    if run:
+        flush()
+    return out
+
+
 def vertical_words(raw):
     """直排姓名：同一 x、同字級的單字片段，上下間距不大的連成一個詞，回傳 [x, y0, size, text, y1]"""
     singles = [s for s in raw if len(norm(s[3])) == 1 and CJK_CHAR.match(norm(s[3]))]
@@ -125,8 +162,8 @@ def number_columns(raw):
         t = SPACE.sub('', text)
         i = t.find('號次')
         if i >= 0:
-            if '姓名' in t:
-                cols.append((x, x + len(t) * size, y))
+            if '姓名' in t:  # 號次常印在合併表頭的左緣外
+                cols.append((x - 2 * size, x + len(t) * size, y))
             else:
                 cols.append((x + i * size, x + (i + 2) * size, y))
         elif t == '號':
@@ -156,7 +193,9 @@ def find_number_in_column(raw, cols, box):
     cy = (y0 + y1) / 2
     best, best_score = None, 1e9
     for x, y, size, text in (s[:4] for s in raw):
-        t = text.strip()
+        t = text.strip().rstrip(NUM_PUNCT)
+        if t in ('I', 'l', '|') and size >= 30:  # 內嵌 OCR 文字層把大字「1」讀成 I
+            t = '1'
         if not DIGITS.match(t) or size < 12:
             continue
         dcx = x + len(t) * size * 0.3
@@ -250,10 +289,11 @@ def main():
             if sum(len(p) for p in doc['pages']) >= 20:
                 garbled_files.append(doc)
             continue
-        for raw in doc['pages']:
+        for raw in glyph_digits(doc['pages']):
             page = merge_lines(raw)
             cols = number_columns(raw)
             verticals = vertical_words(raw) if cols else []
+            verticals += spaced_words(raw)
             seen_text[(county, office)].append(''.join(cjk(s[3]) for s in page))
             seen_text[(county, office)].append(''.join(cjk(s[3]) for s in raw))
             for span in page + verticals:
@@ -267,11 +307,13 @@ def main():
                     continue  # 同縣市同職位同名，無法單靠姓名判斷
                 if len(span) == 5:  # 直排
                     box = (span[0], span[1], span[0] + span[2], span[4], span[2])
+                elif len(span) == 6:  # 字距拉開的橫排
+                    box = (span[0], span[1], span[5], span[1] + span[2], span[2])
                 else:
                     box = (span[0], span[1], span[0] + span[2] * len(key), span[1] + span[2], span[2])
                 n = find_number_in_column(raw, cols, box) if cols else None
-                if n is None and len(span) == 4:
-                    n = find_number(page, span)
+                if n is None and len(span) != 5:
+                    n = find_number(page, span[:4])
                 if n is not None:
                     found_numbers[rks[0]][key].add(n)
 
