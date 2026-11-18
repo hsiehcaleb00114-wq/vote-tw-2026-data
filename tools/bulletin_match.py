@@ -34,7 +34,8 @@ OFFICE_OF_FOLDER = [
     ('市長', 'mayor'),
 ]
 DIGITS = re.compile(r'^\d{1,2}$')
-SPACE = re.compile(r'\s+')
+SPACE = re.compile(r'[\s\x00-\x1f]+')  # 部分公報在字與字之間夾控制字元
+CJK_CHAR = re.compile(r'[\u3400-\u9fff\uf900-\ufaff\u2e80-\u2fdf]')
 
 # 公報與登記名冊常見的異體字寫法不同，比對前統一
 VARIANTS = str.maketrans({
@@ -90,6 +91,86 @@ def merge_lines(page):
                 continue
         merged.append([s[0], s[1], s[2], s[3], len(s[3])])
     return [m[:4] for m in merged]
+
+
+def garbled(pages):
+    """文字層是亂碼（字型沒有對應表、或內嵌的劣質 OCR）：漢字比例太低，當掃描檔處理"""
+    text = ''.join(s[3] for p in pages for s in p)
+    text = SPACE.sub('', text)
+    return len(text) > 0 and len(CJK_CHAR.findall(text)) < 0.5 * len(text)
+
+
+def vertical_words(raw):
+    """直排姓名：同一 x、同字級的單字片段，上下間距不大的連成一個詞，回傳 [x, y0, size, text, y1]"""
+    singles = [s for s in raw if len(norm(s[3])) == 1 and CJK_CHAR.match(norm(s[3]))]
+    singles.sort(key=lambda s: (round(s[0]), s[1]))
+    out, cur = [], None
+    for s in singles:
+        if cur and abs(cur[0] - s[0]) <= 2 and abs(cur[2] - s[2]) <= 1 and 0 < s[1] - cur[4] < 2.6 * s[2] - s[2]:
+            cur[3] += s[3]
+            cur[4] = s[1] + s[2]
+            continue
+        if cur and len(cur[3]) >= 2:
+            out.append(cur)
+        cur = [s[0], s[1], s[2], s[3], s[1] + s[2]]
+    if cur and len(cur[3]) >= 2:
+        out.append(cur)
+    return out
+
+
+def number_columns(raw):
+    """「號次」表頭：(左, 右, 上緣)。「號次、姓名」合併表頭取整個表頭寬"""
+    cols = []
+    for x, y, size, text in (s[:4] for s in raw):
+        t = SPACE.sub('', text)
+        i = t.find('號次')
+        if i >= 0:
+            if '姓名' in t:
+                cols.append((x, x + len(t) * size, y))
+            else:
+                cols.append((x + i * size, x + (i + 2) * size, y))
+        elif t == '號':
+            cols.append((x, x + size, y))
+    return cols
+
+
+def header_of(cols, x, y, reach):
+    """某位置所屬的表頭：在它上方（容許 10 點）、左緣不超過 reach 的表頭中，
+    垂直距離加水平距離最近的那個（並排的區塊表頭高度不一定對齊）"""
+    best, best_d = None, 1e9
+    for c in cols:
+        if c[2] > y + 10 or c[0] > x + reach:
+            continue
+        d = (y - c[2]) + abs(x - c[0])
+        if d < best_d:
+            best, best_d = c, d
+    return best
+
+
+def find_number_in_column(raw, cols, box):
+    """號次欄裡、和姓名屬於同一個表頭區塊、而且同一列的數字。box = (x0, y0, x1, y1, 字級)"""
+    x0, y0, x1, y1, ns = box
+    head = header_of(cols, x0, y0, 2 * ns)
+    if head is None:
+        return None
+    cy = (y0 + y1) / 2
+    best, best_score = None, 1e9
+    for x, y, size, text in (s[:4] for s in raw):
+        t = text.strip()
+        if not DIGITS.match(t) or size < 12:
+            continue
+        dcx = x + len(t) * size * 0.3
+        if not (head[0] - 15 <= dcx <= head[1] + 15):
+            continue
+        if header_of(cols, dcx, y, 15) != head:
+            continue
+        dcy = y + size / 2
+        if not (y0 - 4 * ns - size <= dcy <= y1 + 3 * ns):
+            continue
+        score = abs(dcy - cy) + 0.3 * abs(dcx - (x0 + x1) / 2)
+        if score < best_score:
+            best, best_score = int(t), score
+    return best
 
 
 def find_number(page, name_span):
@@ -152,6 +233,7 @@ def main():
     found_numbers = defaultdict(lambda: defaultdict(set))  # rk -> 名字 -> {號次}
     seen_text = defaultdict(list)  # (縣市, 職位) -> 公報文字
     files = 0
+    garbled_files = []
     for f in os.listdir(cache):
         if not f.endswith('.json'):
             continue
@@ -163,14 +245,18 @@ def main():
         files += 1
         names = pool[(county, office)]
         scope = file_scope(doc, towns_of[county])
-        if sum(len(p) for p in doc['pages']) < 20:
+        if sum(len(p) for p in doc['pages']) < 20 or garbled(doc['pages']):
             image_scopes[(county, office)].append(scope)
+            if sum(len(p) for p in doc['pages']) >= 20:
+                garbled_files.append(doc)
             continue
         for raw in doc['pages']:
             page = merge_lines(raw)
+            cols = number_columns(raw)
+            verticals = vertical_words(raw) if cols else []
             seen_text[(county, office)].append(''.join(cjk(s[3]) for s in page))
             seen_text[(county, office)].append(''.join(cjk(s[3]) for s in raw))
-            for span in page:
+            for span in page + verticals:
                 key = cjk(span[3])
                 if key not in names:
                     continue
@@ -179,7 +265,13 @@ def main():
                     rks = [rk for rk in rks if town_of(rk[2], scope)] or rks
                 if len(rks) != 1:
                     continue  # 同縣市同職位同名，無法單靠姓名判斷
-                n = find_number(page, span)
+                if len(span) == 5:  # 直排
+                    box = (span[0], span[1], span[0] + span[2], span[4], span[2])
+                else:
+                    box = (span[0], span[1], span[0] + span[2] * len(key), span[1] + span[2], span[2])
+                n = find_number_in_column(raw, cols, box) if cols else None
+                if n is None and len(span) == 4:
+                    n = find_number(page, span)
                 if n is not None:
                     found_numbers[rks[0]][key].add(n)
 
@@ -230,6 +322,9 @@ def main():
         w.writerow(['office', 'county', 'district', 'name', 'number'])
         w.writerows(sorted(rows))
     images = sum(len(v) for v in image_scopes.values())
+    with open(os.path.join(out_dir, 'garbled.tsv'), 'w', encoding='utf-8') as fh:
+        for d in garbled_files:
+            fh.write('\t'.join([d['url'], d['county'], d['office'], d.get('sub') or '', d['file'], str(len(d['pages']))]) + '\n')
     summary = (
         f'公報 {files} 檔（掃描圖片 {images}）；號次全部找到的選區 {complete}、部分 {partial}、共 {len(rows)} 人；'
         f'找不到 {len(absent)}、無法核對 {len(unverifiable)}、衝突 {len(conflict)}、重複 {len(bad_race)}'
