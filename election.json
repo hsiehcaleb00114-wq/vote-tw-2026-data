@@ -1672,16 +1672,16 @@
       {"name": "徐榮耀", "party": "中國國民黨", "number": 14}
     ]},
     {"office": "council", "county": "屏東縣", "district": "第4選舉區", "area": "東港鎮、新園鄉、萬丹鄉", "seats": 8, "womenSeats": 2, "candidates": [
-      {"name": "劉孟君", "party": "民主進步黨"},
-      {"name": "胡嘉玲", "party": "中國國民黨"},
-      {"name": "許展維", "party": "民主進步黨"},
-      {"name": "方文正", "party": "民主進步黨"},
-      {"name": "林蔡鳯梅", "party": "無黨籍"},
-      {"name": "方冠丁", "party": "民主進步黨"},
-      {"name": "鄭喬云", "party": "無黨籍"},
-      {"name": "呂少麒", "party": "民主進步黨"},
-      {"name": "周芸均", "party": "中國國民黨"},
-      {"name": "林宇澤", "party": "無黨籍"}
+      {"name": "周芸均", "party": "中國國民黨", "number": 1},
+      {"name": "林宇澤", "party": "無黨籍", "number": 2},
+      {"name": "許展維", "party": "民主進步黨", "number": 3},
+      {"name": "呂少麒", "party": "民主進步黨", "number": 4},
+      {"name": "方冠丁", "party": "民主進步黨", "number": 5},
+      {"name": "劉孟君", "party": "民主進步黨", "number": 6},
+      {"name": "林蔡鳯梅", "party": "無黨籍", "number": 7},
+      {"name": "方文正", "party": "民主進步黨", "number": 8},
+      {"name": "胡嘉玲", "party": "中國國民黨", "number": 9},
+      {"name": "鄭喬云", "party": "無黨籍", "number": 10}
     ]},
     {"office": "council", "county": "屏東縣", "district": "第5選舉區", "area": "崁頂鄉、林邊鄉、南州鄉、佳冬鄉", "seats": 4, "womenSeats": 1, "candidates": [
       {"name": "陳靜芳", "party": "中國國民黨", "number": 1},
@@ -2558,7 +2558,7 @@
       {"name": "謝志鴻pasulang ruljuan", "party": "中國國民黨"}
     ]},
     {"office": "township", "county": "屏東縣", "district": "九如鄉", "candidates": [
-      {"name": "藍聰信", "party": "民主進步黨"}
+      {"name": "藍聰信", "party": "民主進步黨", "number": 1}
     ]},
     {"office": "township", "county": "屏東縣", "district": "佳冬鄉", "candidates": [
       {"name": "賴文一", "party": "無黨籍", "number": 1}
@@ -2618,8 +2618,8 @@
       {"name": "洪茂豐", "party": "無黨籍", "number": 3}
     ]},
     {"office": "township", "county": "屏東縣", "district": "枋山鄉", "candidates": [
-      {"name": "羅金良", "party": "民主進步黨"},
-      {"name": "洪啓能", "party": "無黨籍"}
+      {"name": "羅金良", "party": "民主進步黨", "number": 1},
+      {"name": "洪啓能", "party": "無黨籍", "number": 2}
     ]},
     {"office": "township", "county": "屏東縣", "district": "林邊鄉", "candidates": [
       {"name": "鄭慶堂", "party": "民主進步黨", "number": 1},
@@ -5904,14 +5904,14 @@
       {"name": "陳進成", "party": "無黨籍"}
     ]},
     {"office": "township_rep", "county": "屏東縣", "district": "來義鄉第1選舉區", "candidates": [
-      {"name": "陳政輝", "party": "無黨籍"},
-      {"name": "高國光", "party": "無黨籍"},
-      {"name": "趙志強", "party": "無黨籍"},
-      {"name": "李文華", "party": "無黨籍"},
-      {"name": "沈巧柔", "party": "無黨籍"},
-      {"name": "洪仙蓮", "party": "無黨籍"},
-      {"name": "張達敏", "party": "無黨籍"},
-      {"name": "石天月", "party": "中國國民黨"}
+      {"name": "陳政輝", "party": "無黨籍", "number": 1},
+      {"name": "高國光", "party": "無黨籍", "number": 2},
+      {"name": "洪仙蓮", "party": "無黨籍", "number": 3},
+      {"name": "李文華", "party": "無黨籍", "number": 4},
+      {"name": "張達敏", "party": "無黨籍", "number": 5},
+      {"name": "趙志強", "party": "無黨籍", "number": 6},
+      {"name": "石天月", "party": "中國國民黨", "number": 7},
+      {"name": "沈巧柔", "party": "無黨籍", "number": 8}
     ]},
     {"office": "township_rep", "county": "屏東縣", "district": "來義鄉第2選舉區", "candidates": [
       {"name": "詹勇仁", "party": "中國國民黨"},
@@ -6044,10 +6044,10 @@
       {"name": "羅明旭", "party": "無黨籍", "number": 5}
     ]},
     {"office": "township_rep", "county": "屏東縣", "district": "恆春鎮第1選舉區", "candidates": [
-      {"name": "楊志偉", "party": "中國國民黨"},
-      {"name": "陳進忠", "party": "無黨籍"},
-      {"name": "周美鳯", "party": "無黨籍"},
-      {"name": "游家銘", "party": "中國國民黨"}
+      {"name": "楊志偉", "party": "中國國民黨", "number": 1},
+      {"name": "陳進忠", "party": "無黨籍", "number": 2},
+      {"name": "游家銘", "party": "中國國民黨", "number": 3},
+      {"name": "周美鳯", "party": "無黨籍", "number": 4}
     ]},
     {"office": "township_rep", "county": "屏東縣", "district": "恆春鎮第2選舉區", "candidates": [
       {"name": "龔定為", "party": "中國國民黨", "number": 1},
@@ -6132,12 +6132,12 @@
       {"name": "高王添福", "party": "無黨籍"}
     ]},
     {"office": "township_rep", "county": "屏東縣", "district": "東港鎮第1選舉區", "candidates": [
-      {"name": "林立婷", "party": "無黨籍"},
-      {"name": "洪慶田", "party": "民主進步黨"},
-      {"name": "蘇珉賢", "party": "中國國民黨"},
-      {"name": "陳梅香", "party": "無黨籍"},
-      {"name": "王俊文", "party": "無黨籍"},
-      {"name": "黃俊嵐", "party": "民主進步黨"}
+      {"name": "黃俊嵐", "party": "民主進步黨", "number": 1},
+      {"name": "洪慶田", "party": "民主進步黨", "number": 2},
+      {"name": "蘇珉賢", "party": "中國國民黨", "number": 3},
+      {"name": "陳梅香", "party": "無黨籍", "number": 4},
+      {"name": "王俊文", "party": "無黨籍", "number": 5},
+      {"name": "林立婷", "party": "無黨籍", "number": 6}
     ]},
     {"office": "township_rep", "county": "屏東縣", "district": "東港鎮第2選舉區", "candidates": [
       {"name": "蔡振茂", "party": "無黨籍", "number": 1},
@@ -6221,14 +6221,14 @@
       {"name": "阮茂益", "party": "無黨籍", "number": 3}
     ]},
     {"office": "township_rep", "county": "屏東縣", "district": "泰武鄉第1選舉區", "candidates": [
-      {"name": "丁克強", "party": "無黨籍"},
-      {"name": "華李立民", "party": "中國國民黨"},
-      {"name": "莊臣", "party": "無黨籍"},
-      {"name": "何梅君Zepulj．Kadrangiyan", "party": "中國國民黨"},
-      {"name": "許燕虹", "party": "無黨籍"},
-      {"name": "曾進仁Arucangaij‧Taratiki", "party": "無黨籍"},
-      {"name": "孫美珍Ljuzjem．Pacekeij", "party": "無黨籍"},
-      {"name": "劉金山", "party": "無黨籍"}
+      {"name": "劉金山", "party": "無黨籍", "number": 1},
+      {"name": "華李立民", "party": "中國國民黨", "number": 2},
+      {"name": "莊臣", "party": "無黨籍", "number": 3},
+      {"name": "丁克強", "party": "無黨籍", "number": 4},
+      {"name": "曾進仁Arucangaij‧Taratiki", "party": "無黨籍", "number": 5},
+      {"name": "孫美珍Ljuzjem．Pacekeij", "party": "無黨籍", "number": 6},
+      {"name": "許燕虹", "party": "無黨籍", "number": 7},
+      {"name": "何梅君Zepulj．Kadrangiyan", "party": "中國國民黨", "number": 8}
     ]},
     {"office": "township_rep", "county": "屏東縣", "district": "泰武鄉第2選舉區", "candidates": [
       {"name": "沈安日", "party": "無黨籍"},
@@ -6492,10 +6492,10 @@
       {"name": "葉里仁", "party": "無黨籍"}
     ]},
     {"office": "township_rep", "county": "屏東縣", "district": "長治鄉第3選舉區", "candidates": [
-      {"name": "李清科", "party": "無黨籍"},
-      {"name": "蘇瑞珉", "party": "無黨籍"},
-      {"name": "林鳳美", "party": "無黨籍"},
-      {"name": "陳澤緒", "party": "無黨籍"}
+      {"name": "陳澤緒", "party": "無黨籍", "number": 1},
+      {"name": "李清科", "party": "無黨籍", "number": 2},
+      {"name": "林鳳美", "party": "無黨籍", "number": 3},
+      {"name": "蘇瑞珉", "party": "無黨籍", "number": 4}
     ]},
     {"office": "township_rep", "county": "屏東縣", "district": "霧臺鄉第1選舉區", "candidates": [
       {"name": "巴仁昌", "party": "無黨籍", "number": 1},
@@ -7346,17 +7346,17 @@
       {"name": "王美淨Savi Madiklan", "party": "無黨籍"}
     ]},
     {"office": "township_rep", "county": "臺東縣", "district": "成功鎮第1選舉區", "candidates": [
-      {"name": "曾千育", "party": "無黨籍"},
-      {"name": "陳坤章", "party": "無黨籍"},
-      {"name": "林聰傑", "party": "無黨籍"},
-      {"name": "查道晴", "party": "中國國民黨"},
-      {"name": "陳威旭", "party": "無黨籍"},
-      {"name": "蔡協進", "party": "無黨籍"},
-      {"name": "吳俊寬", "party": "無黨籍"},
-      {"name": "賴宗汶", "party": "無黨籍"},
-      {"name": "陳秋豆", "party": "無黨籍"},
-      {"name": "吳佩真", "party": "無黨籍"},
-      {"name": "楊瑞華", "party": "無黨籍"}
+      {"name": "蔡協進", "party": "無黨籍", "number": 1},
+      {"name": "陳秋豆", "party": "無黨籍", "number": 2},
+      {"name": "賴宗汶", "party": "無黨籍", "number": 3},
+      {"name": "陳威旭", "party": "無黨籍", "number": 4},
+      {"name": "吳俊寬", "party": "無黨籍", "number": 5},
+      {"name": "林聰傑", "party": "無黨籍", "number": 6},
+      {"name": "楊瑞華", "party": "無黨籍", "number": 7},
+      {"name": "陳坤章", "party": "無黨籍", "number": 8},
+      {"name": "曾千育", "party": "無黨籍", "number": 9},
+      {"name": "查道晴", "party": "中國國民黨", "number": 10},
+      {"name": "吳佩真", "party": "無黨籍", "number": 11}
     ]},
     {"office": "township_rep", "county": "臺東縣", "district": "成功鎮第2選舉區", "candidates": [
       {"name": "胡明發", "party": "無黨籍", "number": 1},
@@ -20519,10 +20519,10 @@
       {"name": "林志榮", "party": "民主進步黨", "number": 2}
     ]},
     {"office": "village", "county": "高雄市", "district": "仁武區五和里", "candidates": [
-      {"name": "許有長", "party": "民主進步黨"},
-      {"name": "林雅婷", "party": "無黨籍"},
-      {"name": "楊惠如", "party": "無黨籍"},
-      {"name": "羅世傑", "party": "無黨籍"}
+      {"name": "許有長", "party": "民主進步黨", "number": 1},
+      {"name": "羅世傑", "party": "無黨籍", "number": 2},
+      {"name": "林雅婷", "party": "無黨籍", "number": 3},
+      {"name": "楊惠如", "party": "無黨籍", "number": 4}
     ]},
     {"office": "village", "county": "高雄市", "district": "仁武區仁和里", "candidates": [
       {"name": "鄭諭澤", "party": "無黨籍", "number": 1}
@@ -21202,8 +21202,8 @@
       {"name": "陳文宗", "party": "無黨籍", "number": 3}
     ]},
     {"office": "village", "county": "高雄市", "district": "大社區神農里", "candidates": [
-      {"name": "葉東火", "party": "無黨籍"},
-      {"name": "葉秀英", "party": "無黨籍"}
+      {"name": "葉東火", "party": "無黨籍", "number": 1},
+      {"name": "葉秀英", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "高雄市", "district": "大社區翠屏里", "candidates": [
       {"name": "尤昆宏", "party": "中國國民黨", "number": 1},
@@ -33053,8 +33053,8 @@
       {"name": "李龍智", "party": "無黨籍"}
     ]},
     {"office": "village", "county": "屏東縣", "district": "九如鄉玉泉村", "candidates": [
-      {"name": "周綉苡", "party": "無黨籍"},
-      {"name": "邱文瑞", "party": "無黨籍"}
+      {"name": "邱文瑞", "party": "無黨籍", "number": 1},
+      {"name": "周綉苡", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "屏東縣", "district": "九如鄉耆老村", "candidates": [
       {"name": "楊銘煌", "party": "無黨籍", "number": 1}
@@ -33111,8 +33111,8 @@
       {"name": "李飛明", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "屏東縣", "district": "來義鄉南和村", "candidates": [
-      {"name": "王自強", "party": "無黨籍"},
-      {"name": "蔡閎富", "party": "無黨籍"}
+      {"name": "王自強", "party": "無黨籍", "number": 1},
+      {"name": "蔡閎富", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "屏東縣", "district": "來義鄉古樓村", "candidates": [
       {"name": "田陳世凱Qaulai Pauraudrang", "party": "無黨籍", "number": 1},
@@ -33180,8 +33180,8 @@
       {"name": "孔相山", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "屏東縣", "district": "內埔鄉竹圍村", "candidates": [
-      {"name": "温福坤", "party": "無黨籍"},
-      {"name": "林哲正", "party": "無黨籍"}
+      {"name": "林哲正", "party": "無黨籍", "number": 1},
+      {"name": "温福坤", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "屏東縣", "district": "內埔鄉美和村", "candidates": [
       {"name": "曾瑞英", "party": "無黨籍", "number": 1},
@@ -33520,8 +33520,8 @@
       {"name": "黃蕓婍", "party": "無黨籍", "number": 3}
     ]},
     {"office": "village", "county": "屏東縣", "district": "恆春鎮南灣里", "candidates": [
-      {"name": "葉啓俊", "party": "無黨籍"},
-      {"name": "鄭富澄", "party": "無黨籍"}
+      {"name": "葉啓俊", "party": "無黨籍", "number": 1},
+      {"name": "鄭富澄", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "屏東縣", "district": "恆春鎮四溝里", "candidates": [
       {"name": "廖世哲", "party": "無黨籍", "number": 1},
@@ -33657,9 +33657,9 @@
       {"name": "林偉政", "party": "無黨籍", "number": 3}
     ]},
     {"office": "village", "county": "屏東縣", "district": "新埤鄉新埤村", "candidates": [
-      {"name": "葉慶裕", "party": "無黨籍"},
-      {"name": "馮招金", "party": "無黨籍"},
-      {"name": "鍾孝聲", "party": "無黨籍"}
+      {"name": "葉慶裕", "party": "無黨籍", "number": 1},
+      {"name": "馮招金", "party": "無黨籍", "number": 2},
+      {"name": "鍾孝聲", "party": "無黨籍", "number": 3}
     ]},
     {"office": "village", "county": "屏東縣", "district": "新埤鄉箕湖村", "candidates": [
       {"name": "潘高山", "party": "無黨籍", "number": 1},
@@ -33673,10 +33673,10 @@
       {"name": "賴建成", "party": "無黨籍", "number": 3}
     ]},
     {"office": "village", "county": "屏東縣", "district": "新埤鄉餉潭村", "candidates": [
-      {"name": "潘暐傑", "party": "無黨籍"},
-      {"name": "潘吉實", "party": "無黨籍"},
-      {"name": "潘水鏡", "party": "無黨籍"},
-      {"name": "潘榮世", "party": "無黨籍"}
+      {"name": "潘暐傑", "party": "無黨籍", "number": 1},
+      {"name": "潘榮世", "party": "無黨籍", "number": 2},
+      {"name": "潘吉實", "party": "無黨籍", "number": 3},
+      {"name": "潘水鏡", "party": "無黨籍", "number": 4}
     ]},
     {"office": "village", "county": "屏東縣", "district": "春日鄉七佳村", "candidates": [
       {"name": "鄞美瑛", "party": "無黨籍", "number": 1}
@@ -33686,8 +33686,8 @@
       {"name": "劉清吉", "party": "中國國民黨", "number": 2}
     ]},
     {"office": "village", "county": "屏東縣", "district": "春日鄉古華村", "candidates": [
-      {"name": "陸清木", "party": "無黨籍"},
-      {"name": "魏金玉", "party": "無黨籍"}
+      {"name": "陸清木", "party": "無黨籍", "number": 1},
+      {"name": "魏金玉", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "屏東縣", "district": "春日鄉士文村", "candidates": [
       {"name": "楊大業", "party": "無黨籍", "number": 1}
@@ -33895,8 +33895,8 @@
       {"name": "蘇福仁", "party": "無黨籍", "number": 3}
     ]},
     {"office": "village", "county": "屏東縣", "district": "林邊鄉鎮安村", "candidates": [
-      {"name": "李居財", "party": "無黨籍"},
-      {"name": "謝坤霖", "party": "無黨籍"}
+      {"name": "李居財", "party": "無黨籍", "number": 1},
+      {"name": "謝坤霖", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "屏東縣", "district": "泰武鄉佳平村", "candidates": [
       {"name": "尤梅玲 Kjy．Edrdu", "party": "無黨籍", "number": 1}
@@ -33955,9 +33955,9 @@
       {"name": "尤瑞宏", "party": "無黨籍"}
     ]},
     {"office": "village", "county": "屏東縣", "district": "潮州鎮三共里", "candidates": [
-      {"name": "王綉珍", "party": "無黨籍"},
-      {"name": "余和女", "party": "無黨籍"},
-      {"name": "程文科", "party": "無黨籍"}
+      {"name": "程文科", "party": "無黨籍", "number": 1},
+      {"name": "王綉珍", "party": "無黨籍", "number": 2},
+      {"name": "余和女", "party": "無黨籍", "number": 3}
     ]},
     {"office": "village", "county": "屏東縣", "district": "潮州鎮三和里", "candidates": [
       {"name": "李坤明", "party": "無黨籍", "number": 1}
@@ -34015,10 +34015,10 @@
       {"name": "陳冠璋", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "屏東縣", "district": "潮州鎮新生里", "candidates": [
-      {"name": "洪偉㨗", "party": "無黨籍"},
-      {"name": "林吉良", "party": "無黨籍"},
-      {"name": "陳春信", "party": "無黨籍"},
-      {"name": "詹錦宗", "party": "無黨籍"}
+      {"name": "詹錦宗", "party": "無黨籍", "number": 1},
+      {"name": "洪偉㨗", "party": "無黨籍", "number": 2},
+      {"name": "林吉良", "party": "無黨籍", "number": 3},
+      {"name": "陳春信", "party": "無黨籍", "number": 4}
     ]},
     {"office": "village", "county": "屏東縣", "district": "潮州鎮檨子里", "candidates": [
       {"name": "倪駿朗", "party": "無黨籍", "number": 1},
@@ -34477,8 +34477,8 @@
       {"name": "許麗惠", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "屏東縣", "district": "長治鄉崙上村", "candidates": [
-      {"name": "邱進安", "party": "無黨籍"},
-      {"name": "邱啓川", "party": "無黨籍"}
+      {"name": "邱啓川", "party": "無黨籍", "number": 1},
+      {"name": "邱進安", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "屏東縣", "district": "長治鄉復興村", "candidates": [
       {"name": "黃福和", "party": "無黨籍", "number": 1},
@@ -34616,8 +34616,8 @@
       {"name": "陳寶川", "party": "無黨籍", "number": 1}
     ]},
     {"office": "village", "county": "屏東縣", "district": "高樹鄉菜寮村", "candidates": [
-      {"name": "蕭惠眞", "party": "無黨籍"},
-      {"name": "劉宛瑜", "party": "無黨籍"}
+      {"name": "劉宛瑜", "party": "無黨籍", "number": 1},
+      {"name": "蕭惠眞", "party": "無黨籍", "number": 2}
     ]},
     {"office": "village", "county": "屏東縣", "district": "高樹鄉長榮村", "candidates": [
       {"name": "藍和國", "party": "無黨籍", "number": 1}
@@ -36490,10 +36490,10 @@
       {"name": "林筑涵", "party": "無黨籍", "number": 3}
     ]},
     {"office": "village", "county": "臺東縣", "district": "成功鎮三民里", "candidates": [
-      {"name": "曾連發", "party": "無黨籍"},
-      {"name": "林金安", "party": "無黨籍"},
-      {"name": "王冠崎", "party": "無黨籍"},
-      {"name": "許光明", "party": "無黨籍"}
+      {"name": "王冠崎", "party": "無黨籍", "number": 1},
+      {"name": "許光明", "party": "無黨籍", "number": 2},
+      {"name": "林金安", "party": "無黨籍", "number": 3},
+      {"name": "曾連發", "party": "無黨籍", "number": 4}
     ]},
     {"office": "village", "county": "臺東縣", "district": "成功鎮信義里", "candidates": [
       {"name": "黃正宏", "party": "無黨籍", "number": 1},

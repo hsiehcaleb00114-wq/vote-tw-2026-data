@@ -68,8 +68,19 @@ def norm(s):
 
 
 def cjk(s):
-    """只留漢字部分：原住民姓名的羅馬拼音在公報裡寫法常不同"""
-    return LATIN.sub('', norm(s))
+    """只留漢字部分：原住民姓名的羅馬拼音在公報裡寫法常不同。
+    括號字（如「㈮」）經 NFKC 會變成「(金)」，括號一併去掉"""
+    return LATIN.sub('', norm(s)).replace('(', '').replace(')', '')
+
+
+def resolve_name(key, names):
+    """公報用「●」代替罕用字：其他字都相同、字數相同、而且只有一人符合時才算"""
+    if key in names:
+        return key
+    if '●' not in key or len(key) < 2 or key.count('●') > 1:
+        return None
+    hits = [n for n in names if len(n) == len(key) and all(a == b or a == '●' for a, b in zip(key, n))]
+    return hits[0] if len(hits) == 1 else None
 
 
 def merge_lines(page):
@@ -297,8 +308,8 @@ def main():
             seen_text[(county, office)].append(''.join(cjk(s[3]) for s in page))
             seen_text[(county, office)].append(''.join(cjk(s[3]) for s in raw))
             for span in page + verticals:
-                key = cjk(span[3])
-                if key not in names:
+                key = resolve_name(cjk(span[3]), names)
+                if key is None:
                     continue
                 rks = names[key]
                 if len(rks) > 1 and scope:
