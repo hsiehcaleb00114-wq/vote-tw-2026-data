@@ -162,6 +162,21 @@ def main():
             n += 1
         counts[f] = n
 
+    # 登記彙總表漏列、但選舉公報有刊登的參選人
+    for x in json.load(open(os.path.join(ROOT, 'tools', 'added.json'), encoding='utf-8'))['added']:
+        key = (x['office'], x['county'], x.get('district') or '')
+        race = races.setdefault(
+            key,
+            {'office': x['office'], 'county': x['county'], **({'district': x['district']} if x.get('district') else {}),
+             **keep_race.get(key, {}), 'candidates': []},
+        )
+        for c in x['candidates']:
+            if any(o['name'] == c['name'] for o in race['candidates']):
+                continue
+            cand = dict(c)
+            cand.update(keep.get((*key, c['name']), {}))
+            race['candidates'].append(cand)
+
     order = {c: i for i, c in enumerate(COUNTIES)}
     office_order = ['mayor', 'council', 'township', 'township_rep', 'village']
     sorted_races = sorted(

@@ -3,7 +3,7 @@
   "updated": "2026-11-18",
   "source": "中選會「115年地方公職人員選舉候選人登記名冊」，議員以上已排除 10/16 審定不合格者；號次：中央社 10/27 整理各縣市選委會抽籤結果；號次：中選會選舉公報（115/11/17）；號次：中選會選舉公報（115/11/17 公告）；號次：中選會選舉公報（115/11/17 公告，掃描版以 OCR 判讀）",
   "referendums": [{"no": 22, "question": "你是否支持政府使用「核電」振興經濟，以廢除「非核家園」的能源政策？", "proposer": "立法院", "date": "2026-11-28", "forums": "2026-11-09/2026-11-21", "sourceUrl": "https://web.cec.gov.tw/api/file/3ea9497f-7945-49a2-bd4b-375e3d6f1ddf.pdf", "infoUrl": "https://web.cec.gov.tw/referendum"}],
-  "vacantVillages": [{"county": "新北市", "district": "永和區永成里"}, {"county": "桃園市", "district": "中壢區普強里"}],
+  "vacantVillages": [{"county": "新北市", "district": "永和區永成里"}],
   "races": [
     {"office": "mayor", "county": "臺北市", "candidates": [
       {"name": "郭璽", "party": "台灣麻將最大黨", "number": 1},
@@ -13459,6 +13459,14 @@
     {"office": "village", "county": "桃園市", "district": "中壢區普仁里", "candidates": [
       {"name": "張鳳凰", "party": "無黨籍", "number": 1},
       {"name": "鍾明徨", "party": "無黨籍", "number": 2}
+    ]},
+    {"office": "village", "county": "桃園市", "district": "中壢區普強里", "candidates": [
+      {"name": "何沛穎", "party": "無黨籍", "number": 1},
+      {"name": "簡紹軒", "party": "無黨籍", "number": 2},
+      {"name": "沈文鐿", "party": "無黨籍", "number": 3},
+      {"name": "陳柏堯", "party": "無黨籍", "number": 4},
+      {"name": "蔡秋桂", "party": "無黨籍", "number": 5},
+      {"name": "張儀辰", "party": "無黨籍", "number": 6}
     ]},
     {"office": "village", "county": "桃園市", "district": "中壢區普忠里", "candidates": [
       {"name": "許志煒", "party": "無黨籍"},

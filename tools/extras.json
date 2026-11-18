@@ -12,8 +12,8 @@
     }
   ],
   "vacantVillages": [
-    {"county": "新北市", "district": "永和區永成里"},
-    {"county": "桃園市", "district": "中壢區普強里"}
+    {"county": "新北市", "district": "永和區永成里"}
   ],
+  "_vacantVillagesNote": "中壢區普強里原列於此，但 11/17 選舉公報刊登六位候選人，已移到 added.json",
   "_vacantVillagesSource": "內政部國土測繪中心村里界圖（1150817 版，7,780 村里）與中選會村里長候選人登記名冊比對，名冊中沒有登記者的村里"
 }
